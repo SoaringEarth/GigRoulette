@@ -168,6 +168,9 @@
                                 <rect key="frame" x="37" y="509" width="247" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="findmegig"/>
+                                <connections>
+                                    <action selector="partyAction:" destination="Bl4-h5-EGt" eventType="touchUpInside" id="lGQ-8r-sUP"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
