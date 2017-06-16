@@ -36,25 +36,27 @@ class EventsModel {
                     if let embeddedData = serializedData["_embedded"] {
                         if let eventData = embeddedData["events"] {
                             for event in eventData as! [AnyObject] {
-                                let eventName = event["name"] as! String
-                                let eventID = event["id"] as! String
-                                let eventURL = event["url"] as! String
                                 
-                                var genreArray:[GenreEntity] = []
-                                for genre in (event["classifications"] as! [AnyObject]) {
-                                    let eventGenreName = (genre["genre"] as! [String : AnyObject])["name"] as! String
-                                    let eventGenreID = (genre["genre"] as! [String : AnyObject])["id"] as! String
-                                    let newGenre = GenreEntity(name: eventGenreName, id: eventGenreID)
-                                    genreArray.append(newGenre)
+                                if ((event["dates"] as! [String : AnyObject])["status"] as! [String : AnyObject])["code"] as! String == "onsale" {
+                                    let eventName = event["name"] as! String
+                                    let eventID = event["id"] as! String
+                                    let eventURL = event["url"] as! String
+                                    
+                                    var genreArray:[GenreEntity] = []
+                                    for genre in (event["classifications"] as! [AnyObject]) {
+                                        let eventGenreName = (genre["genre"] as! [String : AnyObject])["name"] as! String
+                                        let eventGenreID = (genre["genre"] as! [String : AnyObject])["id"] as! String
+                                        let newGenre = GenreEntity(name: eventGenreName, id: eventGenreID)
+                                        genreArray.append(newGenre)
+                                    }
+                                    
+                                    
+                                    let eventDistanceFromUser = (event["distance"] as! Double).roundTo(places: 2)
+                                    // get distance from user
+                                    
+                                    let newEvent = EventEntity(name: eventName, id: eventID, url: eventURL, genres: genreArray, distanceFromUser: eventDistanceFromUser)
+                                    self.events!.append(newEvent)
                                 }
-                                
-                                
-                                // Filter based on ticket sale status
-                                
-                                // get distance from user
-                                
-                                let newEvent = EventEntity(name: eventName, id: eventID, url: eventURL, genres: genreArray)
-                                self.events!.append(newEvent)
                             }
                             print(self.events!.count)
                         }
