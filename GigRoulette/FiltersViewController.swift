@@ -140,6 +140,10 @@ class FiltersViewController: UIViewController {
     
 
 	@IBAction func partyAction(_ sender: Any) {
+        let loadingVC = LoadingVC(nibName: "LoadingVC", bundle: nil)
+        show(loadingVC, sender: self)
+        
+        
 	}
     
         

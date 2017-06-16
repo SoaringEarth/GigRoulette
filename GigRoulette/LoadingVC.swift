@@ -19,7 +19,8 @@ class LoadingVC: UIViewController {
         animateIconOut()
         
         let timer = Timer.scheduledTimer(withTimeInterval: 5, repeats: false) { (timer) in
-            
+            let chosenVC = ChosenEventViewController(nibName: "ChosenEventViewController", bundle: nil)
+            self.show(chosenVC, sender: nil)
         }
         
     }
