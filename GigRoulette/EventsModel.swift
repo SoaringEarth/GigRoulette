@@ -44,13 +44,14 @@ class EventsModel {
                                     let eventURL = event["url"] as! String
                                     
                                     var genreArray:[GenreEntity] = []
-                                    for genre in (event["classifications"] as! [AnyObject]) {
-                                        let eventGenreName = (genre["genre"] as! [String : AnyObject])["name"] as! String
-                                        let eventGenreID = (genre["genre"] as! [String : AnyObject])["id"] as! String
-                                        let newGenre = GenreEntity(name: eventGenreName, id: eventGenreID)
-                                        genreArray.append(newGenre)
-                                    }
-                                    
+									
+//                                    for genre in (event["classifications"] as! [AnyObject]) {
+//                                        let eventGenreName = (genre["genre"] as! [String : AnyObject])["name"] as! String
+//                                        let eventGenreID = (genre["genre"] as! [String : AnyObject])["id"] as! String
+//                                        let newGenre = GenreEntity(name: eventGenreName, id: eventGenreID)
+//                                        genreArray.append(newGenre)
+//                                    }
+									
                                     let eventLat: String = (((((event["_embedded"] as! [String : AnyObject])["venues"] as! [AnyObject]).first as! [String : AnyObject])["location"] as! [String : AnyObject])["latitude"] as! String)
                                     let eventLon: String = (((((event["_embedded"] as! [String : AnyObject])["venues"] as! [AnyObject]).first as! [String : AnyObject])["location"] as! [String : AnyObject])["longitude"] as! String)
                                     let eventLocation = Point(lat: eventLat, lon: eventLon)
