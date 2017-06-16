@@ -10,14 +10,27 @@ import Foundation
 // 2af9a281d929bcb15d3f0838ee372f2a
 
 struct Journey {
-    let legs: [Leg]
+    var legs: [Leg] = [Leg]()
     let startDateTime: Date
     let arrivalDateTime: Date
+    let durationMinutes: Int
+    
+    init(durationMinutes: Int) {
+        self.startDateTime = Date()
+        let calendar = Calendar.current
+        self.arrivalDateTime = calendar.date(byAdding: .minute, value: durationMinutes, to: startDateTime)!
+        self.durationMinutes = durationMinutes
+    }
 }
 
 struct Leg {
     let duration: Int
     let description: String
+    
+    init(duration: Int, description: String) {
+        self.duration = duration
+        self.description = description
+    }
 }
 
 struct Point {
@@ -47,7 +60,21 @@ func getDirections(FromStartPoint startPoint: Point, ToEndPoint endPoint: Point)
                     print("no journeys")
                     return
                 }
-                print(firstJourney["duration"])
+                
+                guard let duration = firstJourney["duration"] as? Int, let legs = firstJourney["legs"] as? [[String: AnyObject]] else {
+                    print("unparseable")
+                    return
+                }
+                
+                var theJourney = Journey(durationMinutes: duration)
+                
+                for leg in legs {
+                    guard let duration = leg["duration"] as? Int, let instruction = leg["instruction"] as? [String: AnyObject], let description = instruction["summary"] as? String else { continue }
+                    theJourney.legs.append(Leg(duration: duration, description: description))
+                }
+                
+                print(theJourney)
+                NotificationCenter.default.post(name: NotificationName.journeyReceived.realName, object: nil)
                 
                 
             } catch {
