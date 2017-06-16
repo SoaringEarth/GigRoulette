@@ -10,6 +10,7 @@ import Foundation
 
 enum NotificationName: String {
     case eventsReceived = "EVENTSRECEIVED"
+    case journeyReceived = "JOURNEYRECEIVED"
     
     var realName: Notification.Name {
         return Notification.Name(self.rawValue)
