@@ -15,6 +15,9 @@
 		04705D071EF32B230011B236 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04705D051EF32B230011B236 /* Main.storyboard */; };
 		04705D091EF32B230011B236 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04705D081EF32B230011B236 /* Assets.xcassets */; };
 		04705D0C1EF32B230011B236 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04705D0A1EF32B230011B236 /* LaunchScreen.storyboard */; };
+		047B8AF31EF3F3A60024C293 /* TFLApiStuff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047B8AF21EF3F3A60024C293 /* TFLApiStuff.swift */; };
+		047B8AF51EF3F6200024C293 /* EventsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047B8AF41EF3F6200024C293 /* EventsManager.swift */; };
+		047B8AF71EF3FFBA0024C293 /* EventsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047B8AF61EF3FFBA0024C293 /* EventsModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		04705D081EF32B230011B236 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04705D0B1EF32B230011B236 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04705D0D1EF32B230011B236 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		047B8AF21EF3F3A60024C293 /* TFLApiStuff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFLApiStuff.swift; sourceTree = "<group>"; };
+		047B8AF41EF3F6200024C293 /* EventsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsManager.swift; sourceTree = "<group>"; };
+		047B8AF61EF3FFBA0024C293 /* EventsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +68,9 @@
 			children = (
 				04705D011EF32B230011B236 /* AppDelegate.swift */,
 				041184311EF3B71C0054A00C /* APIStuff.swift */,
+				047B8AF61EF3FFBA0024C293 /* EventsModel.swift */,
+				047B8AF41EF3F6200024C293 /* EventsManager.swift */,
+				047B8AF21EF3F3A60024C293 /* TFLApiStuff.swift */,
 				0411843C1EF3C2050054A00C /* GeoHashAPIStuff.swift */,
 				041184331EF3B7380054A00C /* EntityStuff.swift */,
 				04705D031EF32B230011B236 /* ViewController.swift */,
@@ -145,7 +154,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0411843D1EF3C2050054A00C /* GeoHashAPIStuff.swift in Sources */,
+				047B8AF51EF3F6200024C293 /* EventsManager.swift in Sources */,
+				047B8AF71EF3FFBA0024C293 /* EventsModel.swift in Sources */,
 				041184321EF3B71C0054A00C /* APIStuff.swift in Sources */,
+				047B8AF31EF3F3A60024C293 /* TFLApiStuff.swift in Sources */,
 				041184341EF3B7380054A00C /* EntityStuff.swift in Sources */,
 				04705D041EF32B230011B236 /* ViewController.swift in Sources */,
 				04705D021EF32B230011B236 /* AppDelegate.swift in Sources */,
