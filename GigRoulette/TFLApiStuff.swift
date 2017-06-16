@@ -42,7 +42,6 @@ func getDirections(FromStartPoint startPoint: Point, ToEndPoint endPoint: Point)
         } else {
             do {
                 let serializedData = try JSONSerialization.jsonObject(with: responseData!, options:.allowFragments) as! [String : AnyObject]
-                print(serializedData)
                                 
                 guard let journeys = serializedData["journeys"] as? [[String: AnyObject]], let firstJourney = journeys.first else {
                     print("no journeys")
