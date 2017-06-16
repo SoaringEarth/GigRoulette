@@ -28,6 +28,7 @@ struct EventEntity {
     let genres: [GenreEntity]
     let distanceFromUser: Double
     let eventLocation: Point
+    let ticketPrice: Double
 //    let dates: [EventDate]
 }
 

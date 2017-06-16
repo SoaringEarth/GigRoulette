@@ -19,6 +19,7 @@
 		047B8AF31EF3F3A60024C293 /* TFLApiStuff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047B8AF21EF3F3A60024C293 /* TFLApiStuff.swift */; };
 		047B8AF51EF3F6200024C293 /* EventsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047B8AF41EF3F6200024C293 /* EventsManager.swift */; };
 		047B8AF71EF3FFBA0024C293 /* EventsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047B8AF61EF3FFBA0024C293 /* EventsModel.swift */; };
+		047B8AF91EF41BB10024C293 /* PriceStuff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047B8AF81EF41BB10024C293 /* PriceStuff.swift */; };
 		644A007A1EF4118A0001A6C6 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644A00791EF4118A0001A6C6 /* Globals.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		047B8AF21EF3F3A60024C293 /* TFLApiStuff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFLApiStuff.swift; sourceTree = "<group>"; };
 		047B8AF41EF3F6200024C293 /* EventsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsManager.swift; sourceTree = "<group>"; };
 		047B8AF61EF3FFBA0024C293 /* EventsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsModel.swift; sourceTree = "<group>"; };
+		047B8AF81EF41BB10024C293 /* PriceStuff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceStuff.swift; sourceTree = "<group>"; };
 		644A00791EF4118A0001A6C6 /* Globals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,6 +74,7 @@
 			children = (
 				04705D011EF32B230011B236 /* AppDelegate.swift */,
 				041184311EF3B71C0054A00C /* APIStuff.swift */,
+				047B8AF81EF41BB10024C293 /* PriceStuff.swift */,
 				047B8AF61EF3FFBA0024C293 /* EventsModel.swift */,
 				047B8AF41EF3F6200024C293 /* EventsManager.swift */,
 				047B8AF21EF3F3A60024C293 /* TFLApiStuff.swift */,
@@ -166,6 +169,7 @@
 				03A8D6C21EF3FA2A000DD90C /* RouletteViewController.swift in Sources */,
 				644A007A1EF4118A0001A6C6 /* Globals.swift in Sources */,
 				047B8AF31EF3F3A60024C293 /* TFLApiStuff.swift in Sources */,
+				047B8AF91EF41BB10024C293 /* PriceStuff.swift in Sources */,
 				041184341EF3B7380054A00C /* EntityStuff.swift in Sources */,
 				033090151EF3EE9800C62FDC /* FiltersViewController.swift in Sources */,
 				04705D021EF32B230011B236 /* AppDelegate.swift in Sources */,
