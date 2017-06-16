@@ -25,19 +25,19 @@ class LoadingVC: UIViewController {
     }
     
     func animateIconIn() {
-        UIView.animate(withDuration: 1, delay: 0, options: .curveEaseInOut, animations: {
-            self.icon.alpha = 0
+        UIView.animate(withDuration: 1.5, delay: 0, options: .curveEaseInOut, animations: {
+            self.icon.alpha = 1
         }) { (success) in
-            self.animateIconIn()
+            self.animateIconOut()
         }
         
     }
     
     func animateIconOut() {
-        UIView.animate(withDuration: 1, delay: 0, options: .curveEaseInOut, animations: {
-            self.icon.alpha = 1
+        UIView.animate(withDuration: 1.5, delay: 0, options: .curveEaseInOut, animations: {
+            self.icon.alpha = 0.5
         }) { (success) in
-            self.animateIconOut()
+            self.animateIconIn()
         }
         
     }
