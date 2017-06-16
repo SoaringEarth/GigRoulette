@@ -56,7 +56,7 @@ class EventsModel {
                                     
                                     let eventDistanceFromUser = (event["distance"] as! Double).roundTo(places: 2)
                                     
-                                    let newEvent = EventEntity(name: eventName, id: eventID, url: eventURL, genres: genreArray, distanceFromUser: eventDistanceFromUser, eventLocation: Point(lat: "0.0", lon: "0.0"))
+                                    let newEvent = EventEntity(name: eventName, id: eventID, url: eventURL, genres: genreArray, distanceFromUser: eventDistanceFromUser, eventLocation: eventLocation)
                                     self.events!.append(newEvent)
                                 }
                             }
