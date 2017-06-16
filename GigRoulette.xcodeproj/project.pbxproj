@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		033090151EF3EE9800C62FDC /* FiltersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033090141EF3EE9800C62FDC /* FiltersViewController.swift */; };
 		03A8D6C21EF3FA2A000DD90C /* RouletteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A8D6C11EF3FA2A000DD90C /* RouletteViewController.swift */; };
+		03E58CBF1EF4123200CB5BD0 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E58CBE1EF4123200CB5BD0 /* SplashViewController.swift */; };
 		041184321EF3B71C0054A00C /* APIStuff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041184311EF3B71C0054A00C /* APIStuff.swift */; };
 		041184341EF3B7380054A00C /* EntityStuff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041184331EF3B7380054A00C /* EntityStuff.swift */; };
 		0411843D1EF3C2050054A00C /* GeoHashAPIStuff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0411843C1EF3C2050054A00C /* GeoHashAPIStuff.swift */; };
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		033090141EF3EE9800C62FDC /* FiltersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FiltersViewController.swift; sourceTree = "<group>"; };
 		03A8D6C11EF3FA2A000DD90C /* RouletteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouletteViewController.swift; sourceTree = "<group>"; };
+		03E58CBE1EF4123200CB5BD0 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		041184311EF3B71C0054A00C /* APIStuff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIStuff.swift; sourceTree = "<group>"; };
 		041184331EF3B7380054A00C /* EntityStuff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityStuff.swift; sourceTree = "<group>"; };
 		0411843C1EF3C2050054A00C /* GeoHashAPIStuff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoHashAPIStuff.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 				04705D031EF32B230011B236 /* ViewController.swift */,
 				033090141EF3EE9800C62FDC /* FiltersViewController.swift */,
 				03A8D6C11EF3FA2A000DD90C /* RouletteViewController.swift */,
+				03E58CBE1EF4123200CB5BD0 /* SplashViewController.swift */,
 				04705D051EF32B230011B236 /* Main.storyboard */,
 				04705D081EF32B230011B236 /* Assets.xcassets */,
 				04705D0A1EF32B230011B236 /* LaunchScreen.storyboard */,
@@ -169,6 +172,7 @@
 				04705D041EF32B230011B236 /* ViewController.swift in Sources */,
 				033090151EF3EE9800C62FDC /* FiltersViewController.swift in Sources */,
 				04705D021EF32B230011B236 /* AppDelegate.swift in Sources */,
+				03E58CBF1EF4123200CB5BD0 /* SplashViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
