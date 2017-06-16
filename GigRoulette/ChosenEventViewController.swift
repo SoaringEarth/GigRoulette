@@ -10,7 +10,7 @@ import UIKit
 
 class ChosenEventViewController: UIViewController {
     
-    var chosenEvent: EventEntity = EventsModel.sharedInstance.getRandomEvent()
+    var chosenEvent: EventEntity?
     
     override func viewDidLoad() {
         super.viewDidLoad()

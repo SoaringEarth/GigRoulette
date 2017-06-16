@@ -16,6 +16,7 @@ class EventsModel {
     var events: [EventEntity]?
     
     init() {
+        
     }
     
     init(WithGeoHash geoHash: String, AndCountryCode countryCode: String) {
@@ -80,7 +81,6 @@ class EventsModel {
     }
     
     func getRandomEvent() -> EventEntity {
-        let randomIndex: Int = Int(arc4random_uniform(UInt32(events!.count)) - 1)
-        return events![randomIndex]
+        return events![0]
     }
 }

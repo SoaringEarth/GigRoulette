@@ -9,7 +9,8 @@
 import UIKit
 
 class LoadingVC: UIViewController {
-
+    
+    var chosenEvent: EventEntity?
     @IBOutlet weak var icon: UIImageView!
     @IBOutlet weak var purchaseButton: UIButton!
     override func viewDidLoad() {
@@ -43,6 +44,7 @@ class LoadingVC: UIViewController {
     }
     @IBAction func open(_ sender: Any) {
         let chosenVC = ChosenEventViewController(nibName: "ChosenEventViewController", bundle: nil)
+        chosenVC.chosenEvent = self.chosenEvent
         self.show(chosenVC, sender: nil)
     }
     
