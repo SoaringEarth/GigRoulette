@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		033090151EF3EE9800C62FDC /* FiltersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033090141EF3EE9800C62FDC /* FiltersViewController.swift */; };
+		03A8D6C21EF3FA2A000DD90C /* RouletteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A8D6C11EF3FA2A000DD90C /* RouletteViewController.swift */; };
 		041184321EF3B71C0054A00C /* APIStuff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041184311EF3B71C0054A00C /* APIStuff.swift */; };
 		041184341EF3B7380054A00C /* EntityStuff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041184331EF3B7380054A00C /* EntityStuff.swift */; };
 		0411843D1EF3C2050054A00C /* GeoHashAPIStuff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0411843C1EF3C2050054A00C /* GeoHashAPIStuff.swift */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		033090141EF3EE9800C62FDC /* FiltersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FiltersViewController.swift; sourceTree = "<group>"; };
+		03A8D6C11EF3FA2A000DD90C /* RouletteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouletteViewController.swift; sourceTree = "<group>"; };
 		041184311EF3B71C0054A00C /* APIStuff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIStuff.swift; sourceTree = "<group>"; };
 		041184331EF3B7380054A00C /* EntityStuff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityStuff.swift; sourceTree = "<group>"; };
 		0411843C1EF3C2050054A00C /* GeoHashAPIStuff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoHashAPIStuff.swift; sourceTree = "<group>"; };
@@ -65,6 +69,8 @@
 				0411843C1EF3C2050054A00C /* GeoHashAPIStuff.swift */,
 				041184331EF3B7380054A00C /* EntityStuff.swift */,
 				04705D031EF32B230011B236 /* ViewController.swift */,
+				033090141EF3EE9800C62FDC /* FiltersViewController.swift */,
+				03A8D6C11EF3FA2A000DD90C /* RouletteViewController.swift */,
 				04705D051EF32B230011B236 /* Main.storyboard */,
 				04705D081EF32B230011B236 /* Assets.xcassets */,
 				04705D0A1EF32B230011B236 /* LaunchScreen.storyboard */,
@@ -146,8 +152,10 @@
 			files = (
 				0411843D1EF3C2050054A00C /* GeoHashAPIStuff.swift in Sources */,
 				041184321EF3B71C0054A00C /* APIStuff.swift in Sources */,
+				03A8D6C21EF3FA2A000DD90C /* RouletteViewController.swift in Sources */,
 				041184341EF3B7380054A00C /* EntityStuff.swift in Sources */,
 				04705D041EF32B230011B236 /* ViewController.swift in Sources */,
+				033090151EF3EE9800C62FDC /* FiltersViewController.swift in Sources */,
 				04705D021EF32B230011B236 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -281,8 +289,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = QM89243HP4;
+				DEVELOPMENT_TEAM = BL7QL4ZK6J;
 				INFOPLIST_FILE = GigRoulette/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.creative-Coder.GigRoulette";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -295,8 +304,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = QM89243HP4;
+				DEVELOPMENT_TEAM = BL7QL4ZK6J;
 				INFOPLIST_FILE = GigRoulette/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.creative-Coder.GigRoulette";
 				PRODUCT_NAME = "$(TARGET_NAME)";
