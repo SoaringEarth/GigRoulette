@@ -25,6 +25,8 @@
 		644A00821EF4228C0001A6C6 /* StepsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 644A00801EF4228C0001A6C6 /* StepsVC.xib */; };
 		644A00851EF423B10001A6C6 /* LegCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644A00831EF423B10001A6C6 /* LegCell.swift */; };
 		644A00861EF423B10001A6C6 /* LegCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 644A00841EF423B10001A6C6 /* LegCell.xib */; };
+		644A00891EF4259D0001A6C6 /* LoadingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644A00871EF4259D0001A6C6 /* LoadingVC.swift */; };
+		644A008A1EF4259D0001A6C6 /* LoadingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 644A00881EF4259D0001A6C6 /* LoadingVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		644A00801EF4228C0001A6C6 /* StepsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StepsVC.xib; sourceTree = "<group>"; };
 		644A00831EF423B10001A6C6 /* LegCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegCell.swift; sourceTree = "<group>"; };
 		644A00841EF423B10001A6C6 /* LegCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LegCell.xib; sourceTree = "<group>"; };
+		644A00871EF4259D0001A6C6 /* LoadingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingVC.swift; sourceTree = "<group>"; };
+		644A00881EF4259D0001A6C6 /* LoadingVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,8 @@
 				644A00801EF4228C0001A6C6 /* StepsVC.xib */,
 				644A00831EF423B10001A6C6 /* LegCell.swift */,
 				644A00841EF423B10001A6C6 /* LegCell.xib */,
+				644A00871EF4259D0001A6C6 /* LoadingVC.swift */,
+				644A00881EF4259D0001A6C6 /* LoadingVC.xib */,
 			);
 			path = GigRoulette;
 			sourceTree = "<group>";
@@ -162,6 +168,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				644A00821EF4228C0001A6C6 /* StepsVC.xib in Resources */,
+				644A008A1EF4259D0001A6C6 /* LoadingVC.xib in Resources */,
 				644A00861EF423B10001A6C6 /* LegCell.xib in Resources */,
 				04705D0C1EF32B230011B236 /* LaunchScreen.storyboard in Resources */,
 				04705D091EF32B230011B236 /* Assets.xcassets in Resources */,
@@ -189,6 +196,7 @@
 				041184341EF3B7380054A00C /* EntityStuff.swift in Sources */,
 				033090151EF3EE9800C62FDC /* FiltersViewController.swift in Sources */,
 				04705D021EF32B230011B236 /* AppDelegate.swift in Sources */,
+				644A00891EF4259D0001A6C6 /* LoadingVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
