@@ -20,16 +20,38 @@ struct Leg {
     let description: String
 }
 
-struct StartPoint {
+struct Point {
     let lat: Double
     let lon: Double
-    let postCode: String
+    
+    init(lat: Double, lon: Double) {
+        self.lat = lat
+        self.lon = lon
+    }
 }
 
-struct EndPoint {
+func getDirections(FromStartPoint startPoint: Point, ToEndPoint endPoint: Point) {
+    //https://api.tfl.gov.uk/Journey/JourneyResults/51.5412969%2C-0.0954148/to/51.5388457%2C-0.1367267
     
-}
-
-func getDirections(FromStartPoint startPoint: StartPoint, ToEndPoint endPoint: EndPoint) {
+    let urlRequest = URLRequest(url: URL(string:"https://api.tfl.gov.uk/Journey/JourneyResults/\(startPoint.lat)%2C\(startPoint.lon)/to/\(endPoint.lat)%2C\(endPoint.lon)")!)
     
+    let defaultSession: URLSession = URLSession(configuration: .default)
+    defaultSession.dataTask(with: urlRequest) { (responseData, responseURL, responseError) in
+        if responseError != nil {
+            print("failed")
+        } else {
+            do {
+                let serializedData = try JSONSerialization.jsonObject(with: responseData!, options:.allowFragments) as! [String : AnyObject]
+                print(serializedData)
+                                
+                guard let journeys = serializedData["journeys"] as? [[String: AnyObject]], let firstJourney = journeys.first else {
+                    
+                    
+                }
+                
+            } catch {
+                print("Failed to serialize responseData to [String : AnyObject]")
+            }
+        }
+    }.resume()
 }
