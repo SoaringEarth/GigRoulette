@@ -12,17 +12,15 @@ import CoreLocation
 class FiltersViewController: UIViewController {
 
 	@IBOutlet weak var userlocationLabel: UILabel!
-	var locationManager:CLLocationManager!
-	
+    let locationManager = CLLocationManager()
+    var currentLocation: CLLocationCoordinate2D? = nil
+    var currentGeoHash: String = ""
+    
+    var eventManager: EventsManager?
+    
 	override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-		
-		locationManager = CLLocationManager()
-		locationManager.delegate = self
-		locationManager.desiredAccuracy = kCLLocationAccuracyBest
-		locationManager.requestAlwaysAuthorization()
-		locationManager.startUpdatingLocation()
+        startLocationServices()
 		
 		//blurTheView()
     }
@@ -39,29 +37,50 @@ class FiltersViewController: UIViewController {
 		blurEffectView.frame = view.bounds
 		blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
 		view.addSubview(blurEffectView)
-	}
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+    }
+        
+    func startLocationServices() {
+        
+        // Ask for Authorisation from the User.
+        locationManager.requestAlwaysAuthorization()
+        
+        // For use in foreground
+        self.locationManager.requestWhenInUseAuthorization()
+        
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+            locationManager.startUpdatingLocation()
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 extension FiltersViewController: CLLocationManagerDelegate {
-	func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-		let locValue:CLLocationCoordinate2D = manager.location!.coordinate
-		print("locations = \(locValue.latitude) \(locValue.longitude)")
-	}
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if currentLocation == nil {
+            if let locationCoordinates = manager.location?.coordinate {
+                currentLocation = locationCoordinates
+                getPlacemarkFromLocation(location: manager.location!, withSuccess: { (countryCode) in
+                    getGeoHash(WithLat: self.currentLocation!.latitude, AndLongitude: self.currentLocation!.longitude, WithSuccess: { (geoHash) in
+                        self.currentGeoHash = geoHash
+                        self.eventManager = EventsManager(WithGeoHash: geoHash, AndCountryCode: countryCode)
+                    })
+                })
+            }
+        }
+    }
+    
+    func getPlacemarkFromLocation(location: CLLocation, withSuccess success: @escaping (String)->()) {
+        CLGeocoder().reverseGeocodeLocation(location, completionHandler:
+            { (placemarks, error) in
+                if let placeMark = placemarks?.first {
+                    if let countryCode = placeMark.isoCountryCode {
+                        success(countryCode)
+                    }
+                }
+        })
+    }
 }

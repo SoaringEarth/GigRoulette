@@ -52,53 +52,9 @@ func getTMEvents(NearGeoHash geoHash: String, InRadius radius: Int, withDistance
     }.resume()
 }
 
-func getTMVenues() {
-    var urlRequest = URLRequest(url: URL(string:"https://app.ticketmaster.com/discovery/v2/venues.json?countryCode=GB&apikey=p2qmN2j6HxHbR3IG8ErzSHV2fJ6Jsz3w")!)
-    urlRequest.cachePolicy = .reloadIgnoringCacheData
-    let defaultSession: URLSession = URLSession(configuration: .default)
-    defaultSession.dataTask(with: urlRequest) { (responseData, responseURL, responseError) in
-        if responseError != nil {
-            print("failed")
-        } else {
-            do {
-                let serializedData = try JSONSerialization.jsonObject(with: responseData!, options:.allowFragments) as! [String : AnyObject]
-                if let embeddedData = serializedData["_embedded"] {
-                    if let venueData = embeddedData["venues"] {
-                        for venue in venueData as! [AnyObject] {
-                            print(venue)
-                        }
-                    }
-                }
-            } catch {
-                print("Failed to serialize responseData to [String : AnyObject]")
-            }
-        }
-        }.resume()
-}
 
-func getTicketMasterAttractions() {
-    var urlRequest = URLRequest(url: URL(string:"https://app.ticketmaster.com/discovery/v2/attractions.json?apikey=p2qmN2j6HxHbR3IG8ErzSHV2fJ6Jsz3w")!)
-    urlRequest.cachePolicy = .reloadIgnoringCacheData
-    
-    let defaultSession: URLSession = URLSession(configuration: .default)
-    defaultSession.dataTask(with: urlRequest) { (responseData, responseURL, responseError) in
-        if responseError != nil {
-            print("failed")
-        } else {
-            do {
-                let serializedData = try JSONSerialization.jsonObject(with: responseData!, options:.allowFragments) as! [String : AnyObject]
-                if let embeddedData = serializedData["_embedded"] {
-                    if let attractionData = embeddedData["attractions"] {
-                        for attraction in attractionData as! [AnyObject] {
-                            print(attraction)
-                        }
-                    }
-                }
-            } catch {
-                print("Failed to serialize responseData to [String : AnyObject]")
-            }
-        }
-    }.resume()
-}
+
+
+
 
 

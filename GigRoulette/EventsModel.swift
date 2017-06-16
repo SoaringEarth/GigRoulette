@@ -48,6 +48,11 @@ class EventsModel {
                                     genreArray.append(newGenre)
                                 }
                                 
+                                
+                                // Filter based on ticket sale status
+                                
+                                // get distance from user
+                                
                                 let newEvent = EventEntity(name: eventName, id: eventID, url: eventURL, genres: genreArray)
                                 self.events!.append(newEvent)
                             }
