@@ -78,5 +78,9 @@ class EventsModel {
             }
         }.resume()
     }
-
+    
+    func getRandomEvent() -> EventEntity {
+        let randomIndex: Int = Int(arc4random_uniform(UInt32(events!.count)) - 1)
+        return events![randomIndex]
+    }
 }

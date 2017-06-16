@@ -9,11 +9,12 @@
 import UIKit
 
 class ChosenEventViewController: UIViewController {
-
+    
+    var chosenEvent: EventEntity = EventsModel.sharedInstance.getRandomEvent()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {

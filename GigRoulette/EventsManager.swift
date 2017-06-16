@@ -23,6 +23,12 @@ class EventsManager {
         events = eventsModel.events
     }
     
+    func getRandomEvent() -> EventEntity {
+        
+        return events![0]
+        
+    }
+    
     private func getGenres(FromEvents: [EventEntity]) {
         
         
