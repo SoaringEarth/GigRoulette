@@ -57,6 +57,7 @@ class EventsModel {
                                 self.events!.append(newEvent)
                             }
                             print(self.events!.count)
+                            NotificationCenter.default.post(name: NotificationName.eventsReceived.realName, object: nil)
                         }
                     } else {
                         print("No Events")

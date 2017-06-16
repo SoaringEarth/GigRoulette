@@ -20,6 +20,7 @@
 		047B8AF31EF3F3A60024C293 /* TFLApiStuff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047B8AF21EF3F3A60024C293 /* TFLApiStuff.swift */; };
 		047B8AF51EF3F6200024C293 /* EventsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047B8AF41EF3F6200024C293 /* EventsManager.swift */; };
 		047B8AF71EF3FFBA0024C293 /* EventsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047B8AF61EF3FFBA0024C293 /* EventsModel.swift */; };
+		644A007A1EF4118A0001A6C6 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644A00791EF4118A0001A6C6 /* Globals.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		047B8AF21EF3F3A60024C293 /* TFLApiStuff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFLApiStuff.swift; sourceTree = "<group>"; };
 		047B8AF41EF3F6200024C293 /* EventsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsManager.swift; sourceTree = "<group>"; };
 		047B8AF61EF3FFBA0024C293 /* EventsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsModel.swift; sourceTree = "<group>"; };
+		644A00791EF4118A0001A6C6 /* Globals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 				04705D081EF32B230011B236 /* Assets.xcassets */,
 				04705D0A1EF32B230011B236 /* LaunchScreen.storyboard */,
 				04705D0D1EF32B230011B236 /* Info.plist */,
+				644A00791EF4118A0001A6C6 /* Globals.swift */,
 			);
 			path = GigRoulette;
 			sourceTree = "<group>";
@@ -164,6 +167,7 @@
 				047B8AF71EF3FFBA0024C293 /* EventsModel.swift in Sources */,
 				041184321EF3B71C0054A00C /* APIStuff.swift in Sources */,
 				03A8D6C21EF3FA2A000DD90C /* RouletteViewController.swift in Sources */,
+				644A007A1EF4118A0001A6C6 /* Globals.swift in Sources */,
 				047B8AF31EF3F3A60024C293 /* TFLApiStuff.swift in Sources */,
 				041184341EF3B7380054A00C /* EntityStuff.swift in Sources */,
 				04705D041EF32B230011B236 /* ViewController.swift in Sources */,
