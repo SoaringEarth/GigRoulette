@@ -50,11 +50,13 @@ class EventsModel {
                                         genreArray.append(newGenre)
                                     }
                                     
+                                    let eventLat: String = (((((event["_embedded"] as! [String : AnyObject])["venues"] as! [AnyObject]).first as! [String : AnyObject])["location"] as! [String : AnyObject])["latitude"] as! String)
+                                    let eventLon: String = (((((event["_embedded"] as! [String : AnyObject])["venues"] as! [AnyObject]).first as! [String : AnyObject])["location"] as! [String : AnyObject])["longitude"] as! String)
+                                    let eventLocation = StartPoint(lat: eventLat, lon: eventLon, postCode: "")
                                     
                                     let eventDistanceFromUser = (event["distance"] as! Double).roundTo(places: 2)
-                                    // get distance from user
                                     
-                                    let newEvent = EventEntity(name: eventName, id: eventID, url: eventURL, genres: genreArray, distanceFromUser: eventDistanceFromUser)
+                                    let newEvent = EventEntity(name: eventName, id: eventID, url: eventURL, genres: genreArray, distanceFromUser: eventDistanceFromUser, eventLocation: StartPoint(lat: 0.0, lon: 0.0, postCode: ""))
                                     self.events!.append(newEvent)
                                 }
                             }

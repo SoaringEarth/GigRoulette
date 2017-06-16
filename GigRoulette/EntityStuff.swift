@@ -27,6 +27,7 @@ struct EventEntity {
     let url: String
     let genres: [GenreEntity]
     let distanceFromUser: Double
+    let eventLocation: StartPoint
 //    let dates: [EventDate]
 }
 
