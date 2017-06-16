@@ -52,11 +52,11 @@ class EventsModel {
                                     
                                     let eventLat: String = (((((event["_embedded"] as! [String : AnyObject])["venues"] as! [AnyObject]).first as! [String : AnyObject])["location"] as! [String : AnyObject])["latitude"] as! String)
                                     let eventLon: String = (((((event["_embedded"] as! [String : AnyObject])["venues"] as! [AnyObject]).first as! [String : AnyObject])["location"] as! [String : AnyObject])["longitude"] as! String)
-                                    let eventLocation = StartPoint(lat: eventLat, lon: eventLon, postCode: "")
+                                    let eventLocation = Point(lat: eventLat, lon: eventLon)
                                     
                                     let eventDistanceFromUser = (event["distance"] as! Double).roundTo(places: 2)
                                     
-                                    let newEvent = EventEntity(name: eventName, id: eventID, url: eventURL, genres: genreArray, distanceFromUser: eventDistanceFromUser, eventLocation: StartPoint(lat: 0.0, lon: 0.0, postCode: ""))
+                                    let newEvent = EventEntity(name: eventName, id: eventID, url: eventURL, genres: genreArray, distanceFromUser: eventDistanceFromUser, eventLocation: Point(lat: "0.0", lon: "0.0"))
                                     self.events!.append(newEvent)
                                 }
                             }

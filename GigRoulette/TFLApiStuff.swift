@@ -21,10 +21,10 @@ struct Leg {
 }
 
 struct Point {
-    let lat: Double
-    let lon: Double
+    let lat: String
+    let lon: String
     
-    init(lat: Double, lon: Double) {
+    init(lat: String, lon: String) {
         self.lat = lat
         self.lon = lon
     }
@@ -45,9 +45,11 @@ func getDirections(FromStartPoint startPoint: Point, ToEndPoint endPoint: Point)
                 print(serializedData)
                                 
                 guard let journeys = serializedData["journeys"] as? [[String: AnyObject]], let firstJourney = journeys.first else {
-                    
-                    
+                    print("no journeys")
+                    return
                 }
+                print(firstJourney["duration"])
+                
                 
             } catch {
                 print("Failed to serialize responseData to [String : AnyObject]")
