@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     var currentLocation: CLLocationCoordinate2D? = nil
     var currentGeoHash: String = ""
     
+    var eventManager: EventsManager?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,7 +26,7 @@ class ViewController: UIViewController {
     func startLocationServices() {
         
         // Ask for Authorisation from the User.
-        self.locationManager.requestAlwaysAuthorization()
+        locationManager.requestAlwaysAuthorization()
         
         // For use in foreground
         self.locationManager.requestWhenInUseAuthorization()
@@ -44,16 +46,25 @@ extension ViewController: CLLocationManagerDelegate {
         if currentLocation == nil {
             if let locationCoordinates = manager.location?.coordinate {
                 currentLocation = locationCoordinates
-                getGeoHash(WithLat: 51.5076, AndLongitude: 0.1278, WithSuccess: { (geoHash) in
-                    self.currentGeoHash = geoHash
-                    getTMEvents(NearGeoHash: self.currentGeoHash, InRadius: 3, withDistanceUnit: .miles)
+                getPlacemarkFromLocation(location: manager.location!, withSuccess: { (countryCode) in
+                    getGeoHash(WithLat: self.currentLocation!.latitude, AndLongitude: self.currentLocation!.longitude, WithSuccess: { (geoHash) in
+                        self.currentGeoHash = geoHash
+                        self.eventManager = EventsManager(WithGeoHash: geoHash, AndCountryCode: countryCode)
+                    })
                 })
-//                getGeoHash(WithLat: currentLocation!.latitude, AndLongitude: currentLocation!.longitude, WithSuccess: { (geoHash) in
-//                    self.currentGeoHash = geoHash
-//                    getTMEvents(NearGeoHash: self.currentGeoHash, InRadius: "1.5", withDistanceUnit: .km)
-//                })
             }
         }
+    }
+    
+    func getPlacemarkFromLocation(location: CLLocation, withSuccess success: @escaping (String)->()) {
+        CLGeocoder().reverseGeocodeLocation(location, completionHandler:
+            { (placemarks, error) in
+                if let placeMark = placemarks?.first {
+                    if let countryCode = placeMark.isoCountryCode {                        
+                        success(countryCode)
+                    }
+                }
+        })
     }
 }
 
