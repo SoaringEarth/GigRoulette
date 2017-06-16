@@ -20,6 +20,8 @@
 		047B8AF51EF3F6200024C293 /* EventsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047B8AF41EF3F6200024C293 /* EventsManager.swift */; };
 		047B8AF71EF3FFBA0024C293 /* EventsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047B8AF61EF3FFBA0024C293 /* EventsModel.swift */; };
 		047B8AF91EF41BB10024C293 /* PriceStuff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047B8AF81EF41BB10024C293 /* PriceStuff.swift */; };
+		047B8AFC1EF423E30024C293 /* ChosenEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047B8AFA1EF423E30024C293 /* ChosenEventViewController.swift */; };
+		047B8AFD1EF423E30024C293 /* ChosenEventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 047B8AFB1EF423E30024C293 /* ChosenEventViewController.xib */; };
 		644A007A1EF4118A0001A6C6 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644A00791EF4118A0001A6C6 /* Globals.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +41,8 @@
 		047B8AF41EF3F6200024C293 /* EventsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsManager.swift; sourceTree = "<group>"; };
 		047B8AF61EF3FFBA0024C293 /* EventsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsModel.swift; sourceTree = "<group>"; };
 		047B8AF81EF41BB10024C293 /* PriceStuff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceStuff.swift; sourceTree = "<group>"; };
+		047B8AFA1EF423E30024C293 /* ChosenEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChosenEventViewController.swift; sourceTree = "<group>"; };
+		047B8AFB1EF423E30024C293 /* ChosenEventViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChosenEventViewController.xib; sourceTree = "<group>"; };
 		644A00791EF4118A0001A6C6 /* Globals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,6 +86,7 @@
 				041184331EF3B7380054A00C /* EntityStuff.swift */,
 				033090141EF3EE9800C62FDC /* FiltersViewController.swift */,
 				03A8D6C11EF3FA2A000DD90C /* RouletteViewController.swift */,
+				047B8AFE1EF423E70024C293 /* ChosenEvent */,
 				04705D051EF32B230011B236 /* Main.storyboard */,
 				04705D081EF32B230011B236 /* Assets.xcassets */,
 				04705D0A1EF32B230011B236 /* LaunchScreen.storyboard */,
@@ -89,6 +94,15 @@
 				644A00791EF4118A0001A6C6 /* Globals.swift */,
 			);
 			path = GigRoulette;
+			sourceTree = "<group>";
+		};
+		047B8AFE1EF423E70024C293 /* ChosenEvent */ = {
+			isa = PBXGroup;
+			children = (
+				047B8AFA1EF423E30024C293 /* ChosenEventViewController.swift */,
+				047B8AFB1EF423E30024C293 /* ChosenEventViewController.xib */,
+			);
+			name = ChosenEvent;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,6 +166,7 @@
 				04705D0C1EF32B230011B236 /* LaunchScreen.storyboard in Resources */,
 				04705D091EF32B230011B236 /* Assets.xcassets in Resources */,
 				04705D071EF32B230011B236 /* Main.storyboard in Resources */,
+				047B8AFD1EF423E30024C293 /* ChosenEventViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,6 +188,7 @@
 				041184341EF3B7380054A00C /* EntityStuff.swift in Sources */,
 				033090151EF3EE9800C62FDC /* FiltersViewController.swift in Sources */,
 				04705D021EF32B230011B236 /* AppDelegate.swift in Sources */,
+				047B8AFC1EF423E30024C293 /* ChosenEventViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
