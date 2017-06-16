@@ -25,6 +25,7 @@ class FiltersViewController: UIViewController {
 		//blurTheView()
         
         getDirections(FromStartPoint: Point(lat: "51.5412969", lon: "-0.0954148"), ToEndPoint: Point(lat: "51.5388457", lon: "-0.1367267"))
+        
     }
 	
 	@IBAction func genreButtonAction(_ sender: Any) {

@@ -56,10 +56,16 @@ class EventsModel {
                                     
                                     let eventDistanceFromUser = (event["distance"] as! Double).roundTo(places: 2)
                                     
-                                    let newEvent = EventEntity(name: eventName, id: eventID, url: eventURL, genres: genreArray, distanceFromUser: eventDistanceFromUser, eventLocation: eventLocation)
+                                    let eventTicketPrice = Double(arc4random_uniform(100) + 16)
+                                    
+                                    
+                                    let newEvent = EventEntity(name: eventName, id: eventID, url: eventURL, genres: genreArray, distanceFromUser: eventDistanceFromUser, eventLocation: eventLocation, ticketPrice: eventTicketPrice)
                                     self.events!.append(newEvent)
                                 }
                             }
+//                            getPrice(ForEvent: self.events!.first!, WithSuccess: { (priceString) in
+//                                print(priceString)
+//                            })
                             print(self.events!.count)
                             NotificationCenter.default.post(name: NotificationName.eventsReceived.realName, object: nil)
                         }
