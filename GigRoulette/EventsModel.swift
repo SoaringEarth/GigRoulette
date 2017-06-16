@@ -36,25 +36,29 @@ class EventsModel {
                     if let embeddedData = serializedData["_embedded"] {
                         if let eventData = embeddedData["events"] {
                             for event in eventData as! [AnyObject] {
-                                let eventName = event["name"] as! String
-                                let eventID = event["id"] as! String
-                                let eventURL = event["url"] as! String
                                 
-                                var genreArray:[GenreEntity] = []
-                                for genre in (event["classifications"] as! [AnyObject]) {
-                                    let eventGenreName = (genre["genre"] as! [String : AnyObject])["name"] as! String
-                                    let eventGenreID = (genre["genre"] as! [String : AnyObject])["id"] as! String
-                                    let newGenre = GenreEntity(name: eventGenreName, id: eventGenreID)
-                                    genreArray.append(newGenre)
+                                if ((event["dates"] as! [String : AnyObject])["status"] as! [String : AnyObject])["code"] as! String == "onsale" {
+                                    let eventName = event["name"] as! String
+                                    let eventID = event["id"] as! String
+                                    let eventURL = event["url"] as! String
+                                    
+                                    var genreArray:[GenreEntity] = []
+                                    for genre in (event["classifications"] as! [AnyObject]) {
+                                        let eventGenreName = (genre["genre"] as! [String : AnyObject])["name"] as! String
+                                        let eventGenreID = (genre["genre"] as! [String : AnyObject])["id"] as! String
+                                        let newGenre = GenreEntity(name: eventGenreName, id: eventGenreID)
+                                        genreArray.append(newGenre)
+                                    }
+                                    
+                                    let eventLat: String = (((((event["_embedded"] as! [String : AnyObject])["venues"] as! [AnyObject]).first as! [String : AnyObject])["location"] as! [String : AnyObject])["latitude"] as! String)
+                                    let eventLon: String = (((((event["_embedded"] as! [String : AnyObject])["venues"] as! [AnyObject]).first as! [String : AnyObject])["location"] as! [String : AnyObject])["longitude"] as! String)
+                                    let eventLocation = StartPoint(lat: eventLat, lon: eventLon, postCode: "")
+                                    
+                                    let eventDistanceFromUser = (event["distance"] as! Double).roundTo(places: 2)
+                                    
+                                    let newEvent = EventEntity(name: eventName, id: eventID, url: eventURL, genres: genreArray, distanceFromUser: eventDistanceFromUser, eventLocation: StartPoint(lat: 0.0, lon: 0.0, postCode: ""))
+                                    self.events!.append(newEvent)
                                 }
-                                
-                                
-                                // Filter based on ticket sale status
-                                
-                                // get distance from user
-                                
-                                let newEvent = EventEntity(name: eventName, id: eventID, url: eventURL, genres: genreArray)
-                                self.events!.append(newEvent)
                             }
                             print(self.events!.count)
                             NotificationCenter.default.post(name: NotificationName.eventsReceived.realName, object: nil)
