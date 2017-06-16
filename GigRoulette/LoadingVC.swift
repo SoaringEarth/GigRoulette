@@ -19,7 +19,7 @@ class LoadingVC: UIViewController {
         
         animateIconOut()
         
-        let timer = Timer.scheduledTimer(withTimeInterval: 5.4, repeats: false) { (timer) in
+        let timer = Timer.scheduledTimer(withTimeInterval: 5.9, repeats: false) { (timer) in
             
             self.animate = false
             self.stopAnimation()
