@@ -19,45 +19,59 @@ class LoadingVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         purchaseButton.isHidden = true
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
-        animateIconOut()
+        // TODO: Add more tickets to make it look busier
+//        for i in 0...10 {
+//            if let ticket = icon {
+//                ticket.frame.origin.x += CGFloat(i * 64)
+//                view.addSubview(ticket)
+//
+//                perform(#selector(LoadingVC.animate(Ticket:)), with: ticket, afterDelay: 0.0)
+//            }
+//        }
+        
+        animate(Ticket: self.icon)
+    }
+    
+    @objc func animate(Ticket ticket: UIView) {
+        animateIconViewOut(IconViewToAnimate: ticket)
         
         let _ = Timer.scheduledTimer(withTimeInterval: 5.9, repeats: false) { (timer) in
-            
             self.animate = false
-            self.stopAnimation()
+            self.stopAnimation(ForView: ticket)
         }
-        
     }
     
-    func animateIconIn() {
+    func animateIconViewIn(IconViewToAnimate iconView: UIView) {
         guard animate == true else { return }
         UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseInOut, animations: {
-            self.icon.alpha = 1
-            self.icon.transform = CGAffineTransform.init(translationX: -self.view.frame.width/1.5, y: 0)
+            iconView.alpha = 1
+            iconView.transform = CGAffineTransform.init(translationX: -self.view.frame.width/1.5, y: 0)
         }) { (success) in
-            self.animateIconOut()
-            
+            self.animateIconViewOut(IconViewToAnimate: iconView)
         }
-        
     }
     
-    func animateIconOut() {
+    func animateIconViewOut(IconViewToAnimate iconView: UIView) {
         guard animate == true else { return }
         UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseInOut, animations: {
-            self.icon.alpha = 0.2
-            self.icon.transform = CGAffineTransform.init(translationX: -self.view.frame.width/1.5, y: 0)
+            iconView.alpha = 0.2
+            iconView.transform = CGAffineTransform.init(translationX: -self.view.frame.width/1.5, y: 0)
         }) { (success) in
-            self.icon.transform = CGAffineTransform.init(translationX: self.view.frame.width, y: 0)
-            self.animateIconIn()
+            iconView.transform = CGAffineTransform.init(translationX: self.view.frame.width, y: 0)
+            self.animateIconViewIn(IconViewToAnimate: iconView)
         }
         
     }
     
-    func stopAnimation() {
+    func stopAnimation(ForView view: UIView) {
         UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseInOut, animations: {
-            self.icon.alpha = 1.0
-            self.icon.transform = CGAffineTransform.identity
+            view.alpha = 1.0
+            view.transform = CGAffineTransform.identity
         }) { (success) in
             self.purchaseButton.isHidden = false
         }
