@@ -56,126 +56,213 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background-blurred" translatesAutoresizingMaskIntoConstraints="NO" id="boZ-rl-SCO">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Filters" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nb8-hx-Y8Z">
-                                <rect key="frame" x="16" y="20" width="288" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gza-bI-7hZ">
-                                <rect key="frame" x="135" y="77" width="51" height="73"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="Icon_unselected_Sport"/>
-                                <state key="selected" image="Icon_selected_Sport"/>
-                                <connections>
-                                    <action selector="genreButtonAction:" destination="Bl4-h5-EGt" eventType="touchUpInside" id="G0T-z3-eTn"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ETJ-3j-9f5">
-                                <rect key="frame" x="228" y="77" width="51" height="73"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="Icon_unselected_Theatre"/>
-                                <state key="selected" image="Icon_selected_Theatre"/>
-                                <connections>
-                                    <action selector="genreButtonAction:" destination="Bl4-h5-EGt" eventType="touchUpInside" id="x4i-mb-azH"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6E6-fq-fN9">
-                                <rect key="frame" x="37" y="189" width="51" height="73"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="Icon_unselected_Art"/>
-                                <state key="selected" image="Icon_selected_Art"/>
-                                <connections>
-                                    <action selector="genreButtonAction:" destination="Bl4-h5-EGt" eventType="touchUpInside" id="upi-Sh-ggH"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dr9-Ra-uFs">
-                                <rect key="frame" x="135" y="189" width="51" height="73"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="Icon_unselected_Comedy"/>
-                                <state key="selected" image="Icon_selected_Comedy"/>
-                                <connections>
-                                    <action selector="genreButtonAction:" destination="Bl4-h5-EGt" eventType="touchUpInside" id="waG-Xm-Far"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Anh-BG-SEf">
-                                <rect key="frame" x="228" y="189" width="51" height="73"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="Icon_unselected_Family"/>
-                                <state key="selected" image="Icon_selected_Family"/>
-                                <connections>
-                                    <action selector="genreButtonAction:" destination="Bl4-h5-EGt" eventType="touchUpInside" id="avv-ws-Qco"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kos-cG-AUS">
-                                <rect key="frame" x="139" y="400" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hXj-gv-IkD">
-                                <rect key="frame" x="37" y="452" width="67" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="Icon_unselected_£"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cu2-Uf-SAZ">
-                                <rect key="frame" x="127" y="452" width="67" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="Icon_unselected_££"/>
-                            </button>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tDg-jb-BiQ">
-                                <rect key="frame" x="37" y="77" width="51" height="73"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="Icon_unselected_music"/>
-                                <state key="selected" image="Icon_selected_music"/>
-                                <connections>
-                                    <action selector="genreButtonAction:" destination="Bl4-h5-EGt" eventType="touchUpInside" id="X3G-eS-lxh"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="When" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="60b-4t-z0m">
-                                <rect key="frame" x="37" y="289" width="242" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" tag="7" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1aP-iJ-s7v">
-                                <rect key="frame" x="37" y="328" width="68" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="Icon_unselected_now"/>
-                                <state key="selected" image="Icon_selected_now"/>
-                                <connections>
-                                    <action selector="genreButtonAction:" destination="Bl4-h5-EGt" eventType="touchUpInside" id="b5w-Ym-dVU"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mVi-zS-ShL">
-                                <rect key="frame" x="126" y="328" width="68" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="Icon_unselected_tomorrow"/>
-                                <state key="selected" image="Icon_selected_tomorrow"/>
-                                <connections>
-                                    <action selector="genreButtonAction:" destination="Bl4-h5-EGt" eventType="touchUpInside" id="Gho-3S-bgS"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="9" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dwy-XF-5Q2">
-                                <rect key="frame" x="211" y="328" width="68" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="Icon_unselected_anytime"/>
-                                <state key="selected" image="Icon_selected_anytime"/>
-                                <connections>
-                                    <action selector="genreButtonAction:" destination="Bl4-h5-EGt" eventType="touchUpInside" id="P40-Ia-Iel"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9rn-an-wBp">
-                                <rect key="frame" x="212" y="452" width="67" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="Icon_unselected_£££"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bgo-X0-j3V">
-                                <rect key="frame" x="37" y="509" width="247" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5q2-oI-21x" userLabel="FilterView">
+                                <rect key="frame" x="16" y="16" width="288" height="259"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filters" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nb8-hx-Y8Z">
+                                        <rect key="frame" x="16" y="16" width="256" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" tag="1" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tDg-jb-BiQ" customClass="TintedToggleButton" customModule="GigRoulette" customModuleProvider="target">
+                                        <rect key="frame" x="15" y="53" width="54" height="72"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="72" id="ZWl-Rh-Jbk"/>
+                                            <constraint firstAttribute="width" constant="54" id="b6r-KW-che"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" image="Icon_unselected_music"/>
+                                        <connections>
+                                            <action selector="genreButtonAction:" destination="Bl4-h5-EGt" eventType="touchUpInside" id="X3G-eS-lxh"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gza-bI-7hZ" customClass="TintedToggleButton" customModule="GigRoulette" customModuleProvider="target">
+                                        <rect key="frame" x="117" y="53" width="54" height="72"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" image="Icon_unselected_Sport"/>
+                                        <connections>
+                                            <action selector="genreButtonAction:" destination="Bl4-h5-EGt" eventType="touchUpInside" id="G0T-z3-eTn"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ETJ-3j-9f5" customClass="TintedToggleButton" customModule="GigRoulette" customModuleProvider="target">
+                                        <rect key="frame" x="219" y="53" width="54" height="72"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" image="Icon_unselected_Theatre"/>
+                                        <connections>
+                                            <action selector="genreButtonAction:" destination="Bl4-h5-EGt" eventType="touchUpInside" id="x4i-mb-azH"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="4" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6E6-fq-fN9" customClass="TintedToggleButton" customModule="GigRoulette" customModuleProvider="target">
+                                        <rect key="frame" x="15" y="141" width="54" height="72"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" image="Icon_unselected_Art"/>
+                                        <connections>
+                                            <action selector="genreButtonAction:" destination="Bl4-h5-EGt" eventType="touchUpInside" id="upi-Sh-ggH"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="5" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dr9-Ra-uFs" customClass="TintedToggleButton" customModule="GigRoulette" customModuleProvider="target">
+                                        <rect key="frame" x="117" y="141" width="54" height="72"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" image="Icon_unselected_Comedy"/>
+                                        <connections>
+                                            <action selector="genreButtonAction:" destination="Bl4-h5-EGt" eventType="touchUpInside" id="waG-Xm-Far"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="6" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Anh-BG-SEf" customClass="TintedToggleButton" customModule="GigRoulette" customModuleProvider="target">
+                                        <rect key="frame" x="219" y="141" width="54" height="72"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" image="Icon_unselected_Family"/>
+                                        <connections>
+                                            <action selector="genreButtonAction:" destination="Bl4-h5-EGt" eventType="touchUpInside" id="avv-ws-Qco"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="ETJ-3j-9f5" firstAttribute="leading" secondItem="gza-bI-7hZ" secondAttribute="trailing" constant="48" id="0CU-Xi-iXm"/>
+                                    <constraint firstItem="Anh-BG-SEf" firstAttribute="height" secondItem="Dr9-Ra-uFs" secondAttribute="height" id="5r7-zd-hnZ"/>
+                                    <constraint firstItem="Dr9-Ra-uFs" firstAttribute="width" secondItem="6E6-fq-fN9" secondAttribute="width" id="5xv-eL-09s"/>
+                                    <constraint firstItem="gza-bI-7hZ" firstAttribute="height" secondItem="tDg-jb-BiQ" secondAttribute="height" id="BXl-pD-Krp"/>
+                                    <constraint firstItem="Anh-BG-SEf" firstAttribute="width" secondItem="Dr9-Ra-uFs" secondAttribute="width" id="D3h-DO-spd"/>
+                                    <constraint firstItem="6E6-fq-fN9" firstAttribute="top" secondItem="tDg-jb-BiQ" secondAttribute="bottom" constant="16" id="DD0-Dy-cnf"/>
+                                    <constraint firstItem="gza-bI-7hZ" firstAttribute="top" secondItem="tDg-jb-BiQ" secondAttribute="top" id="FA7-fH-ApB"/>
+                                    <constraint firstAttribute="trailing" secondItem="Nb8-hx-Y8Z" secondAttribute="trailing" constant="16" id="Fqk-0g-PKi"/>
+                                    <constraint firstItem="ETJ-3j-9f5" firstAttribute="top" secondItem="gza-bI-7hZ" secondAttribute="top" id="G5q-SN-Bej"/>
+                                    <constraint firstItem="Nb8-hx-Y8Z" firstAttribute="top" secondItem="5q2-oI-21x" secondAttribute="top" constant="16" id="NzP-Mf-MJ6"/>
+                                    <constraint firstItem="Dr9-Ra-uFs" firstAttribute="height" secondItem="6E6-fq-fN9" secondAttribute="height" id="OFg-UY-Tde"/>
+                                    <constraint firstItem="gza-bI-7hZ" firstAttribute="centerX" secondItem="5q2-oI-21x" secondAttribute="centerX" id="Oxo-CE-l6T"/>
+                                    <constraint firstItem="Dr9-Ra-uFs" firstAttribute="top" secondItem="6E6-fq-fN9" secondAttribute="top" id="Q2B-h4-Tkr"/>
+                                    <constraint firstItem="Nb8-hx-Y8Z" firstAttribute="leading" secondItem="5q2-oI-21x" secondAttribute="leading" constant="16" id="TDR-X5-VEJ"/>
+                                    <constraint firstItem="tDg-jb-BiQ" firstAttribute="top" secondItem="Nb8-hx-Y8Z" secondAttribute="bottom" constant="16" id="U1a-yD-MCM"/>
+                                    <constraint firstItem="gza-bI-7hZ" firstAttribute="leading" secondItem="tDg-jb-BiQ" secondAttribute="trailing" constant="48" id="WX8-Fa-Rdd"/>
+                                    <constraint firstItem="gza-bI-7hZ" firstAttribute="width" secondItem="tDg-jb-BiQ" secondAttribute="width" id="bIZ-2U-Ey8"/>
+                                    <constraint firstItem="ETJ-3j-9f5" firstAttribute="height" secondItem="gza-bI-7hZ" secondAttribute="height" id="cfP-52-60U"/>
+                                    <constraint firstItem="Dr9-Ra-uFs" firstAttribute="leading" secondItem="6E6-fq-fN9" secondAttribute="trailing" constant="48" id="lUf-Ca-NkN"/>
+                                    <constraint firstItem="ETJ-3j-9f5" firstAttribute="width" secondItem="gza-bI-7hZ" secondAttribute="width" id="p7l-FA-JQ4"/>
+                                    <constraint firstItem="Dr9-Ra-uFs" firstAttribute="centerX" secondItem="5q2-oI-21x" secondAttribute="centerX" id="pWE-QN-tIP"/>
+                                    <constraint firstItem="Anh-BG-SEf" firstAttribute="top" secondItem="Dr9-Ra-uFs" secondAttribute="top" id="r0T-Ea-II9"/>
+                                    <constraint firstItem="6E6-fq-fN9" firstAttribute="height" secondItem="ETJ-3j-9f5" secondAttribute="height" id="vEG-cr-e9Z"/>
+                                    <constraint firstItem="6E6-fq-fN9" firstAttribute="width" secondItem="ETJ-3j-9f5" secondAttribute="width" id="zD6-76-VHo"/>
+                                    <constraint firstItem="Anh-BG-SEf" firstAttribute="leading" secondItem="Dr9-Ra-uFs" secondAttribute="trailing" constant="48" id="zWX-2b-1ol"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tdw-2R-U2n" userLabel="TimeView">
+                                <rect key="frame" x="16" y="291" width="288" height="88"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="When" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="60b-4t-z0m">
+                                        <rect key="frame" x="16" y="0.0" width="256" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="PpY-pH-qFa"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mVi-zS-ShL" customClass="TintedToggleButton" customModule="GigRoulette" customModuleProvider="target">
+                                        <rect key="frame" x="110" y="40" width="68" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="68" id="lPK-K4-Kzl"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" image="Icon_unselected_tomorrow"/>
+                                        <state key="selected" image="Icon_selected_tomorrow"/>
+                                        <connections>
+                                            <action selector="genreButtonAction:" destination="Bl4-h5-EGt" eventType="touchUpInside" id="Gho-3S-bgS"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dwy-XF-5Q2" customClass="TintedToggleButton" customModule="GigRoulette" customModuleProvider="target">
+                                        <rect key="frame" x="202" y="40" width="68" height="32"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" image="Icon_unselected_anytime"/>
+                                        <state key="selected" image="Icon_selected_anytime"/>
+                                        <connections>
+                                            <action selector="genreButtonAction:" destination="Bl4-h5-EGt" eventType="touchUpInside" id="P40-Ia-Iel"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1aP-iJ-s7v" customClass="TintedToggleButton" customModule="GigRoulette" customModuleProvider="target">
+                                        <rect key="frame" x="18" y="40" width="68" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="Rkv-67-2JE"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" image="Icon_unselected_now"/>
+                                        <state key="selected" image="Icon_selected_now"/>
+                                        <connections>
+                                            <action selector="genreButtonAction:" destination="Bl4-h5-EGt" eventType="touchUpInside" id="b5w-Ym-dVU"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="dwy-XF-5Q2" firstAttribute="width" secondItem="mVi-zS-ShL" secondAttribute="width" id="4WD-ps-oxM"/>
+                                    <constraint firstAttribute="trailing" secondItem="60b-4t-z0m" secondAttribute="trailing" constant="16" id="4g6-If-ilQ"/>
+                                    <constraint firstItem="60b-4t-z0m" firstAttribute="top" secondItem="Tdw-2R-U2n" secondAttribute="top" id="DbY-Ue-abQ"/>
+                                    <constraint firstItem="dwy-XF-5Q2" firstAttribute="height" secondItem="mVi-zS-ShL" secondAttribute="height" id="Hvc-JK-sg2"/>
+                                    <constraint firstItem="mVi-zS-ShL" firstAttribute="leading" secondItem="1aP-iJ-s7v" secondAttribute="trailing" constant="24" id="Nx7-sP-Skg"/>
+                                    <constraint firstItem="dwy-XF-5Q2" firstAttribute="top" secondItem="mVi-zS-ShL" secondAttribute="top" id="SdB-nv-kE2"/>
+                                    <constraint firstItem="mVi-zS-ShL" firstAttribute="height" secondItem="1aP-iJ-s7v" secondAttribute="height" id="Yf0-pv-tPW"/>
+                                    <constraint firstItem="mVi-zS-ShL" firstAttribute="top" secondItem="1aP-iJ-s7v" secondAttribute="top" id="aHX-sj-Zz7"/>
+                                    <constraint firstItem="mVi-zS-ShL" firstAttribute="width" secondItem="1aP-iJ-s7v" secondAttribute="width" id="bte-iB-hW4"/>
+                                    <constraint firstItem="mVi-zS-ShL" firstAttribute="centerX" secondItem="Tdw-2R-U2n" secondAttribute="centerX" id="etA-Oq-CfZ"/>
+                                    <constraint firstItem="60b-4t-z0m" firstAttribute="leading" secondItem="Tdw-2R-U2n" secondAttribute="leading" constant="16" id="gsi-3g-oVt"/>
+                                    <constraint firstItem="1aP-iJ-s7v" firstAttribute="top" secondItem="60b-4t-z0m" secondAttribute="bottom" constant="16" id="tXL-dy-vcn"/>
+                                    <constraint firstAttribute="bottom" secondItem="1aP-iJ-s7v" secondAttribute="bottom" constant="16" id="yxx-oU-1xp"/>
+                                    <constraint firstItem="dwy-XF-5Q2" firstAttribute="leading" secondItem="mVi-zS-ShL" secondAttribute="trailing" constant="24" id="ziO-sS-h66"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wWh-Ig-lp2" userLabel="PriceView">
+                                <rect key="frame" x="16" y="395" width="288" height="85"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kos-cG-AUS">
+                                        <rect key="frame" x="16" y="0.0" width="256" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hXj-gv-IkD" customClass="TintedToggleButton" customModule="GigRoulette" customModuleProvider="target">
+                                        <rect key="frame" x="21" y="37" width="66" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="EEb-yy-x4T"/>
+                                            <constraint firstAttribute="width" constant="66" id="dEw-sF-syb"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" image="Icon_unselected_£"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cu2-Uf-SAZ" customClass="TintedToggleButton" customModule="GigRoulette" customModuleProvider="target">
+                                        <rect key="frame" x="111" y="37" width="66" height="32"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" image="Icon_unselected_££"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9rn-an-wBp" customClass="TintedToggleButton" customModule="GigRoulette" customModuleProvider="target">
+                                        <rect key="frame" x="201" y="37" width="66" height="32"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" image="Icon_unselected_£££"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="hXj-gv-IkD" secondAttribute="bottom" constant="16" id="0jn-uX-YeG"/>
+                                    <constraint firstAttribute="trailing" secondItem="Kos-cG-AUS" secondAttribute="trailing" constant="16" id="2yb-dg-ubN"/>
+                                    <constraint firstItem="hXj-gv-IkD" firstAttribute="top" secondItem="Kos-cG-AUS" secondAttribute="bottom" constant="16" id="61E-Zh-dmm"/>
+                                    <constraint firstItem="Cu2-Uf-SAZ" firstAttribute="width" secondItem="hXj-gv-IkD" secondAttribute="width" id="AD3-xR-s3P"/>
+                                    <constraint firstItem="Kos-cG-AUS" firstAttribute="leading" secondItem="wWh-Ig-lp2" secondAttribute="leading" constant="16" id="CKg-0O-AQC"/>
+                                    <constraint firstItem="9rn-an-wBp" firstAttribute="height" secondItem="Cu2-Uf-SAZ" secondAttribute="height" id="Gcx-YK-teO"/>
+                                    <constraint firstItem="9rn-an-wBp" firstAttribute="top" secondItem="Cu2-Uf-SAZ" secondAttribute="top" id="Khr-z8-dX9"/>
+                                    <constraint firstItem="9rn-an-wBp" firstAttribute="leading" secondItem="Cu2-Uf-SAZ" secondAttribute="trailing" constant="24" id="RZo-t4-huI"/>
+                                    <constraint firstItem="9rn-an-wBp" firstAttribute="width" secondItem="Cu2-Uf-SAZ" secondAttribute="width" id="TsL-mE-Kbc"/>
+                                    <constraint firstItem="Kos-cG-AUS" firstAttribute="top" secondItem="wWh-Ig-lp2" secondAttribute="top" id="cVD-uE-4sO"/>
+                                    <constraint firstItem="Cu2-Uf-SAZ" firstAttribute="height" secondItem="hXj-gv-IkD" secondAttribute="height" id="dcK-iH-gVM"/>
+                                    <constraint firstItem="Cu2-Uf-SAZ" firstAttribute="centerX" secondItem="wWh-Ig-lp2" secondAttribute="centerX" id="kA2-TF-FpQ"/>
+                                    <constraint firstItem="Cu2-Uf-SAZ" firstAttribute="leading" secondItem="hXj-gv-IkD" secondAttribute="trailing" constant="24" id="rHN-wt-coh"/>
+                                    <constraint firstItem="Cu2-Uf-SAZ" firstAttribute="top" secondItem="hXj-gv-IkD" secondAttribute="top" id="rgM-Z2-kn3"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bgo-X0-j3V">
+                                <rect key="frame" x="32" y="496" width="256" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="dfK-XB-fZ0"/>
+                                </constraints>
                                 <state key="normal" backgroundImage="findmegig"/>
                                 <connections>
                                     <action selector="partyAction:" destination="Bl4-h5-EGt" eventType="touchUpInside" id="lGQ-8r-sUP"/>
@@ -184,10 +271,23 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="bgo-X0-j3V" secondAttribute="trailing" constant="32" id="2YM-Ol-O4m"/>
                             <constraint firstItem="boZ-rl-SCO" firstAttribute="top" secondItem="S2l-U1-0rn" secondAttribute="top" id="2s5-bf-Vlk"/>
+                            <constraint firstItem="Tdw-2R-U2n" firstAttribute="leading" secondItem="S2l-U1-0rn" secondAttribute="leading" constant="16" id="Bnm-w9-CbW"/>
+                            <constraint firstItem="wWh-Ig-lp2" firstAttribute="top" secondItem="Tdw-2R-U2n" secondAttribute="bottom" constant="16" id="EZ2-fk-eHh"/>
+                            <constraint firstAttribute="trailing" secondItem="Tdw-2R-U2n" secondAttribute="trailing" constant="16" id="LBz-nK-7g1"/>
+                            <constraint firstItem="5q2-oI-21x" firstAttribute="leading" secondItem="S2l-U1-0rn" secondAttribute="leading" constant="16" id="Rom-wN-Sbn"/>
+                            <constraint firstAttribute="trailing" secondItem="5q2-oI-21x" secondAttribute="trailing" constant="16" id="Ukh-ms-TAq"/>
                             <constraint firstAttribute="trailing" secondItem="boZ-rl-SCO" secondAttribute="trailing" id="aNo-2Q-Hfs"/>
+                            <constraint firstItem="5q2-oI-21x" firstAttribute="top" secondItem="S2l-U1-0rn" secondAttribute="top" constant="16" id="cyv-ff-fRp"/>
+                            <constraint firstItem="wWh-Ig-lp2" firstAttribute="leading" secondItem="S2l-U1-0rn" secondAttribute="leading" constant="16" id="dqi-ib-Wna"/>
+                            <constraint firstItem="bgo-X0-j3V" firstAttribute="top" secondItem="wWh-Ig-lp2" secondAttribute="bottom" constant="16" id="fPm-nM-eLe"/>
+                            <constraint firstItem="bgo-X0-j3V" firstAttribute="leading" secondItem="S2l-U1-0rn" secondAttribute="leading" constant="32" id="g4c-rl-UtZ"/>
                             <constraint firstItem="boZ-rl-SCO" firstAttribute="leading" secondItem="S2l-U1-0rn" secondAttribute="leading" id="hID-8Z-vWk"/>
+                            <constraint firstItem="Tdw-2R-U2n" firstAttribute="top" secondItem="5q2-oI-21x" secondAttribute="bottom" constant="16" id="lZN-Li-8fa"/>
+                            <constraint firstAttribute="bottom" secondItem="bgo-X0-j3V" secondAttribute="bottom" constant="32" id="mBk-Rw-FDe"/>
                             <constraint firstAttribute="bottom" secondItem="boZ-rl-SCO" secondAttribute="bottom" id="voO-mx-RYp"/>
+                            <constraint firstAttribute="trailing" secondItem="wWh-Ig-lp2" secondAttribute="trailing" constant="16" id="zVy-Gi-pgA"/>
                         </constraints>
                     </view>
                     <size key="freeformSize" width="320" height="568"/>
@@ -229,13 +329,7 @@
     </scenes>
     <resources>
         <image name="Background-blurred" width="750" height="1334"/>
-        <image name="Icon_selected_Art" width="102" height="154"/>
-        <image name="Icon_selected_Comedy" width="104" height="154"/>
-        <image name="Icon_selected_Family" width="100" height="154"/>
-        <image name="Icon_selected_Sport" width="102" height="146"/>
-        <image name="Icon_selected_Theatre" width="100" height="146"/>
         <image name="Icon_selected_anytime" width="134" height="52"/>
-        <image name="Icon_selected_music" width="102" height="146"/>
         <image name="Icon_selected_now" width="136" height="52"/>
         <image name="Icon_selected_tomorrow" width="208" height="52"/>
         <image name="Icon_unselected_Art" width="102" height="154"/>
