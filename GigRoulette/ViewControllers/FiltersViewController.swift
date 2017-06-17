@@ -56,9 +56,9 @@ class FiltersViewController: UIViewController {
 	}
     
 	@IBAction func partyAction(_ sender: Any) {
-        if eventManager.events.count > 0 {
+        if eventManager.getEvents().count > 0 {
             let loadingVC = LoadingVC(nibName: "LoadingVC", bundle: nil)
-            loadingVC.chosenEvent = eventManager.events.first
+            loadingVC.chosenEvent = eventManager.getEvents().first
             show(loadingVC, sender: self)
         }
 	}

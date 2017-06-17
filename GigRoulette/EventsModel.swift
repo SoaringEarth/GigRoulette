@@ -16,23 +16,18 @@ class EventsModel {
     var events: [EventEntity] = []
     
     init() {
-        self.events = initEvents()
+        initEvents()
     }
     
-    fileprivate func initEvents() -> [EventEntity] {
-        var localEvents: [EventEntity] = []
+    fileprivate func initEvents() {
         if let location = LocationTracker.sharedInstance.currentLocation {
             GeoHashAPIHandler.getCountryCode(FromLocation: location, withSuccess: { (countryCode) in
                 GeoHashAPIHandler.getGeoHash(ForLocation: location, WithSuccess: { (geoHash) in
                     self.getAllEvents(WithGeoHash: geoHash, AndCountryCode: countryCode, WithSuccess: { (events) in
-                        localEvents = events
+                        self.events = events
                     })
                 })
             })
-            
-            return localEvents
-        } else {
-            return localEvents
         }
     }
     

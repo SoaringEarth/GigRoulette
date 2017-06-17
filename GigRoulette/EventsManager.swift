@@ -10,22 +10,15 @@ import Foundation
 
 class EventsManager {
     
-    static let sharedInstance = EventsManager()
-    
     let eventsModel = EventsModel.sharedInstance
-    var events: [EventEntity]
     
-    init() {
-        self.events = eventsModel.events
-    }
     
     func getEvents() -> [EventEntity] {
-        return self.events
+        return eventsModel.events
     }
     
     func getRandomEvent() -> EventEntity {
         
-        return events[0]
-        
+        return eventsModel.events[0]
     }
 }
