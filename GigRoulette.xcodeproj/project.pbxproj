@@ -18,6 +18,15 @@
 		047B8AF51EF3F6200024C293 /* EventsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047B8AF41EF3F6200024C293 /* EventsManager.swift */; };
 		047B8AF71EF3FFBA0024C293 /* EventsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047B8AF61EF3FFBA0024C293 /* EventsModel.swift */; };
 		047B8AF91EF41BB10024C293 /* PriceStuff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047B8AF81EF41BB10024C293 /* PriceStuff.swift */; };
+		04F074331EF549F200670F28 /* ChosenEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047B8B061EF548580024C293 /* ChosenEventViewController.swift */; };
+		04F074341EF549F200670F28 /* ChosenEventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 047B8B0D1EF548590024C293 /* ChosenEventViewController.xib */; };
+		04F074351EF549F200670F28 /* FiltersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047B8B081EF548580024C293 /* FiltersViewController.swift */; };
+		04F074361EF549F200670F28 /* LoadingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047B8B0A1EF548580024C293 /* LoadingVC.swift */; };
+		04F074371EF549F200670F28 /* LoadingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 047B8B091EF548580024C293 /* LoadingVC.xib */; };
+		04F074381EF549F200670F28 /* RouletteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047B8B0C1EF548590024C293 /* RouletteViewController.swift */; };
+		04F074391EF549F200670F28 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047B8B0E1EF548590024C293 /* SplashViewController.swift */; };
+		04F0743A1EF549F200670F28 /* StepsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047B8B0B1EF548580024C293 /* StepsVC.swift */; };
+		04F0743B1EF549F200670F28 /* StepsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 047B8B071EF548580024C293 /* StepsVC.xib */; };
 		644A007A1EF4118A0001A6C6 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644A00791EF4118A0001A6C6 /* Globals.swift */; };
 		644A00851EF423B10001A6C6 /* LegCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644A00831EF423B10001A6C6 /* LegCell.swift */; };
 		644A00861EF423B10001A6C6 /* LegCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 644A00841EF423B10001A6C6 /* LegCell.xib */; };
@@ -45,7 +54,7 @@
 		047B8B0B1EF548580024C293 /* StepsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StepsVC.swift; path = GigRoulette/ViewControllers/StepsVC.swift; sourceTree = SOURCE_ROOT; };
 		047B8B0C1EF548590024C293 /* RouletteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RouletteViewController.swift; path = GigRoulette/ViewControllers/RouletteViewController.swift; sourceTree = SOURCE_ROOT; };
 		047B8B0D1EF548590024C293 /* ChosenEventViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ChosenEventViewController.xib; path = GigRoulette/ViewControllers/ChosenEventViewController.xib; sourceTree = SOURCE_ROOT; };
-		047B8B0E1EF548590024C293 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SplashViewController.swift; path = GigRoulette/ViewControllers/SplashViewController.swift; sourceTree = SOURCE_ROOT; };
+		047B8B0E1EF548590024C293 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		644A00791EF4118A0001A6C6 /* Globals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
 		644A00831EF423B10001A6C6 /* LegCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegCell.swift; sourceTree = "<group>"; };
 		644A00841EF423B10001A6C6 /* LegCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LegCell.xib; sourceTree = "<group>"; };
@@ -114,8 +123,7 @@
 				047B8B0B1EF548580024C293 /* StepsVC.swift */,
 				047B8B071EF548580024C293 /* StepsVC.xib */,
 			);
-			name = ViewControllers;
-			path = "New Group";
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,7 +185,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				644A00861EF423B10001A6C6 /* LegCell.xib in Resources */,
+				04F0743B1EF549F200670F28 /* StepsVC.xib in Resources */,
+				04F074371EF549F200670F28 /* LoadingVC.xib in Resources */,
 				04705D0C1EF32B230011B236 /* LaunchScreen.storyboard in Resources */,
+				04F074341EF549F200670F28 /* ChosenEventViewController.xib in Resources */,
 				04705D091EF32B230011B236 /* Assets.xcassets in Resources */,
 				04705D071EF32B230011B236 /* Main.storyboard in Resources */,
 			);
@@ -190,15 +201,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04F0743A1EF549F200670F28 /* StepsVC.swift in Sources */,
 				0411843D1EF3C2050054A00C /* GeoHashAPIStuff.swift in Sources */,
 				047B8AF51EF3F6200024C293 /* EventsManager.swift in Sources */,
+				04F074361EF549F200670F28 /* LoadingVC.swift in Sources */,
 				047B8AF71EF3FFBA0024C293 /* EventsModel.swift in Sources */,
 				041184321EF3B71C0054A00C /* APIStuff.swift in Sources */,
 				644A00851EF423B10001A6C6 /* LegCell.swift in Sources */,
+				04F074381EF549F200670F28 /* RouletteViewController.swift in Sources */,
 				644A007A1EF4118A0001A6C6 /* Globals.swift in Sources */,
 				047B8AF31EF3F3A60024C293 /* TFLApiStuff.swift in Sources */,
+				04F074391EF549F200670F28 /* SplashViewController.swift in Sources */,
+				04F074331EF549F200670F28 /* ChosenEventViewController.swift in Sources */,
 				047B8AF91EF41BB10024C293 /* PriceStuff.swift in Sources */,
 				041184341EF3B7380054A00C /* EntityStuff.swift in Sources */,
+				04F074351EF549F200670F28 /* FiltersViewController.swift in Sources */,
 				04705D021EF32B230011B236 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
