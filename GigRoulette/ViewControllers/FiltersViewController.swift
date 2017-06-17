@@ -34,8 +34,8 @@ class FiltersViewController: UIViewController {
                 
         if let location = LocationTracker.sharedInstance.getCurrentLocation() {
             currentLocation = location
-            getCountryCode(FromLocation: currentLocation, withSuccess: { (countryCode) in
-                getGeoHash(ForLocation: self.currentLocation, WithSuccess: { (geoHash) in
+            GeoHashAPIHandler.getCountryCode(FromLocation: currentLocation, withSuccess: { (countryCode) in
+                GeoHashAPIHandler.getGeoHash(ForLocation: self.currentLocation, WithSuccess: { (geoHash) in
                     self.currentGeoHash = geoHash
                     self.eventManager = EventsManager(WithGeoHash: geoHash, AndCountryCode: countryCode)
                 })
