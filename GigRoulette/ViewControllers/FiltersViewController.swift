@@ -13,7 +13,7 @@ class FiltersViewController: UIViewController {
 
     var currentLocation: CLLocation = CLLocation()
     var currentGeoHash: String = ""
-    var eventManager: EventsManager?
+    var eventManager = EventsManager()
     
     @IBOutlet weak var userlocationLabel: UILabel!
     
@@ -34,12 +34,6 @@ class FiltersViewController: UIViewController {
                 
         if let location = LocationTracker.sharedInstance.getCurrentLocation() {
             currentLocation = location
-            GeoHashAPIHandler.getCountryCode(FromLocation: currentLocation, withSuccess: { (countryCode) in
-                GeoHashAPIHandler.getGeoHash(ForLocation: self.currentLocation, WithSuccess: { (geoHash) in
-                    self.currentGeoHash = geoHash
-                    self.eventManager = EventsManager(WithGeoHash: geoHash, AndCountryCode: countryCode)
-                })
-            })
         }
         
         getDirections(FromStartPoint: Point(lat: "51.5412969", lon: "-0.0954148"), ToEndPoint: Point(lat: "51.5388457", lon: "-0.1367267"))
@@ -62,9 +56,9 @@ class FiltersViewController: UIViewController {
 	}
     
 	@IBAction func partyAction(_ sender: Any) {
-        if eventManager?.events != nil {
+        if eventManager.events.count > 0 {
             let loadingVC = LoadingVC(nibName: "LoadingVC", bundle: nil)
-            loadingVC.chosenEvent = eventManager!.events!.first
+            loadingVC.chosenEvent = eventManager.events.first
             show(loadingVC, sender: self)
         }
 	}

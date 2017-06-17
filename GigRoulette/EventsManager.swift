@@ -10,28 +10,22 @@ import Foundation
 
 class EventsManager {
     
-    let eventsModel: EventsModel
+    static let sharedInstance = EventsManager()
     
-    init(WithGeoHash geoHash: String, AndCountryCode countryCode: String) {
-        eventsModel = EventsModel(WithGeoHash: geoHash, AndCountryCode: countryCode)
+    let eventsModel = EventsModel.sharedInstance
+    var events: [EventEntity]
+    
+    init() {
+        self.events = eventsModel.events
     }
     
-    var events: [EventEntity]? = []
-    var genres: [GenreEntity]? = []
-    
-    func getEvents() {
-        events = eventsModel.events
+    func getEvents() -> [EventEntity] {
+        return self.events
     }
     
     func getRandomEvent() -> EventEntity {
         
-        return events![0]
-        
-    }
-    
-    private func getGenres(FromEvents: [EventEntity]) {
-        
-        
+        return events[0]
         
     }
 }
