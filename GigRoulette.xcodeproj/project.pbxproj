@@ -98,7 +98,7 @@
 			children = (
 				04F0743E1EF54B4900670F28 /* Managers */,
 				04705D011EF32B230011B236 /* AppDelegate.swift */,
-				04F074461EF5692F00670F28 /* Class Extentions */,
+				04F074461EF5692F00670F28 /* Class Extensions */,
 				04F0743D1EF54AAE00670F28 /* API Handlers */,
 				047B8AF61EF3FFBA0024C293 /* EventsModel.swift */,
 				047B8AF41EF3F6200024C293 /* EventsManager.swift */,
@@ -159,12 +159,12 @@
 			name = "UI Elements";
 			sourceTree = "<group>";
 		};
-		04F074461EF5692F00670F28 /* Class Extentions */ = {
+		04F074461EF5692F00670F28 /* Class Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				04F074441EF5692700670F28 /* Double+RoundTo.swift */,
 			);
-			path = "Class Extentions";
+			path = "Class Extensions";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
