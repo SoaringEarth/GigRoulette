@@ -36,7 +36,6 @@ class FiltersViewController: UIViewController {
             currentLocation = location
         }
         
-        getDirections(FromStartPoint: Point(lat: "51.5412969", lon: "-0.0954148"), ToEndPoint: Point(lat: "51.5388457", lon: "-0.1367267"))
 		musicBTN.setTitle("inactive", for: .normal)
 		sportsBTN.setTitle("inactive", for: .normal)
 		comedyBTN.setTitle("inactive", for: .normal)
@@ -59,7 +58,16 @@ class FiltersViewController: UIViewController {
         if eventManager.getEvents().count > 0 {
             let loadingVC = LoadingVC(nibName: "LoadingVC", bundle: nil)
             loadingVC.chosenEvent = eventManager.getEvents().first
-            show(loadingVC, sender: self)
+            
+            if let currentLocation = LocationTracker.sharedInstance.currentLocation {
+                let latString = String(describing: currentLocation.coordinate.latitude)
+                let lonString = String(describing: currentLocation.coordinate.longitude)
+                let startPoint = Point(lat: latString, lon: lonString)
+                getDirections(FromStartPoint: startPoint, ToEndPoint: loadingVC.chosenEvent!.eventLocation, WithSuccess: { (journey) in
+                    loadingVC.journey = journey
+                    self.show(loadingVC, sender: self)
+                })
+            }
         }
 	}
 }

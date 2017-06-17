@@ -43,7 +43,7 @@ struct Point {
     }
 }
 
-func getDirections(FromStartPoint startPoint: Point, ToEndPoint endPoint: Point) {
+func getDirections(FromStartPoint startPoint: Point, ToEndPoint endPoint: Point, WithSuccess success: @escaping (Journey)->()) {
     //https://api.tfl.gov.uk/Journey/JourneyResults/51.5412969%2C-0.0954148/to/51.5388457%2C-0.1367267
     
     let urlRequest = URLRequest(url: URL(string:"https://api.tfl.gov.uk/Journey/JourneyResults/\(startPoint.lat)%2C\(startPoint.lon)/to/\(endPoint.lat)%2C\(endPoint.lon)")!)
@@ -76,7 +76,9 @@ func getDirections(FromStartPoint startPoint: Point, ToEndPoint endPoint: Point)
                 print(theJourney)
                 NotificationCenter.default.post(name: NotificationName.journeyReceived.realName, object: nil)
                 
-                
+                DispatchQueue.main.async {
+                    success(theJourney)
+                }
             } catch {
                 print("Failed to serialize responseData to [String : AnyObject]")
             }

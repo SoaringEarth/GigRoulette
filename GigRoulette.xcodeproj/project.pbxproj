@@ -26,13 +26,11 @@
 		04F074381EF549F200670F28 /* RouletteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047B8B0C1EF548590024C293 /* RouletteViewController.swift */; };
 		04F074391EF549F200670F28 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047B8B0E1EF548590024C293 /* SplashViewController.swift */; };
 		04F0743A1EF549F200670F28 /* StepsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047B8B0B1EF548580024C293 /* StepsVC.swift */; };
-		04F0743B1EF549F200670F28 /* StepsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 047B8B071EF548580024C293 /* StepsVC.xib */; };
 		04F074401EF54B5900670F28 /* LocationTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F0743F1EF54B5900670F28 /* LocationTracker.swift */; };
 		04F074431EF55CD100670F28 /* TintedToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F074421EF55CD100670F28 /* TintedToggleButton.swift */; };
 		04F074451EF5692700670F28 /* Double+RoundTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F074441EF5692700670F28 /* Double+RoundTo.swift */; };
 		644A007A1EF4118A0001A6C6 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644A00791EF4118A0001A6C6 /* Globals.swift */; };
 		644A00851EF423B10001A6C6 /* LegCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644A00831EF423B10001A6C6 /* LegCell.swift */; };
-		644A00861EF423B10001A6C6 /* LegCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 644A00841EF423B10001A6C6 /* LegCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,7 +48,6 @@
 		047B8AF61EF3FFBA0024C293 /* EventsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsModel.swift; sourceTree = "<group>"; };
 		047B8AF81EF41BB10024C293 /* TMPricingAPIHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMPricingAPIHandler.swift; sourceTree = "<group>"; };
 		047B8B061EF548580024C293 /* ChosenEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChosenEventViewController.swift; path = GigRoulette/ViewControllers/ChosenEventViewController.swift; sourceTree = SOURCE_ROOT; };
-		047B8B071EF548580024C293 /* StepsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = StepsVC.xib; path = GigRoulette/ViewControllers/StepsVC.xib; sourceTree = SOURCE_ROOT; };
 		047B8B081EF548580024C293 /* FiltersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FiltersViewController.swift; path = GigRoulette/ViewControllers/FiltersViewController.swift; sourceTree = SOURCE_ROOT; };
 		047B8B091EF548580024C293 /* LoadingVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = LoadingVC.xib; path = GigRoulette/ViewControllers/LoadingVC.xib; sourceTree = SOURCE_ROOT; };
 		047B8B0A1EF548580024C293 /* LoadingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoadingVC.swift; path = GigRoulette/ViewControllers/LoadingVC.swift; sourceTree = SOURCE_ROOT; };
@@ -63,7 +60,6 @@
 		04F074441EF5692700670F28 /* Double+RoundTo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+RoundTo.swift"; sourceTree = "<group>"; };
 		644A00791EF4118A0001A6C6 /* Globals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
 		644A00831EF423B10001A6C6 /* LegCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegCell.swift; sourceTree = "<group>"; };
-		644A00841EF423B10001A6C6 /* LegCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LegCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,7 +107,6 @@
 				04705D0D1EF32B230011B236 /* Info.plist */,
 				644A00791EF4118A0001A6C6 /* Globals.swift */,
 				644A00831EF423B10001A6C6 /* LegCell.swift */,
-				644A00841EF423B10001A6C6 /* LegCell.xib */,
 			);
 			path = GigRoulette;
 			sourceTree = "<group>";
@@ -121,13 +116,12 @@
 			children = (
 				047B8B0E1EF548590024C293 /* SplashViewController.swift */,
 				047B8B081EF548580024C293 /* FiltersViewController.swift */,
-				047B8B061EF548580024C293 /* ChosenEventViewController.swift */,
-				047B8B0D1EF548590024C293 /* ChosenEventViewController.xib */,
 				047B8B0A1EF548580024C293 /* LoadingVC.swift */,
 				047B8B091EF548580024C293 /* LoadingVC.xib */,
+				047B8B061EF548580024C293 /* ChosenEventViewController.swift */,
+				047B8B0D1EF548590024C293 /* ChosenEventViewController.xib */,
 				047B8B0C1EF548590024C293 /* RouletteViewController.swift */,
 				047B8B0B1EF548580024C293 /* StepsVC.swift */,
-				047B8B071EF548580024C293 /* StepsVC.xib */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -233,8 +227,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				644A00861EF423B10001A6C6 /* LegCell.xib in Resources */,
-				04F0743B1EF549F200670F28 /* StepsVC.xib in Resources */,
 				04F074371EF549F200670F28 /* LoadingVC.xib in Resources */,
 				04705D0C1EF32B230011B236 /* LaunchScreen.storyboard in Resources */,
 				04F074341EF549F200670F28 /* ChosenEventViewController.xib in Resources */,
