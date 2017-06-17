@@ -11,13 +11,12 @@ import CoreLocation
 
 class FiltersViewController: UIViewController {
 
-	@IBOutlet weak var userlocationLabel: UILabel!
-    let locationManager = CLLocationManager()
     var currentLocation: CLLocation = CLLocation()
     var currentGeoHash: String = ""
-    
     var eventManager: EventsManager?
-	
+    
+    @IBOutlet weak var userlocationLabel: UILabel!
+    
 	@IBOutlet weak var musicBTN: UIButton!
 	@IBOutlet weak var sportsBTN: UIButton!
 	@IBOutlet weak var comedyBTN: UIButton!
