@@ -13,12 +13,10 @@ class FiltersViewController: UIViewController {
 
 	@IBOutlet weak var userlocationLabel: UILabel!
     let locationManager = CLLocationManager()
-    var currentLocation: CLLocationCoordinate2D? = nil
+    var currentLocation: CLLocation = CLLocation()
     var currentGeoHash: String = ""
     
     var eventManager: EventsManager?
-    
-    
 	
 	@IBOutlet weak var musicBTN: UIButton!
 	@IBOutlet weak var sportsBTN: UIButton!
@@ -34,7 +32,16 @@ class FiltersViewController: UIViewController {
     
 	override func viewDidLoad() {
         super.viewDidLoad()
-        startLocationServices()
+                
+        if let location = LocationTracker.sharedInstance.getCurrentLocation() {
+            currentLocation = location
+            getCountryCode(FromLocation: currentLocation, withSuccess: { (countryCode) in
+                getGeoHash(ForLocation: self.currentLocation, WithSuccess: { (geoHash) in
+                    self.currentGeoHash = geoHash
+                    self.eventManager = EventsManager(WithGeoHash: geoHash, AndCountryCode: countryCode)
+                })
+            })
+        }
         
         getDirections(FromStartPoint: Point(lat: "51.5412969", lon: "-0.0954148"), ToEndPoint: Point(lat: "51.5388457", lon: "-0.1367267"))
 		musicBTN.setTitle("inactive", for: .normal)
@@ -138,7 +145,6 @@ class FiltersViewController: UIViewController {
 		
 	}
     
-
 	@IBAction func partyAction(_ sender: Any) {
         if eventManager?.events != nil {
             let loadingVC = LoadingVC(nibName: "LoadingVC", bundle: nil)
@@ -146,49 +152,4 @@ class FiltersViewController: UIViewController {
             show(loadingVC, sender: self)
         }
 	}
-    
-        
-    func startLocationServices() {
-        
-        // Ask for Authorisation from the User.
-        locationManager.requestAlwaysAuthorization()
-        
-        // For use in foreground
-        self.locationManager.requestWhenInUseAuthorization()
-        
-        if CLLocationManager.locationServicesEnabled() {
-            locationManager.delegate = self
-            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
-            locationManager.startUpdatingLocation()
-        }
-    }
-    
-}
-
-extension FiltersViewController: CLLocationManagerDelegate {
-    
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        if currentLocation == nil {
-            if let locationCoordinates = manager.location?.coordinate {
-                currentLocation = locationCoordinates
-                getPlacemarkFromLocation(location: manager.location!, withSuccess: { (countryCode) in
-                    getGeoHash(WithLat: self.currentLocation!.latitude, AndLongitude: self.currentLocation!.longitude, WithSuccess: { (geoHash) in
-                        self.currentGeoHash = geoHash
-                        self.eventManager = EventsManager(WithGeoHash: geoHash, AndCountryCode: countryCode)
-                    })
-                })
-            }
-        }
-    }
-    
-    func getPlacemarkFromLocation(location: CLLocation, withSuccess success: @escaping (String)->()) {
-        CLGeocoder().reverseGeocodeLocation(location, completionHandler:
-            { (placemarks, error) in
-                if let placeMark = placemarks?.first {
-                    if let countryCode = placeMark.isoCountryCode {
-                        success(countryCode)
-                    }
-                }
-        })
-    }
 }

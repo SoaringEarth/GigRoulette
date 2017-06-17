@@ -10,17 +10,19 @@ import UIKit
 
 class LoadingVC: UIViewController {
     
-    var chosenEvent: EventEntity?
     @IBOutlet weak var icon: UIImageView!
     @IBOutlet weak var purchaseButton: UIButton!
+    
+    var chosenEvent: EventEntity?
     var animate: Bool = true
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         purchaseButton.isHidden = true
         
         animateIconOut()
         
-        let timer = Timer.scheduledTimer(withTimeInterval: 5.9, repeats: false) { (timer) in
+        let _ = Timer.scheduledTimer(withTimeInterval: 5.9, repeats: false) { (timer) in
             
             self.animate = false
             self.stopAnimation()
@@ -60,6 +62,7 @@ class LoadingVC: UIViewController {
             self.purchaseButton.isHidden = false
         }
     }
+    
     @IBAction func open(_ sender: Any) {
         let chosenVC = ChosenEventViewController(nibName: "ChosenEventViewController", bundle: nil)
         chosenVC.chosenEvent = self.chosenEvent

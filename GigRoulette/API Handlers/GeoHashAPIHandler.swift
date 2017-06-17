@@ -7,9 +7,21 @@
 //
 
 import Foundation
+import CoreLocation
 
-func getGeoHash(WithLat latitude: Double, AndLongitude longitude: Double, WithSuccess success: @escaping (String)->()) {
-    var urlRequest = URLRequest(url: URL(string:"http://geohash.org/?q=\(latitude),\(longitude)&format=url&redirect=0")!)
+func getCountryCode(FromLocation location: CLLocation, withSuccess success: @escaping (String)->()) {
+    CLGeocoder().reverseGeocodeLocation(location, completionHandler:
+        { (placemarks, error) in
+            if let placeMark = placemarks?.first {
+                if let countryCode = placeMark.isoCountryCode {
+                    success(countryCode)
+                }
+            }
+    })
+}
+
+func getGeoHash(ForLocation location: CLLocation, WithSuccess success: @escaping (String)->()) {
+    var urlRequest = URLRequest(url: URL(string:"http://geohash.org/?q=\(location.coordinate.latitude),\(location.coordinate.longitude)&format=url&redirect=0")!)
     urlRequest.cachePolicy = .reloadIgnoringCacheData
     
     let defaultSession: URLSession = URLSession(configuration: .default)

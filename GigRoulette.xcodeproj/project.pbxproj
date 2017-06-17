@@ -113,13 +113,13 @@
 		047B8B051EF548330024C293 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				047B8B0E1EF548590024C293 /* SplashViewController.swift */,
+				047B8B081EF548580024C293 /* FiltersViewController.swift */,
 				047B8B061EF548580024C293 /* ChosenEventViewController.swift */,
 				047B8B0D1EF548590024C293 /* ChosenEventViewController.xib */,
-				047B8B081EF548580024C293 /* FiltersViewController.swift */,
 				047B8B0A1EF548580024C293 /* LoadingVC.swift */,
 				047B8B091EF548580024C293 /* LoadingVC.xib */,
 				047B8B0C1EF548590024C293 /* RouletteViewController.swift */,
-				047B8B0E1EF548590024C293 /* SplashViewController.swift */,
 				047B8B0B1EF548580024C293 /* StepsVC.swift */,
 				047B8B071EF548580024C293 /* StepsVC.xib */,
 			);

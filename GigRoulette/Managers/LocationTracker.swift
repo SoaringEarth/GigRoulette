@@ -9,18 +9,17 @@
 import Foundation
 import CoreLocation
 
-protocol LocationServiceDelegate {
-    func tracingLocation(_ currentLocation: CLLocation)
-    func tracingLocationDidFailWithError(_ error: NSError)
-}
-
 class LocationTracker: NSObject {
     
     static let sharedInstance = LocationTracker()
     
     var locationManager: CLLocationManager?
     var currentLocation: CLLocation?
-    var delegate: LocationServiceDelegate?
+    var currentStatus: CLAuthorizationStatus {
+        get {
+            return CLLocationManager.authorizationStatus()
+        }
+    }
     
     override init() {
         super.init()
@@ -30,13 +29,13 @@ class LocationTracker: NSObject {
             return
         }
         
-        if CLLocationManager.authorizationStatus() == .notDetermined {
+        locationManager.delegate = self
+        locationManager.distanceFilter = 20
+        locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+        
+        if CLLocationManager.authorizationStatus() != .authorizedWhenInUse {
             locationManager.requestWhenInUseAuthorization()
         }
-        
-        locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
-        locationManager.distanceFilter = 20
-        locationManager.delegate = self
     }
     
     func startUpdatingLocation() {
@@ -48,6 +47,11 @@ class LocationTracker: NSObject {
         print("Stop Location Updates")
         self.locationManager?.stopUpdatingLocation()
     }
+    
+    func getCurrentLocation() -> CLLocation? {
+        guard let location = currentLocation else { return nil }
+        return location
+    }
 }
 
 extension LocationTracker: CLLocationManagerDelegate {
@@ -57,27 +61,28 @@ extension LocationTracker: CLLocationManagerDelegate {
         }
         
         currentLocation = location
-        updateLocation(location)
     }
     
-    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        updateLocationDidFailWithError(error as NSError)
-    }
-    
-    // Private function
-    fileprivate func updateLocation(_ currentLocation: CLLocation){
-        guard let delegate = self.delegate else {
-            return
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        switch status {
+        case .notDetermined:
+            // If status has not yet been determied, ask for authorization
+            locationManager?.requestWhenInUseAuthorization()
+            break
+        case .authorizedWhenInUse:
+            // If authorized when in use
+            startUpdatingLocation()
+            break
+        case .authorizedAlways:
+            // If always authorized
+            startUpdatingLocation()
+            break
+        case .restricted:
+            // If restricted by e.g. parental controls. User can't enable Location Services
+            break
+        case .denied:
+            // If user denied your app access to Location Services, but can grant access from Settings.app
+            break
         }
-        
-        delegate.tracingLocation(currentLocation)
-    }
-    
-    fileprivate func updateLocationDidFailWithError(_ error: NSError) {
-        guard let delegate = self.delegate else {
-            return
-        }
-        
-        delegate.tracingLocationDidFailWithError(error)
     }
 }

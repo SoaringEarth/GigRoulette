@@ -7,42 +7,28 @@
 //
 
 import UIKit
+import CoreLocation
 
 class SplashViewController: UIViewController {
-
+        
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-		
-		self.navigationController?.isNavigationBarHidden = true
-		
-		
-		DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: {
-			
-			if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "FiltersViewController") as? FiltersViewController {
-				if let navigator = self.navigationController {
-					navigator.pushViewController(viewController, animated: false)
-				}
-			}
-			
-		})
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+		navigationController?.isNavigationBarHidden = true
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        while LocationTracker.sharedInstance.currentStatus != .authorizedWhenInUse {
+            // Wait for locationTracker's status to change
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: {
+            if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "FiltersViewController") as? FiltersViewController {
+                if let navigator = self.navigationController {
+                    navigator.pushViewController(viewController, animated: false)
+                }
+            }
+        })
     }
-    */
-
 }
