@@ -67,6 +67,7 @@
                                 <rect key="frame" x="135" y="77" width="51" height="73"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Icon_unselected_Sport"/>
+                                <state key="selected" image="Icon_selected_Sport"/>
                                 <connections>
                                     <action selector="genreButtonAction:" destination="Bl4-h5-EGt" eventType="touchUpInside" id="G0T-z3-eTn"/>
                                 </connections>
@@ -75,6 +76,7 @@
                                 <rect key="frame" x="228" y="77" width="51" height="73"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Icon_unselected_Theatre"/>
+                                <state key="selected" image="Icon_selected_Theatre"/>
                                 <connections>
                                     <action selector="genreButtonAction:" destination="Bl4-h5-EGt" eventType="touchUpInside" id="x4i-mb-azH"/>
                                 </connections>
@@ -83,6 +85,7 @@
                                 <rect key="frame" x="37" y="189" width="51" height="73"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Icon_unselected_Art"/>
+                                <state key="selected" image="Icon_selected_Art"/>
                                 <connections>
                                     <action selector="genreButtonAction:" destination="Bl4-h5-EGt" eventType="touchUpInside" id="upi-Sh-ggH"/>
                                 </connections>
@@ -91,6 +94,7 @@
                                 <rect key="frame" x="135" y="189" width="51" height="73"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Icon_unselected_Comedy"/>
+                                <state key="selected" image="Icon_selected_Comedy"/>
                                 <connections>
                                     <action selector="genreButtonAction:" destination="Bl4-h5-EGt" eventType="touchUpInside" id="waG-Xm-Far"/>
                                 </connections>
@@ -99,6 +103,7 @@
                                 <rect key="frame" x="228" y="189" width="51" height="73"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Icon_unselected_Family"/>
+                                <state key="selected" image="Icon_selected_Family"/>
                                 <connections>
                                     <action selector="genreButtonAction:" destination="Bl4-h5-EGt" eventType="touchUpInside" id="avv-ws-Qco"/>
                                 </connections>
@@ -124,6 +129,7 @@
                                 <rect key="frame" x="37" y="77" width="51" height="73"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Icon_unselected_music"/>
+                                <state key="selected" image="Icon_selected_music"/>
                                 <connections>
                                     <action selector="genreButtonAction:" destination="Bl4-h5-EGt" eventType="touchUpInside" id="X3G-eS-lxh"/>
                                 </connections>
@@ -139,6 +145,7 @@
                                 <rect key="frame" x="37" y="328" width="68" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Icon_unselected_now"/>
+                                <state key="selected" image="Icon_selected_now"/>
                                 <connections>
                                     <action selector="genreButtonAction:" destination="Bl4-h5-EGt" eventType="touchUpInside" id="b5w-Ym-dVU"/>
                                 </connections>
@@ -146,7 +153,8 @@
                             <button opaque="NO" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mVi-zS-ShL">
                                 <rect key="frame" x="126" y="328" width="68" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="Icon_unselected_tomorrow-1"/>
+                                <state key="normal" image="Icon_unselected_tomorrow"/>
+                                <state key="selected" image="Icon_selected_tomorrow"/>
                                 <connections>
                                     <action selector="genreButtonAction:" destination="Bl4-h5-EGt" eventType="touchUpInside" id="Gho-3S-bgS"/>
                                 </connections>
@@ -155,6 +163,7 @@
                                 <rect key="frame" x="211" y="328" width="68" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Icon_unselected_anytime"/>
+                                <state key="selected" image="Icon_selected_anytime"/>
                                 <connections>
                                     <action selector="genreButtonAction:" destination="Bl4-h5-EGt" eventType="touchUpInside" id="P40-Ia-Iel"/>
                                 </connections>
@@ -220,6 +229,15 @@
     </scenes>
     <resources>
         <image name="Background-blurred" width="750" height="1334"/>
+        <image name="Icon_selected_Art" width="102" height="154"/>
+        <image name="Icon_selected_Comedy" width="104" height="154"/>
+        <image name="Icon_selected_Family" width="100" height="154"/>
+        <image name="Icon_selected_Sport" width="102" height="146"/>
+        <image name="Icon_selected_Theatre" width="100" height="146"/>
+        <image name="Icon_selected_anytime" width="134" height="52"/>
+        <image name="Icon_selected_music" width="102" height="146"/>
+        <image name="Icon_selected_now" width="136" height="52"/>
+        <image name="Icon_selected_tomorrow" width="208" height="52"/>
         <image name="Icon_unselected_Art" width="102" height="154"/>
         <image name="Icon_unselected_Comedy" width="104" height="154"/>
         <image name="Icon_unselected_Family" width="100" height="154"/>
@@ -228,7 +246,7 @@
         <image name="Icon_unselected_anytime" width="134" height="52"/>
         <image name="Icon_unselected_music" width="102" height="146"/>
         <image name="Icon_unselected_now" width="136" height="52"/>
-        <image name="Icon_unselected_tomorrow-1" width="208" height="52"/>
+        <image name="Icon_unselected_tomorrow" width="208" height="52"/>
         <image name="Icon_unselected_£" width="134" height="52"/>
         <image name="Icon_unselected_££" width="134" height="52"/>
         <image name="Icon_unselected_£££" width="134" height="52"/>
