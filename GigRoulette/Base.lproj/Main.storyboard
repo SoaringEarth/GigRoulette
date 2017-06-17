@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="KF9-Qm-hQt">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -20,16 +20,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background1" translatesAutoresizingMaskIntoConstraints="NO" id="Y8E-s0-F4C">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SplashBackground" translatesAutoresizingMaskIntoConstraints="NO" id="Y8E-s0-F4C">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Y8E-s0-F4C" firstAttribute="centerX" secondItem="68F-em-wjG" secondAttribute="centerX" id="Gow-FW-gLL"/>
-                            <constraint firstItem="Y8E-s0-F4C" firstAttribute="centerY" secondItem="68F-em-wjG" secondAttribute="centerY" id="PX7-n7-eO2"/>
-                            <constraint firstItem="Y8E-s0-F4C" firstAttribute="width" secondItem="68F-em-wjG" secondAttribute="width" id="nIP-Ou-ZsB"/>
-                            <constraint firstItem="Y8E-s0-F4C" firstAttribute="height" secondItem="68F-em-wjG" secondAttribute="height" id="xCF-jg-kr0"/>
+                            <constraint firstItem="Y8E-s0-F4C" firstAttribute="leading" secondItem="68F-em-wjG" secondAttribute="leading" id="6xG-Du-OgV"/>
+                            <constraint firstAttribute="bottom" secondItem="Y8E-s0-F4C" secondAttribute="bottom" id="bXr-V2-mTu"/>
+                            <constraint firstAttribute="trailing" secondItem="Y8E-s0-F4C" secondAttribute="trailing" id="hI6-Jc-0Xb"/>
+                            <constraint firstItem="Y8E-s0-F4C" firstAttribute="top" secondItem="68F-em-wjG" secondAttribute="top" id="rqC-xi-HTu"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="cdt-dz-afq"/>
@@ -39,7 +39,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uAH-9Q-7mp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-158.40000000000001" y="805.99700149925047"/>
+            <point key="canvasLocation" x="-159" y="792"/>
         </scene>
         <!--Filters View Controller-->
         <scene sceneID="LvS-DG-tWX">
@@ -53,7 +53,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background-blurred" translatesAutoresizingMaskIntoConstraints="NO" id="boZ-rl-SCO">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background-blurred" translatesAutoresizingMaskIntoConstraints="NO" id="boZ-rl-SCO">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Filters" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nb8-hx-Y8Z">
@@ -175,10 +175,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="boZ-rl-SCO" firstAttribute="centerY" secondItem="S2l-U1-0rn" secondAttribute="centerY" id="LMp-4h-P0E"/>
-                            <constraint firstItem="boZ-rl-SCO" firstAttribute="centerX" secondItem="S2l-U1-0rn" secondAttribute="centerX" id="PnC-zD-XI4"/>
-                            <constraint firstItem="boZ-rl-SCO" firstAttribute="height" secondItem="S2l-U1-0rn" secondAttribute="height" id="Zxc-AI-cH2"/>
-                            <constraint firstItem="boZ-rl-SCO" firstAttribute="width" secondItem="S2l-U1-0rn" secondAttribute="width" id="ioK-pK-FDC"/>
+                            <constraint firstItem="boZ-rl-SCO" firstAttribute="top" secondItem="S2l-U1-0rn" secondAttribute="top" id="2s5-bf-Vlk"/>
+                            <constraint firstAttribute="trailing" secondItem="boZ-rl-SCO" secondAttribute="trailing" id="aNo-2Q-Hfs"/>
+                            <constraint firstItem="boZ-rl-SCO" firstAttribute="leading" secondItem="S2l-U1-0rn" secondAttribute="leading" id="hID-8Z-vWk"/>
+                            <constraint firstAttribute="bottom" secondItem="boZ-rl-SCO" secondAttribute="bottom" id="voO-mx-RYp"/>
                         </constraints>
                     </view>
                     <size key="freeformSize" width="320" height="568"/>
@@ -196,31 +196,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KTa-wh-yp6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="470.39999999999998" y="792.50374812593714"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="b77-BR-RgX">
-            <objects>
-                <viewController id="L5w-Gz-gkB" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ca8-Yq-0DA"/>
-                        <viewControllerLayoutGuide type="bottom" id="zhs-xM-pGb"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Jtv-L6-5wi">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="I33-BO-VdO" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1356" y="836.13193403298362"/>
+            <point key="canvasLocation" x="602" y="792"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="FYe-lI-Nc9">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KF9-Qm-hQt" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="KF9-Qm-hQt" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="OGO-0z-0el">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -232,12 +215,11 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bmj-8U-Ah7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-833" y="806"/>
+            <point key="canvasLocation" x="-923" y="791"/>
         </scene>
     </scenes>
     <resources>
         <image name="Background-blurred" width="750" height="1334"/>
-        <image name="Background1" width="750" height="1334"/>
         <image name="Icon_unselected_Art" width="102" height="154"/>
         <image name="Icon_unselected_Comedy" width="104" height="154"/>
         <image name="Icon_unselected_Family" width="100" height="154"/>
@@ -250,6 +232,7 @@
         <image name="Icon_unselected_£" width="134" height="52"/>
         <image name="Icon_unselected_££" width="134" height="52"/>
         <image name="Icon_unselected_£££" width="134" height="52"/>
+        <image name="SplashBackground" width="750" height="1334"/>
         <image name="findmegig" width="674" height="92"/>
     </resources>
 </document>

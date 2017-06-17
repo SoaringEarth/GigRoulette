@@ -5,7 +5,6 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,25 +20,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background1" translatesAutoresizingMaskIntoConstraints="NO" id="PZj-1L-Vaz">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SplashBackground" translatesAutoresizingMaskIntoConstraints="NO" id="PZj-1L-Vaz">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="PZj-1L-Vaz" secondAttribute="trailing" constant="-16" id="2DO-Dx-JUf"/>
-                            <constraint firstItem="PZj-1L-Vaz" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="-20" id="Iop-BS-EU5"/>
-                            <constraint firstItem="PZj-1L-Vaz" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="-16" id="JBk-PJ-QLI"/>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="PZj-1L-Vaz" secondAttribute="bottom" id="KVV-77-o0O"/>
+                            <constraint firstAttribute="bottom" secondItem="PZj-1L-Vaz" secondAttribute="bottom" id="Dmm-nq-rz2"/>
+                            <constraint firstAttribute="trailing" secondItem="PZj-1L-Vaz" secondAttribute="trailing" id="M2W-Hp-gl9"/>
+                            <constraint firstItem="PZj-1L-Vaz" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="UEV-Ue-YQG"/>
+                            <constraint firstItem="PZj-1L-Vaz" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="tCJ-xa-V3S"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="52" y="374.66266866566718"/>
+            <point key="canvasLocation" x="51.5" y="374.5"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Background1" width="750" height="1334"/>
+        <image name="SplashBackground" width="750" height="1334"/>
     </resources>
 </document>
