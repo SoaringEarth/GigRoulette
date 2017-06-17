@@ -44,14 +44,16 @@ class EventsModel {
                                     let eventURL = event["url"] as! String
                                     
                                     var genreArray:[GenreEntity] = []
-									
-//                                    for genre in (event["classifications"] as! [AnyObject]) {
-//                                        let eventGenreName = (genre["genre"] as! [String : AnyObject])["name"] as! String
-//                                        let eventGenreID = (genre["genre"] as! [String : AnyObject])["id"] as! String
-//                                        let newGenre = GenreEntity(name: eventGenreName, id: eventGenreID)
-//                                        genreArray.append(newGenre)
-//                                    }
-									
+                                    
+                                    if let classifications = event["classifications"] as? [AnyObject] {
+                                        for genre in classifications {
+                                            let eventGenreName = (genre["genre"] as! [String : AnyObject])["name"] as! String
+                                            let eventGenreID = (genre["genre"] as! [String : AnyObject])["id"] as! String
+                                            let newGenre = GenreEntity(name: eventGenreName, id: eventGenreID)
+                                            genreArray.append(newGenre)
+                                        }
+                                    }
+                                    
                                     let eventLat: String = (((((event["_embedded"] as! [String : AnyObject])["venues"] as! [AnyObject]).first as! [String : AnyObject])["location"] as! [String : AnyObject])["latitude"] as! String)
                                     let eventLon: String = (((((event["_embedded"] as! [String : AnyObject])["venues"] as! [AnyObject]).first as! [String : AnyObject])["location"] as! [String : AnyObject])["longitude"] as! String)
                                     let eventLocation = Point(lat: eventLat, lon: eventLon)
@@ -65,9 +67,9 @@ class EventsModel {
                                     self.events!.append(newEvent)
                                 }
                             }
-//                            getPrice(ForEvent: self.events!.first!, WithSuccess: { (priceString) in
-//                                print(priceString)
-//                            })
+                            //                            getPrice(ForEvent: self.events!.first!, WithSuccess: { (priceString) in
+                            //                                print(priceString)
+                            //                            })
                             print(self.events!.count)
                             NotificationCenter.default.post(name: NotificationName.eventsReceived.realName, object: nil)
                         }
