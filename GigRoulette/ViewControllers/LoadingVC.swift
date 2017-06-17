@@ -33,7 +33,6 @@ class LoadingVC: UIViewController {
 //                perform(#selector(LoadingVC.animate(Ticket:)), with: ticket, afterDelay: 0.0)
 //            }
 //        }
-        
         animate(Ticket: self.icon)
     }
     
@@ -82,5 +81,4 @@ class LoadingVC: UIViewController {
         chosenVC.chosenEvent = self.chosenEvent
         self.show(chosenVC, sender: nil)
     }
-    
 }
