@@ -13,7 +13,7 @@ class FiltersViewController: UIViewController {
 
     var currentLocation: CLLocation = CLLocation()
     var currentGeoHash: String = ""
-    var eventManager = EventsManager()
+    var eventManager = EventsViewModel()
     
     @IBOutlet weak var userlocationLabel: UILabel!
     
