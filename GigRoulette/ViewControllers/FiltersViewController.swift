@@ -138,7 +138,6 @@ class FiltersViewController: UIViewController {
 				anytimeBTN.setImage(UIImage(named:"Icon_unselected_anytime"), for: .normal)
 				anytimeBTN.setTitle("inactive", for: .normal)
 			}
-			
 		default:
 			break;
 		}

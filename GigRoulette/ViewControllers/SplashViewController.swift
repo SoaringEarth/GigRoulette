@@ -19,6 +19,10 @@ class SplashViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+        if LocationTracker.sharedInstance.currentStatus == .denied {
+            presentLocationSettingsAlert()
+        }
+        
         while LocationTracker.sharedInstance.currentStatus != .authorizedWhenInUse {
             // Wait for locationTracker's status to change
         }
@@ -30,5 +34,24 @@ class SplashViewController: UIViewController {
                 }
             }
         })
+    }
+    
+    private func presentLocationSettingsAlert() {
+        let alertController = UIAlertController(
+            title: "Background Location Access Disabled",
+            message: "In order to be notified about adorable kittens near you, please open this app's settings and set location access to 'Always'.",
+            preferredStyle: .alert)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alertController.addAction(cancelAction)
+        
+        let openAction = UIAlertAction(title: "Open Settings", style: .default) { (action) in
+            if let url = NSURL(string:UIApplicationOpenSettingsURLString) {
+                UIApplication.shared.open(url as URL, options: [:], completionHandler: { _ in })
+            }
+        }
+        alertController.addAction(openAction)
+        
+        present(alertController, animated: true, completion: nil)
     }
 }
