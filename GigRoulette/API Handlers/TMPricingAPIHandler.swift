@@ -1,5 +1,5 @@
 //
-//  PriceStuff.swift
+//  TMPricingAPIHandler.swift
 //  GigRoulette
 //
 //  Created by apple on 16/06/2017.

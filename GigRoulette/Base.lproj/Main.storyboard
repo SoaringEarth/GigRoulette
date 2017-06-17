@@ -11,7 +11,7 @@
         <!--Splash View Controller-->
         <scene sceneID="ej0-ya-5tO">
             <objects>
-                <viewController id="IoN-nB-6RR" customClass="SplashViewController" sceneMemberID="viewController">
+                <viewController id="IoN-nB-6RR" customClass="SplashViewController" customModule="GigRoulette" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dOx-nj-5OW"/>
                         <viewControllerLayoutGuide type="bottom" id="X19-9e-jzf"/>
