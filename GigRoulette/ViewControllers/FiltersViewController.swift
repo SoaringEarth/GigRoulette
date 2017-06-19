@@ -58,16 +58,7 @@ class FiltersViewController: UIViewController {
         if eventManager.getEvents().count > 0 {
             let loadingVC = LoadingVC(nibName: "LoadingVC", bundle: nil)
             loadingVC.chosenEvent = eventManager.getEvents().first
-            
-            if let currentLocation = LocationTracker.sharedInstance.currentLocation {
-                let latString = String(describing: currentLocation.coordinate.latitude)
-                let lonString = String(describing: currentLocation.coordinate.longitude)
-                let startPoint = Point(lat: latString, lon: lonString)
-                getDirections(FromStartPoint: startPoint, ToEndPoint: loadingVC.chosenEvent!.eventLocation, WithSuccess: { (journey) in
-                    loadingVC.journey = journey
-                    self.show(loadingVC, sender: self)
-                })
-            }
+            self.show(loadingVC, sender: self)
         }
 	}
 }

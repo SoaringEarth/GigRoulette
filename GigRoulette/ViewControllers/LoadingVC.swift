@@ -14,7 +14,6 @@ class LoadingVC: UIViewController {
     @IBOutlet weak var purchaseButton: UIButton!
     
     var chosenEvent: EventEntity?
-    var journey: Journey?
     
     var animate: Bool = true
     
@@ -81,7 +80,6 @@ class LoadingVC: UIViewController {
     @IBAction func open(_ sender: Any) {
         let chosenVC = ChosenEventViewController(nibName: "ChosenEventViewController", bundle: nil)
         chosenVC.chosenEvent = self.chosenEvent
-        chosenVC.journey = self.journey
         self.show(chosenVC, sender: nil)
     }
 }

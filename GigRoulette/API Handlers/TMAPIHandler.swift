@@ -53,9 +53,9 @@ class TMAPIHandler {
                                     events.append(newEvent)
                                 }
                             }
-                            //                            getPrice(ForEvent: self.events!.first!, WithSuccess: { (priceString) in
-                            //                                print(priceString)
-                            //                            })
+//                            getPrice(ForEvent: self.events!.first!, WithSuccess: { (priceString) in
+//                                print(priceString)
+//                            })
                             print(events.count)
                             success(events)
                             NotificationCenter.default.post(name: NotificationName.eventsReceived.realName, object: nil)

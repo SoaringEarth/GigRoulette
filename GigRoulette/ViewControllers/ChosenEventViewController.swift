@@ -11,18 +11,24 @@ import UIKit
 class ChosenEventViewController: UIViewController {
     
     var chosenEvent: EventEntity?
-    var journey: Journey?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
     }
     
     @IBAction func imGoingButtonTapped(_ sender: Any) {
-        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        let stepsVC = storyBoard.instantiateViewController(withIdentifier: "StepsVC") as! StepsVC
-        stepsVC.journey = journey
-        show(stepsVC, sender: self)
+        if let currentLocation = LocationTracker.sharedInstance.currentLocation {
+            let latString = String(describing: currentLocation.coordinate.latitude)
+            let lonString = String(describing: currentLocation.coordinate.longitude)
+            let startPoint = Point(lat: latString, lon: lonString)
+            getDirections(FromStartPoint: startPoint, ToEndPoint: chosenEvent!.eventLocation, WithSuccess: { (journey) in
+                let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+                let stepsVC = storyBoard.instantiateViewController(withIdentifier: "StepsVC") as! StepsVC
+                stepsVC.journey = journey
+                self.show(stepsVC, sender: self)
+            })
+        }
     }
     
     @IBAction func spinAgainButtonTapped(_ sender: Any) {
