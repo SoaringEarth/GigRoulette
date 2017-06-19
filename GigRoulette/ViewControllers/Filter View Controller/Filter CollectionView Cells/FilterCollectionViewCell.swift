@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FillterCollectionViewCell: UICollectionViewCell {
+class FilterCollectionViewCell: UICollectionViewCell {
     
     override var isSelected: Bool {
         willSet {

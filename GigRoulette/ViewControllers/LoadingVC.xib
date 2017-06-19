@@ -23,7 +23,7 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BlurredBackground" translatesAutoresizingMaskIntoConstraints="NO" id="E0r-jg-mEM">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ticket_icon_360" translatesAutoresizingMaskIntoConstraints="NO" id="mwo-Je-QqO">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon_ticket" translatesAutoresizingMaskIntoConstraints="NO" id="mwo-Je-QqO">
                     <rect key="frame" x="109" y="194" width="102" height="180"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="102.5" id="ecc-nW-QeV"/>
@@ -65,6 +65,6 @@
     </objects>
     <resources>
         <image name="BlurredBackground" width="750" height="1334"/>
-        <image name="ticket_icon_360" width="205" height="360"/>
+        <image name="Icon_ticket" width="205" height="360"/>
     </resources>
 </document>

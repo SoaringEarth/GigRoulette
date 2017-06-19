@@ -16,7 +16,8 @@
 		04408C901EF7FD2300788063 /* CustomFadeInNavigationControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04408C8F1EF7FD2300788063 /* CustomFadeInNavigationControllerDelegate.swift */; };
 		04408C921EF8002200788063 /* DelayedSplashTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04408C911EF8002200788063 /* DelayedSplashTransition.swift */; };
 		04408C951EF8044D00788063 /* EventEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04408C941EF8044D00788063 /* EventEntity.swift */; };
-		04408C971EF81EE900788063 /* FillterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04408C961EF81EE900788063 /* FillterCollectionViewCell.swift */; };
+		04408C971EF81EE900788063 /* FilterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04408C961EF81EE900788063 /* FilterCollectionViewCell.swift */; };
+		04408C9B1EF8209B00788063 /* FiltersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04408C9A1EF81FF000788063 /* FiltersViewController.swift */; };
 		04705D021EF32B230011B236 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04705D011EF32B230011B236 /* AppDelegate.swift */; };
 		04705D071EF32B230011B236 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04705D051EF32B230011B236 /* Main.storyboard */; };
 		04705D091EF32B230011B236 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04705D081EF32B230011B236 /* Assets.xcassets */; };
@@ -49,7 +50,7 @@
 		04408C8F1EF7FD2300788063 /* CustomFadeInNavigationControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFadeInNavigationControllerDelegate.swift; sourceTree = "<group>"; };
 		04408C911EF8002200788063 /* DelayedSplashTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelayedSplashTransition.swift; sourceTree = "<group>"; };
 		04408C941EF8044D00788063 /* EventEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventEntity.swift; sourceTree = "<group>"; };
-		04408C961EF81EE900788063 /* FillterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillterCollectionViewCell.swift; sourceTree = "<group>"; };
+		04408C961EF81EE900788063 /* FilterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCollectionViewCell.swift; sourceTree = "<group>"; };
 		04408C9A1EF81FF000788063 /* FiltersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersViewController.swift; sourceTree = "<group>"; };
 		04705CFE1EF32B230011B236 /* GigRoulette.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GigRoulette.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04705D011EF32B230011B236 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -98,7 +99,7 @@
 		04408C981EF81FC100788063 /* Filter CollectionView Cells */ = {
 			isa = PBXGroup;
 			children = (
-				04408C961EF81EE900788063 /* FillterCollectionViewCell.swift */,
+				04408C961EF81EE900788063 /* FilterCollectionViewCell.swift */,
 			);
 			path = "Filter CollectionView Cells";
 			sourceTree = "<group>";
@@ -289,7 +290,7 @@
 			files = (
 				04F0743A1EF549F200670F28 /* StepsVC.swift in Sources */,
 				04408C8E1EF7FC4500788063 /* CustomFadeInTransition.swift in Sources */,
-				04408C971EF81EE900788063 /* FillterCollectionViewCell.swift in Sources */,
+				04408C971EF81EE900788063 /* FilterCollectionViewCell.swift in Sources */,
 				0411843D1EF3C2050054A00C /* GeoHashAPIHandler.swift in Sources */,
 				047B8AF51EF3F6200024C293 /* EventsViewModel.swift in Sources */,
 				04F074361EF549F200670F28 /* LoadingVC.swift in Sources */,
@@ -306,6 +307,7 @@
 				04408C901EF7FD2300788063 /* CustomFadeInNavigationControllerDelegate.swift in Sources */,
 				04F074451EF5692700670F28 /* Double+RoundTo.swift in Sources */,
 				04F074331EF549F200670F28 /* ChosenEventViewController.swift in Sources */,
+				04408C9B1EF8209B00788063 /* FiltersViewController.swift in Sources */,
 				04F074431EF55CD100670F28 /* TintedToggleButton.swift in Sources */,
 				04408C951EF8044D00788063 /* EventEntity.swift in Sources */,
 				047B8AF91EF41BB10024C293 /* TMPricingAPIHandler.swift in Sources */,
