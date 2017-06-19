@@ -35,18 +35,6 @@ class FiltersViewController: UIViewController {
         if let location = LocationTracker.sharedInstance.getCurrentLocation() {
             currentLocation = location
         }
-        
-		musicBTN.setTitle("inactive", for: .normal)
-		sportsBTN.setTitle("inactive", for: .normal)
-		comedyBTN.setTitle("inactive", for: .normal)
-		artBTN.setTitle("inactive", for: .normal)
-		familyBTN.setTitle("inactive", for: .normal)
-		theatreBTN.setTitle("inactive", for: .normal)
-		
-		nowBTN.setTitle("inactive", for: .normal)
-		tomorrowBTN.setTitle("inactive", for: .normal)
-		anytimeBTN.setTitle("inactive", for: .normal)
-        
     }
 	
 	@IBAction func genreButtonAction(_ sender: Any) {
