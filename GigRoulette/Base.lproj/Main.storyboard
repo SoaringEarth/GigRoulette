@@ -5,6 +5,8 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -36,6 +38,9 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="568"/>
+                    <connections>
+                        <segue destination="IhE-Ba-Ato" kind="show" identifier="ToFetchEvents" id="L8k-l2-cd4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uAH-9Q-7mp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -44,7 +49,7 @@
         <!--Fetch Events View Controller-->
         <scene sceneID="U01-y2-98D">
             <objects>
-                <viewController id="IhE-Ba-Ato" customClass="FetchEventsViewController" customModule="GigRoulette" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FetchEventsViewController" id="IhE-Ba-Ato" customClass="FetchEventsViewController" customModule="GigRoulette" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yyB-G3-MPT"/>
                         <viewControllerLayoutGuide type="bottom" id="Mvz-Tu-M7k"/>
@@ -53,18 +58,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BlurredBackground" translatesAutoresizingMaskIntoConstraints="NO" id="VEI-Up-cmw">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FetchEventsBackground" translatesAutoresizingMaskIntoConstraints="NO" id="VEI-Up-cmw">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon_Loading" translatesAutoresizingMaskIntoConstraints="NO" id="j1Y-Ah-zCc">
+                                <rect key="frame" x="80" y="305" width="160" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="j1Y-Ah-zCc" secondAttribute="height" multiplier="5:4" id="0dH-gb-DW8"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="j1Y-Ah-zCc" firstAttribute="centerY" secondItem="B70-4y-UGT" secondAttribute="centerY" multiplier="1.3" id="0lQ-Ax-efV"/>
                             <constraint firstAttribute="bottom" secondItem="VEI-Up-cmw" secondAttribute="bottom" id="4ae-FG-UWi"/>
                             <constraint firstItem="VEI-Up-cmw" firstAttribute="leading" secondItem="B70-4y-UGT" secondAttribute="leading" id="RLP-he-iHp"/>
+                            <constraint firstItem="j1Y-Ah-zCc" firstAttribute="width" secondItem="B70-4y-UGT" secondAttribute="width" multiplier="0.5" id="Smc-ef-nyY"/>
                             <constraint firstItem="VEI-Up-cmw" firstAttribute="top" secondItem="B70-4y-UGT" secondAttribute="top" id="X9y-n4-IXM"/>
                             <constraint firstAttribute="trailing" secondItem="VEI-Up-cmw" secondAttribute="trailing" id="aMH-Gd-mlS"/>
+                            <constraint firstItem="j1Y-Ah-zCc" firstAttribute="centerX" secondItem="B70-4y-UGT" secondAttribute="centerX" id="jCn-hM-Muv"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="VEI-Up-cmw" id="Mhi-oz-k75"/>
+                        <outlet property="loadingImageView" destination="j1Y-Ah-zCc" id="0kp-j6-AHx"/>
+                        <segue destination="Bl4-h5-EGt" kind="show" identifier="ToFiltersView" id="Ljb-uq-uJB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JuT-m5-e9a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -434,16 +453,20 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
+                        <outlet property="delegate" destination="hYy-mM-Tp3" id="Ndw-ZP-8Sf"/>
                         <segue destination="IoN-nB-6RR" kind="relationship" relationship="rootViewController" id="8Jl-bP-LEj"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bmj-8U-Ah7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="hYy-mM-Tp3" customClass="CustomFadeInNavigationControllerDelegate" customModule="GigRoulette" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="-923" y="791"/>
         </scene>
     </scenes>
     <resources>
         <image name="BlurredBackground" width="750" height="1334"/>
+        <image name="FetchEventsBackground" width="750" height="1334"/>
+        <image name="Icon_Loading" width="206" height="206"/>
         <image name="Icon_selected_anytime" width="134" height="52"/>
         <image name="Icon_selected_now" width="136" height="52"/>
         <image name="Icon_selected_tomorrow" width="208" height="52"/>

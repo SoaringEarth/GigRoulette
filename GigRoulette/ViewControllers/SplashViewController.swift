@@ -28,12 +28,12 @@ class SplashViewController: UIViewController {
         }
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: {
-            if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "FiltersViewController") as? FiltersViewController {
-                if let navigator = self.navigationController {
-                    navigator.pushViewController(viewController, animated: false)
-                }
-            }
+            self.performSegue(withIdentifier: "ToFetchEvents", sender: nil)
         })
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
     }
     
     private func presentLocationSettingsAlert() {

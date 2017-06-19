@@ -7,12 +7,12 @@
 //
 
 import UIKit
-import CoreLocation
 
 class FiltersViewController: UIViewController {
     
     var currentGeoHash: String = ""
-    
+    var eventManager = EventsViewModel()
+
     @IBOutlet weak var userlocationLabel: UILabel!
     
 	@IBOutlet weak var musicBTN: UIButton!
@@ -29,7 +29,6 @@ class FiltersViewController: UIViewController {
     
 	override func viewDidLoad() {
         super.viewDidLoad()
-
     }
 	
 	@IBAction func genreButtonAction(_ sender: Any) {

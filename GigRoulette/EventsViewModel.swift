@@ -12,7 +12,6 @@ class EventsViewModel {
     
     let eventsModel = EventsModel.sharedInstance
     
-    
     func getEvents() -> [EventEntity] {
         return eventsModel.events
     }
