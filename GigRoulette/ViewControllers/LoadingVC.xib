@@ -20,7 +20,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background-blurred" translatesAutoresizingMaskIntoConstraints="NO" id="E0r-jg-mEM">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BlurredBackground" translatesAutoresizingMaskIntoConstraints="NO" id="E0r-jg-mEM">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ticket_icon_360" translatesAutoresizingMaskIntoConstraints="NO" id="mwo-Je-QqO">
@@ -64,7 +64,7 @@
         </view>
     </objects>
     <resources>
-        <image name="Background-blurred" width="750" height="1334"/>
+        <image name="BlurredBackground" width="750" height="1334"/>
         <image name="ticket_icon_360" width="205" height="360"/>
     </resources>
 </document>
