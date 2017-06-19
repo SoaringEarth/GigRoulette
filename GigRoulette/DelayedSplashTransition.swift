@@ -30,7 +30,7 @@ class DelayedSplashTransition: NSObject, UIViewControllerAnimatedTransitioning {
     }
     
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
-        return 2.0
+        return 0.35
     }
     
 }
