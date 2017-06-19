@@ -87,7 +87,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JuT-m5-e9a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="624" y="790"/>
+            <point key="canvasLocation" x="628" y="790"/>
         </scene>
         <!--Filters View Controller-->
         <scene sceneID="LvS-DG-tWX">
@@ -199,19 +199,36 @@
                                 <rect key="frame" x="16" y="16" width="288" height="259"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="I3h-WM-bS2">
-                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="itemSize" width="100" height="100"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="filterCell" id="e85-SW-iGC" customClass="FilterCollectionViewCell" customModule="GigRoulette" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="14E-4f-eJ5">
+                                                    <rect key="frame" x="8" y="8" width="84" height="84"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="14E-4f-eJ5" secondAttribute="trailing" constant="8" id="0ld-2l-y1f"/>
+                                            <constraint firstItem="14E-4f-eJ5" firstAttribute="leading" secondItem="e85-SW-iGC" secondAttribute="leading" constant="8" id="PXC-aU-azf"/>
+                                            <constraint firstAttribute="bottom" secondItem="14E-4f-eJ5" secondAttribute="bottom" constant="8" id="Tck-Y5-PNP"/>
+                                            <constraint firstItem="14E-4f-eJ5" firstAttribute="top" secondItem="e85-SW-iGC" secondAttribute="top" constant="8" id="koP-uy-JEE"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="titleLabel" destination="14E-4f-eJ5" id="hLV-lN-waP"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
@@ -372,6 +389,7 @@
                         <outlet property="artBTN" destination="6E6-fq-fN9" id="yDx-ZL-VEg"/>
                         <outlet property="comedyBTN" destination="Dr9-Ra-uFs" id="zyz-YB-1Hn"/>
                         <outlet property="familyBTN" destination="Anh-BG-SEf" id="oOe-ad-oFM"/>
+                        <outlet property="filterCollectionView" destination="pTm-vN-obv" id="z3A-x8-2uF"/>
                         <outlet property="musicBTN" destination="tDg-jb-BiQ" id="GZH-Si-trK"/>
                         <outlet property="nowBTN" destination="1aP-iJ-s7v" id="MjX-Dj-Hrh"/>
                         <outlet property="sportsBTN" destination="gza-bI-7hZ" id="xGX-mo-w8a"/>
@@ -381,7 +399,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KTa-wh-yp6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1391" y="790"/>
+            <point key="canvasLocation" x="1474" y="791"/>
         </scene>
         <!--StepsVC-->
         <scene sceneID="Jd4-K5-eqs">

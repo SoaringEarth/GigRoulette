@@ -14,6 +14,7 @@ class FiltersViewController: UIViewController {
     var eventManager = EventsViewModel()
 
     @IBOutlet weak var userlocationLabel: UILabel!
+    @IBOutlet weak var filterCollectionView: UICollectionView!
     
 	@IBOutlet weak var musicBTN: UIButton!
 	@IBOutlet weak var sportsBTN: UIButton!
@@ -29,6 +30,8 @@ class FiltersViewController: UIViewController {
     
 	override func viewDidLoad() {
         super.viewDidLoad()
+        
+        filterCollectionView.allowsMultipleSelection = true
     }
 	
 	@IBAction func genreButtonAction(_ sender: Any) {
@@ -63,6 +66,9 @@ extension FiltersViewController: UICollectionViewDataSource {
         } else {
             cell.backgroundColor = UIColor.black
         }
+        
+        cell.filterName = eventManager.getGenres()[indexPath.row].name
+        
         return cell
     }
 }
