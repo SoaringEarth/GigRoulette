@@ -52,15 +52,23 @@ extension FiltersViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return eventManager.getEvents().count
+        print(eventManager.getGenres().count)
+        return eventManager.getGenres().count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
+        if indexPath.row % 2 == 0 {
+            cell.backgroundColor = UIColor.red
+        } else {
+            cell.backgroundColor = UIColor.black
+        }
         return cell
     }
 }
 
 extension FiltersViewController: UICollectionViewDelegate {
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print(indexPath)
+    }
 }

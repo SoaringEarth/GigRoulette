@@ -13,6 +13,14 @@ struct GenreEntity {
     let id: String
 }
 
+extension GenreEntity: Equatable {}
+
+func ==(lhs: GenreEntity, rhs: GenreEntity) -> Bool {
+    let areEqual = lhs.id == rhs.id &&
+        lhs.name == rhs.name
+    return areEqual
+}
+
 struct EventDate {
     let startTime: StartTime
     let startDate: StartDate
