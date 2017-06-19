@@ -20,6 +20,9 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background-blurred" translatesAutoresizingMaskIntoConstraints="NO" id="E0r-jg-mEM">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ticket_icon_360" translatesAutoresizingMaskIntoConstraints="NO" id="mwo-Je-QqO">
                     <rect key="frame" x="109" y="194" width="102" height="180"/>
                     <constraints>
@@ -40,23 +43,28 @@
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choosing your ticket" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qWs-4C-hd3">
                     <rect key="frame" x="0.0" y="30" width="320" height="33.5"/>
                     <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                    <nil key="textColor"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="E0r-jg-mEM" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="5eO-4Y-2AX"/>
                 <constraint firstItem="mwo-Je-QqO" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="8NZ-a7-4Yq"/>
                 <constraint firstItem="mwo-Je-QqO" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="I5b-Tj-MK0"/>
                 <constraint firstAttribute="trailing" secondItem="qWs-4C-hd3" secondAttribute="trailing" id="Qw2-l7-lZs"/>
+                <constraint firstItem="E0r-jg-mEM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ZN4-WN-vrB"/>
                 <constraint firstAttribute="bottom" secondItem="z4i-bn-7mb" secondAttribute="bottom" constant="20" id="aLp-D0-JIX"/>
                 <constraint firstItem="z4i-bn-7mb" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="bO9-lS-geh"/>
                 <constraint firstItem="qWs-4C-hd3" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="30" id="fgK-0l-ENQ"/>
+                <constraint firstAttribute="bottom" secondItem="E0r-jg-mEM" secondAttribute="bottom" id="i3n-Rh-cQi"/>
+                <constraint firstAttribute="trailing" secondItem="E0r-jg-mEM" secondAttribute="trailing" id="tJC-Xa-Ow3"/>
                 <constraint firstItem="qWs-4C-hd3" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="vzP-F6-evt"/>
             </constraints>
         </view>
     </objects>
     <resources>
+        <image name="Background-blurred" width="750" height="1334"/>
         <image name="ticket_icon_360" width="205" height="360"/>
     </resources>
 </document>
