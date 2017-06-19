@@ -16,6 +16,10 @@ class EventsViewModel {
         return eventsModel.events
     }
     
+    func getGenres() -> [GenreEntity] {
+        return eventsModel.getGenresFromEvents()
+    }
+    
     func getRandomEvent() -> EventEntity {
         
         return eventsModel.events[0]

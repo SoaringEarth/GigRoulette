@@ -37,6 +37,18 @@ class EventsModel {
         }
     }
     
+    func getGenresFromEvents() -> [GenreEntity] {
+        var genres: [GenreEntity] = []
+        for event in events {
+            for genre in event.genres {
+                if !genres.contains(where: genre) {
+                    genres.append(contentsOf: event.genres)
+                }
+            }
+        }
+        return genres
+    }
+    
     func getRandomEvent() -> EventEntity {
         return events[0]
     }

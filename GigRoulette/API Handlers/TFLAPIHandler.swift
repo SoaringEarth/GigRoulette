@@ -9,40 +9,6 @@
 import Foundation
 // 2af9a281d929bcb15d3f0838ee372f2a
 
-struct Journey {
-    var legs: [Leg] = [Leg]()
-    let startDateTime: Date
-    let arrivalDateTime: Date
-    let durationMinutes: Int
-    
-    init(durationMinutes: Int) {
-        self.startDateTime = Date()
-        let calendar = Calendar.current
-        self.arrivalDateTime = calendar.date(byAdding: .minute, value: durationMinutes, to: startDateTime)!
-        self.durationMinutes = durationMinutes
-    }
-}
-
-struct Leg {
-    let duration: Int
-    let description: String
-    
-    init(duration: Int, description: String) {
-        self.duration = duration
-        self.description = description
-    }
-}
-
-struct Point {
-    let lat: String
-    let lon: String
-    
-    init(lat: String, lon: String) {
-        self.lat = lat
-        self.lon = lon
-    }
-}
-
 func getDirections(FromStartPoint startPoint: Point, ToEndPoint endPoint: Point, WithSuccess success: @escaping (Journey)->()) {
     //https://api.tfl.gov.uk/Journey/JourneyResults/51.5412969%2C-0.0954148/to/51.5388457%2C-0.1367267
     

@@ -15,6 +15,7 @@
 		04408C8E1EF7FC4500788063 /* CustomFadeInTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04408C8D1EF7FC4500788063 /* CustomFadeInTransition.swift */; };
 		04408C901EF7FD2300788063 /* CustomFadeInNavigationControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04408C8F1EF7FD2300788063 /* CustomFadeInNavigationControllerDelegate.swift */; };
 		04408C921EF8002200788063 /* DelayedSplashTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04408C911EF8002200788063 /* DelayedSplashTransition.swift */; };
+		04408C951EF8044D00788063 /* EventEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04408C941EF8044D00788063 /* EventEntity.swift */; };
 		04705D021EF32B230011B236 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04705D011EF32B230011B236 /* AppDelegate.swift */; };
 		04705D071EF32B230011B236 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04705D051EF32B230011B236 /* Main.storyboard */; };
 		04705D091EF32B230011B236 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04705D081EF32B230011B236 /* Assets.xcassets */; };
@@ -47,6 +48,7 @@
 		04408C8D1EF7FC4500788063 /* CustomFadeInTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFadeInTransition.swift; sourceTree = "<group>"; };
 		04408C8F1EF7FD2300788063 /* CustomFadeInNavigationControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFadeInNavigationControllerDelegate.swift; sourceTree = "<group>"; };
 		04408C911EF8002200788063 /* DelayedSplashTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelayedSplashTransition.swift; sourceTree = "<group>"; };
+		04408C941EF8044D00788063 /* EventEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventEntity.swift; sourceTree = "<group>"; };
 		04705CFE1EF32B230011B236 /* GigRoulette.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GigRoulette.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04705D011EF32B230011B236 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04705D061EF32B230011B236 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -83,6 +85,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04408C931EF8042100788063 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				041184331EF3B7380054A00C /* EntityStuff.swift */,
+				04408C941EF8044D00788063 /* EventEntity.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
 		04705CF51EF32B230011B236 = {
 			isa = PBXGroup;
 			children = (
@@ -109,7 +120,7 @@
 				04F0743D1EF54AAE00670F28 /* API Handlers */,
 				04F074471EF5705A00670F28 /* Models */,
 				047B8AF41EF3F6200024C293 /* EventsViewModel.swift */,
-				041184331EF3B7380054A00C /* EntityStuff.swift */,
+				04408C931EF8042100788063 /* Entities */,
 				04F074411EF55C9600670F28 /* UI Elements */,
 				047B8B051EF548330024C293 /* ViewControllers */,
 				04705D051EF32B230011B236 /* Main.storyboard */,
@@ -277,6 +288,7 @@
 				04F074451EF5692700670F28 /* Double+RoundTo.swift in Sources */,
 				04F074331EF549F200670F28 /* ChosenEventViewController.swift in Sources */,
 				04F074431EF55CD100670F28 /* TintedToggleButton.swift in Sources */,
+				04408C951EF8044D00788063 /* EventEntity.swift in Sources */,
 				047B8AF91EF41BB10024C293 /* TMPricingAPIHandler.swift in Sources */,
 				041184341EF3B7380054A00C /* EntityStuff.swift in Sources */,
 				04F074351EF549F200670F28 /* FiltersViewController.swift in Sources */,

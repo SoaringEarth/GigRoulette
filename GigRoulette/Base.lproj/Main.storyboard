@@ -104,7 +104,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BlurredBackground" translatesAutoresizingMaskIntoConstraints="NO" id="boZ-rl-SCO">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5q2-oI-21x" userLabel="FilterView">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5q2-oI-21x" userLabel="FilterView">
                                 <rect key="frame" x="16" y="16" width="288" height="259"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filters" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nb8-hx-Y8Z">
@@ -195,6 +195,30 @@
                                     <constraint firstItem="Anh-BG-SEf" firstAttribute="leading" secondItem="Dr9-Ra-uFs" secondAttribute="trailing" constant="48" id="zWX-2b-1ol"/>
                                 </constraints>
                             </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pTm-vN-obv">
+                                <rect key="frame" x="16" y="16" width="288" height="259"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="B9E-Za-XBa">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="e85-SW-iGC">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="Bl4-h5-EGt" id="UtS-Yh-n7V"/>
+                                    <outlet property="delegate" destination="Bl4-h5-EGt" id="TDK-tH-aBl"/>
+                                </connections>
+                            </collectionView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tdw-2R-U2n" userLabel="TimeView">
                                 <rect key="frame" x="16" y="291" width="288" height="88"/>
                                 <subviews>
@@ -319,6 +343,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="pTm-vN-obv" firstAttribute="trailing" secondItem="5q2-oI-21x" secondAttribute="trailing" id="08v-hR-257"/>
                             <constraint firstAttribute="trailing" secondItem="bgo-X0-j3V" secondAttribute="trailing" constant="32" id="2YM-Ol-O4m"/>
                             <constraint firstItem="boZ-rl-SCO" firstAttribute="top" secondItem="S2l-U1-0rn" secondAttribute="top" id="2s5-bf-Vlk"/>
                             <constraint firstItem="Tdw-2R-U2n" firstAttribute="leading" secondItem="S2l-U1-0rn" secondAttribute="leading" constant="16" id="Bnm-w9-CbW"/>
@@ -330,10 +355,13 @@
                             <constraint firstItem="5q2-oI-21x" firstAttribute="top" secondItem="S2l-U1-0rn" secondAttribute="top" constant="16" id="cyv-ff-fRp"/>
                             <constraint firstItem="wWh-Ig-lp2" firstAttribute="leading" secondItem="S2l-U1-0rn" secondAttribute="leading" constant="16" id="dqi-ib-Wna"/>
                             <constraint firstItem="bgo-X0-j3V" firstAttribute="top" secondItem="wWh-Ig-lp2" secondAttribute="bottom" constant="16" id="fPm-nM-eLe"/>
+                            <constraint firstItem="pTm-vN-obv" firstAttribute="bottom" secondItem="5q2-oI-21x" secondAttribute="bottom" id="fpo-5S-jnU"/>
                             <constraint firstItem="bgo-X0-j3V" firstAttribute="leading" secondItem="S2l-U1-0rn" secondAttribute="leading" constant="32" id="g4c-rl-UtZ"/>
                             <constraint firstItem="boZ-rl-SCO" firstAttribute="leading" secondItem="S2l-U1-0rn" secondAttribute="leading" id="hID-8Z-vWk"/>
+                            <constraint firstItem="pTm-vN-obv" firstAttribute="top" secondItem="5q2-oI-21x" secondAttribute="top" id="hWn-0P-EsB"/>
                             <constraint firstItem="Tdw-2R-U2n" firstAttribute="top" secondItem="5q2-oI-21x" secondAttribute="bottom" constant="16" id="lZN-Li-8fa"/>
                             <constraint firstAttribute="bottom" secondItem="bgo-X0-j3V" secondAttribute="bottom" constant="32" id="mBk-Rw-FDe"/>
+                            <constraint firstItem="pTm-vN-obv" firstAttribute="leading" secondItem="5q2-oI-21x" secondAttribute="leading" id="ost-La-sP5"/>
                             <constraint firstAttribute="bottom" secondItem="boZ-rl-SCO" secondAttribute="bottom" id="voO-mx-RYp"/>
                             <constraint firstAttribute="trailing" secondItem="wWh-Ig-lp2" secondAttribute="trailing" constant="16" id="zVy-Gi-pgA"/>
                         </constraints>
