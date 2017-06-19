@@ -41,6 +41,35 @@
             </objects>
             <point key="canvasLocation" x="-159" y="792"/>
         </scene>
+        <!--Fetch Events View Controller-->
+        <scene sceneID="U01-y2-98D">
+            <objects>
+                <viewController id="IhE-Ba-Ato" customClass="FetchEventsViewController" customModule="GigRoulette" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yyB-G3-MPT"/>
+                        <viewControllerLayoutGuide type="bottom" id="Mvz-Tu-M7k"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="B70-4y-UGT">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BlurredBackground" translatesAutoresizingMaskIntoConstraints="NO" id="VEI-Up-cmw">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="VEI-Up-cmw" secondAttribute="bottom" id="4ae-FG-UWi"/>
+                            <constraint firstItem="VEI-Up-cmw" firstAttribute="leading" secondItem="B70-4y-UGT" secondAttribute="leading" id="RLP-he-iHp"/>
+                            <constraint firstItem="VEI-Up-cmw" firstAttribute="top" secondItem="B70-4y-UGT" secondAttribute="top" id="X9y-n4-IXM"/>
+                            <constraint firstAttribute="trailing" secondItem="VEI-Up-cmw" secondAttribute="trailing" id="aMH-Gd-mlS"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JuT-m5-e9a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="624" y="790"/>
+        </scene>
         <!--Filters View Controller-->
         <scene sceneID="LvS-DG-tWX">
             <objects>
@@ -53,7 +82,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background-blurred" translatesAutoresizingMaskIntoConstraints="NO" id="boZ-rl-SCO">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BlurredBackground" translatesAutoresizingMaskIntoConstraints="NO" id="boZ-rl-SCO">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5q2-oI-21x" userLabel="FilterView">
@@ -305,7 +334,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KTa-wh-yp6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="602" y="792"/>
+            <point key="canvasLocation" x="1391" y="790"/>
         </scene>
         <!--StepsVC-->
         <scene sceneID="Jd4-K5-eqs">
@@ -391,7 +420,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="niF-Uh-OUu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1558" y="824"/>
+            <point key="canvasLocation" x="2344" y="789"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="FYe-lI-Nc9">
@@ -414,7 +443,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Background-blurred" width="750" height="1334"/>
+        <image name="BlurredBackground" width="750" height="1334"/>
         <image name="Icon_selected_anytime" width="134" height="52"/>
         <image name="Icon_selected_now" width="136" height="52"/>
         <image name="Icon_selected_tomorrow" width="208" height="52"/>

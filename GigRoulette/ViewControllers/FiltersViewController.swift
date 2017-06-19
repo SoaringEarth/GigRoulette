@@ -10,10 +10,8 @@ import UIKit
 import CoreLocation
 
 class FiltersViewController: UIViewController {
-
-    var currentLocation: CLLocation = CLLocation()
+    
     var currentGeoHash: String = ""
-    var eventManager = EventsViewModel()
     
     @IBOutlet weak var userlocationLabel: UILabel!
     
@@ -31,10 +29,7 @@ class FiltersViewController: UIViewController {
     
 	override func viewDidLoad() {
         super.viewDidLoad()
-                
-        if let location = LocationTracker.sharedInstance.getCurrentLocation() {
-            currentLocation = location
-        }
+
     }
 	
 	@IBAction func genreButtonAction(_ sender: Any) {
