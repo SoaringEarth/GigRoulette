@@ -27,7 +27,6 @@
 		047B8AF91EF41BB10024C293 /* TMPricingAPIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047B8AF81EF41BB10024C293 /* TMPricingAPIHandler.swift */; };
 		04F074331EF549F200670F28 /* ChosenEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047B8B061EF548580024C293 /* ChosenEventViewController.swift */; };
 		04F074341EF549F200670F28 /* ChosenEventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 047B8B0D1EF548590024C293 /* ChosenEventViewController.xib */; };
-		04F074351EF549F200670F28 /* FiltersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047B8B081EF548580024C293 /* FiltersViewController.swift */; };
 		04F074361EF549F200670F28 /* LoadingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047B8B0A1EF548580024C293 /* LoadingVC.swift */; };
 		04F074371EF549F200670F28 /* LoadingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 047B8B091EF548580024C293 /* LoadingVC.xib */; };
 		04F074381EF549F200670F28 /* RouletteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047B8B0C1EF548590024C293 /* RouletteViewController.swift */; };
@@ -51,6 +50,7 @@
 		04408C911EF8002200788063 /* DelayedSplashTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelayedSplashTransition.swift; sourceTree = "<group>"; };
 		04408C941EF8044D00788063 /* EventEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventEntity.swift; sourceTree = "<group>"; };
 		04408C961EF81EE900788063 /* FillterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillterCollectionViewCell.swift; sourceTree = "<group>"; };
+		04408C9A1EF81FF000788063 /* FiltersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersViewController.swift; sourceTree = "<group>"; };
 		04705CFE1EF32B230011B236 /* GigRoulette.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GigRoulette.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04705D011EF32B230011B236 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04705D061EF32B230011B236 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -62,7 +62,6 @@
 		047B8AF61EF3FFBA0024C293 /* EventsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsModel.swift; sourceTree = "<group>"; };
 		047B8AF81EF41BB10024C293 /* TMPricingAPIHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMPricingAPIHandler.swift; sourceTree = "<group>"; };
 		047B8B061EF548580024C293 /* ChosenEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChosenEventViewController.swift; path = GigRoulette/ViewControllers/ChosenEventViewController.swift; sourceTree = SOURCE_ROOT; };
-		047B8B081EF548580024C293 /* FiltersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FiltersViewController.swift; path = GigRoulette/ViewControllers/FiltersViewController.swift; sourceTree = SOURCE_ROOT; };
 		047B8B091EF548580024C293 /* LoadingVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = LoadingVC.xib; path = GigRoulette/ViewControllers/LoadingVC.xib; sourceTree = SOURCE_ROOT; };
 		047B8B0A1EF548580024C293 /* LoadingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoadingVC.swift; path = GigRoulette/ViewControllers/LoadingVC.swift; sourceTree = SOURCE_ROOT; };
 		047B8B0B1EF548580024C293 /* StepsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StepsVC.swift; path = GigRoulette/ViewControllers/StepsVC.swift; sourceTree = SOURCE_ROOT; };
@@ -94,6 +93,23 @@
 				04408C941EF8044D00788063 /* EventEntity.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		04408C981EF81FC100788063 /* Filter CollectionView Cells */ = {
+			isa = PBXGroup;
+			children = (
+				04408C961EF81EE900788063 /* FillterCollectionViewCell.swift */,
+			);
+			path = "Filter CollectionView Cells";
+			sourceTree = "<group>";
+		};
+		04408C991EF81FCE00788063 /* Filter View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				04408C9A1EF81FF000788063 /* FiltersViewController.swift */,
+				04408C981EF81FC100788063 /* Filter CollectionView Cells */,
+			);
+			path = "Filter View Controller";
 			sourceTree = "<group>";
 		};
 		04705CF51EF32B230011B236 = {
@@ -139,8 +155,7 @@
 			children = (
 				047B8B0E1EF548590024C293 /* SplashViewController.swift */,
 				04408C891EF7F0E200788063 /* FetchEventsViewController.swift */,
-				047B8B081EF548580024C293 /* FiltersViewController.swift */,
-				04408C961EF81EE900788063 /* FillterCollectionViewCell.swift */,
+				04408C991EF81FCE00788063 /* Filter View Controller */,
 				047B8B0A1EF548580024C293 /* LoadingVC.swift */,
 				047B8B091EF548580024C293 /* LoadingVC.xib */,
 				047B8B061EF548580024C293 /* ChosenEventViewController.swift */,
@@ -295,7 +310,6 @@
 				04408C951EF8044D00788063 /* EventEntity.swift in Sources */,
 				047B8AF91EF41BB10024C293 /* TMPricingAPIHandler.swift in Sources */,
 				041184341EF3B7380054A00C /* EntityStuff.swift in Sources */,
-				04F074351EF549F200670F28 /* FiltersViewController.swift in Sources */,
 				04705D021EF32B230011B236 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
