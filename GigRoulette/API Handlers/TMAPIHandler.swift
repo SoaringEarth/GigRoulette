@@ -67,8 +67,7 @@ class TMAPIHandler {
                     print("Failed to serialize responseData to [String : AnyObject]")
                 }
             }
-            }.resume()
-        
+        }.resume()
     }
 }
 

@@ -13,17 +13,12 @@ class ChosenEventViewController: UIViewController {
     @IBOutlet weak var chosenEventTitleLabel: UILabel!
     @IBOutlet weak var chosenEventVenueAddressLabel: UILabel!
     
-    var chosenEvent: EventEntity? {
-        didSet {
-            if let eventName = chosenEvent?.name {
-                chosenEventTitleLabel.text = eventName
-            }
-            
-        }
-    }
+    var chosenEvent: EventEntity?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        chosenEventTitleLabel.text = chosenEvent?.name
     }
     
     @IBAction func imGoingButtonTapped(_ sender: Any) {
