@@ -14,7 +14,6 @@ class ChosenEventViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     @IBAction func imGoingButtonTapped(_ sender: Any) {
