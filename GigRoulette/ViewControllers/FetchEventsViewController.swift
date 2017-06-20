@@ -44,7 +44,7 @@ class FetchEventsViewController: UIViewController {
         rotationAnimation.fromValue = 0.0
         rotationAnimation.toValue = (2 * Float.pi)
         rotationAnimation.duration = 0.7
-        rotationAnimation.repeatCount = 8
+        rotationAnimation.repeatCount = 10
         rotationAnimation.isRemovedOnCompletion = true
         
         loadingImageView.layer.add(rotationAnimation, forKey: "rotate")

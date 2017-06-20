@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		040AD32B1EF93B7C009131F0 /* againts refresh.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 040AD32A1EF93B7C009131F0 /* againts refresh.ttf */; };
 		041184321EF3B71C0054A00C /* TMAPIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041184311EF3B71C0054A00C /* TMAPIHandler.swift */; };
 		041184341EF3B7380054A00C /* EntityStuff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041184331EF3B7380054A00C /* EntityStuff.swift */; };
 		0411843D1EF3C2050054A00C /* GeoHashAPIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0411843C1EF3C2050054A00C /* GeoHashAPIHandler.swift */; };
@@ -41,6 +42,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		040AD32A1EF93B7C009131F0 /* againts refresh.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "againts refresh.ttf"; path = "../../../../../../Downloads/againts refresh.ttf"; sourceTree = "<group>"; };
 		041184311EF3B71C0054A00C /* TMAPIHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMAPIHandler.swift; sourceTree = "<group>"; };
 		041184331EF3B7380054A00C /* EntityStuff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityStuff.swift; sourceTree = "<group>"; };
 		0411843C1EF3C2050054A00C /* GeoHashAPIHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoHashAPIHandler.swift; sourceTree = "<group>"; };
@@ -87,6 +89,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		040AD3281EF93B58009131F0 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				040AD3291EF93B67009131F0 /* Fonts */,
+				04705D081EF32B230011B236 /* Assets.xcassets */,
+				04408C8B1EF7F1C600788063 /* Icons.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		040AD3291EF93B67009131F0 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				040AD32A1EF93B7C009131F0 /* againts refresh.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		04408C931EF8042100788063 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
@@ -142,9 +162,8 @@
 				04408C931EF8042100788063 /* Entities */,
 				04F074411EF55C9600670F28 /* UI Elements */,
 				047B8B051EF548330024C293 /* ViewControllers */,
+				040AD3281EF93B58009131F0 /* Assets */,
 				04705D051EF32B230011B236 /* Main.storyboard */,
-				04705D081EF32B230011B236 /* Assets.xcassets */,
-				04408C8B1EF7F1C600788063 /* Icons.xcassets */,
 				04705D0A1EF32B230011B236 /* LaunchScreen.storyboard */,
 				04705D0D1EF32B230011B236 /* Info.plist */,
 			);
@@ -278,6 +297,7 @@
 				04705D091EF32B230011B236 /* Assets.xcassets in Resources */,
 				04408C8C1EF7F1C600788063 /* Icons.xcassets in Resources */,
 				04705D071EF32B230011B236 /* Main.storyboard in Resources */,
+				040AD32B1EF93B7C009131F0 /* againts refresh.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

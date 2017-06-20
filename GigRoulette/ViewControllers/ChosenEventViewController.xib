@@ -10,6 +10,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChosenEventViewController" customModule="GigRoulette" customModuleProvider="target">
             <connections>
+                <outlet property="chosenEventTitleLabel" destination="1NN-No-MMU" id="l1f-0l-ThV"/>
+                <outlet property="chosenEventVenueAddressLabel" destination="lSq-3e-Kri" id="PVj-Sd-HV7"/>
+                <outlet property="chosenEventVenueTitleLabel" destination="Wgb-8U-qNg" id="8t4-mI-QXw"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -27,6 +30,24 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fMI-do-lIt">
                     <rect key="frame" x="16" y="238" width="288" height="314"/>
                     <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Venue Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="Wgb-8U-qNg">
+                            <rect key="frame" x="8" y="8" width="272" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="1NN-No-MMU">
+                            <rect key="frame" x="8" y="37" width="272" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Venue Address" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="lSq-3e-Kri">
+                            <rect key="frame" x="8" y="66" width="272" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q0H-dO-gN5">
                             <rect key="frame" x="8" y="242" width="132" height="64"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -51,11 +72,20 @@
                     <constraints>
                         <constraint firstItem="q0H-dO-gN5" firstAttribute="leading" secondItem="fMI-do-lIt" secondAttribute="leading" constant="8" id="17B-Gh-d6t"/>
                         <constraint firstAttribute="bottom" secondItem="q0H-dO-gN5" secondAttribute="bottom" constant="8" id="2Jm-Ag-6eh"/>
+                        <constraint firstItem="1NN-No-MMU" firstAttribute="top" secondItem="Wgb-8U-qNg" secondAttribute="bottom" constant="8" id="3NP-fR-2ZV"/>
+                        <constraint firstItem="lSq-3e-Kri" firstAttribute="top" secondItem="1NN-No-MMU" secondAttribute="bottom" constant="8" id="AZU-KS-hK3"/>
+                        <constraint firstAttribute="trailing" secondItem="1NN-No-MMU" secondAttribute="trailing" constant="8" id="Gj2-Vd-Jxm"/>
                         <constraint firstAttribute="trailing" secondItem="A3Z-cs-xOb" secondAttribute="trailing" constant="8" id="HUc-Fm-Qya"/>
+                        <constraint firstItem="Wgb-8U-qNg" firstAttribute="top" secondItem="fMI-do-lIt" secondAttribute="top" constant="8" id="K0C-tR-9Rg"/>
+                        <constraint firstAttribute="trailing" secondItem="Wgb-8U-qNg" secondAttribute="trailing" constant="8" id="SLz-Yo-PG1"/>
+                        <constraint firstAttribute="trailing" secondItem="lSq-3e-Kri" secondAttribute="trailing" constant="8" id="gQB-Eh-wVM"/>
+                        <constraint firstItem="lSq-3e-Kri" firstAttribute="leading" secondItem="fMI-do-lIt" secondAttribute="leading" constant="8" id="h4q-dn-Hrh"/>
                         <constraint firstItem="q0H-dO-gN5" firstAttribute="width" secondItem="A3Z-cs-xOb" secondAttribute="width" id="jZt-Lw-gMq"/>
                         <constraint firstAttribute="bottom" secondItem="A3Z-cs-xOb" secondAttribute="bottom" constant="8" id="mTu-AF-Og9"/>
                         <constraint firstItem="A3Z-cs-xOb" firstAttribute="height" secondItem="q0H-dO-gN5" secondAttribute="height" id="nbb-02-jsF"/>
+                        <constraint firstItem="Wgb-8U-qNg" firstAttribute="leading" secondItem="fMI-do-lIt" secondAttribute="leading" constant="8" id="otN-ZR-of9"/>
                         <constraint firstItem="A3Z-cs-xOb" firstAttribute="leading" secondItem="q0H-dO-gN5" secondAttribute="trailing" constant="8" id="yMZ-lZ-7CQ"/>
+                        <constraint firstItem="1NN-No-MMU" firstAttribute="leading" secondItem="fMI-do-lIt" secondAttribute="leading" constant="8" id="z91-jI-LVa"/>
                     </constraints>
                 </view>
             </subviews>

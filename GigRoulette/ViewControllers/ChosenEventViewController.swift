@@ -9,8 +9,18 @@
 import UIKit
 
 class ChosenEventViewController: UIViewController {
+    @IBOutlet weak var chosenEventVenueTitleLabel: UILabel!
+    @IBOutlet weak var chosenEventTitleLabel: UILabel!
+    @IBOutlet weak var chosenEventVenueAddressLabel: UILabel!
     
-    var chosenEvent: EventEntity?
+    var chosenEvent: EventEntity? {
+        didSet {
+            if let eventName = chosenEvent?.name {
+                chosenEventTitleLabel.text = eventName
+            }
+            
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
