@@ -25,16 +25,23 @@ class EventsModel {
                 GeoHashAPIHandler.getGeoHash(ForLocation: location, WithSuccess: { (geoHash) in
                     self.getAllEvents(WithGeoHash: geoHash, AndCountryCode: countryCode, WithSuccess: { (events) in
                         self.events = events
+                    }, withFailure: {
+                        print("failedToGetEvents")
                     })
                 })
+            }, WithFailure: {
+                print("EventsModel - Failure to initialise events")
             })
         }
     }
     
-    func getAllEvents(WithGeoHash geoHash: String, AndCountryCode countryCode: String, WithSuccess success: @escaping ([EventEntity])->()) {
-        TMAPIHandler.getEvents(WithGeoHash: geoHash, AndCountryCode: countryCode) { (events) in
+    func getAllEvents(WithGeoHash geoHash: String, AndCountryCode countryCode: String, WithSuccess success: @escaping ([EventEntity])->(), withFailure failure: @escaping ()->()) {
+        
+        TMAPIHandler.getEvents(WithGeoHash: geoHash, AndCountryCode: countryCode, WithSuccess: { (events) in
             success(events)
-        }
+        }, WithFailure: {
+            failure()
+        })
     }
     
     func getGenresFromEvents() -> [GenreEntity] {

@@ -39,16 +39,26 @@ class FetchEventsViewController: UIViewController {
             })
         }
         
-        let rotationAnimation = CABasicAnimation()
-        rotationAnimation.keyPath = "transform.rotation"
-        rotationAnimation.fromValue = 0.0
-        rotationAnimation.toValue = (2 * Float.pi)
-        rotationAnimation.duration = 0.7
-        rotationAnimation.repeatCount = 10
-        rotationAnimation.isRemovedOnCompletion = true
+        let rotationAnimation = create(AnimationWithKeyPath: "transform.rotation",
+                                       fromValue: 0.0,
+                                       toValue: (2 * Float.pi),
+                                       withDuration: 0.7,
+                                       withRepeatCount: 10,
+                                       andIsRemovedOnCompletion: true)
         
         loadingImageView.layer.add(rotationAnimation, forKey: "rotate")
         CATransaction.commit()
+    }
+    
+    private func create(AnimationWithKeyPath keyPath: String, fromValue from: Any?, toValue to: Any?, withDuration duration: CFTimeInterval, withRepeatCount repeatCount: Float, andIsRemovedOnCompletion isRemoved: Bool) -> CABasicAnimation {
+        let basicAnimation = CABasicAnimation()
+        basicAnimation.keyPath = keyPath
+        basicAnimation.fromValue = from
+        basicAnimation.toValue = to
+        basicAnimation.duration = duration
+        basicAnimation.repeatCount = repeatCount
+        basicAnimation.isRemovedOnCompletion = isRemoved
+        return basicAnimation
     }
     
     private func presentFilterViewController() {

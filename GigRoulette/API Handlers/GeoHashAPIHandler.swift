@@ -11,12 +11,17 @@ import CoreLocation
 
 class GeoHashAPIHandler {
     
-    static func getCountryCode(FromLocation location: CLLocation, withSuccess success: @escaping (String)->()) {
+    static func getCountryCode(FromLocation location: CLLocation, withSuccess success: @escaping (String)->(), WithFailure failure: @escaping ()->()) {
         CLGeocoder().reverseGeocodeLocation(location, completionHandler:
             { (placemarks, error) in
-                if let placeMark = placemarks?.first {
-                    if let countryCode = placeMark.isoCountryCode {
-                        success(countryCode)
+                if error != nil {
+                    print("Failed to reverse GeoCode")
+                    failure()
+                } else {
+                    if let placeMark = placemarks?.first {
+                        if let countryCode = placeMark.isoCountryCode {
+                            success(countryCode)
+                        }
                     }
                 }
         })

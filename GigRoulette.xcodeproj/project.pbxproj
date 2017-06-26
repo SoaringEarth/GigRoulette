@@ -19,6 +19,8 @@
 		04408C951EF8044D00788063 /* EventEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04408C941EF8044D00788063 /* EventEntity.swift */; };
 		04408C971EF81EE900788063 /* FilterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04408C961EF81EE900788063 /* FilterCollectionViewCell.swift */; };
 		04408C9B1EF8209B00788063 /* FiltersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04408C9A1EF81FF000788063 /* FiltersViewController.swift */; };
+		0452DEA41F000C93002E27CC /* EventEntityParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0452DEA31F000C93002E27CC /* EventEntityParser.swift */; };
+		0452DEA61F000E33002E27CC /* UIView+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0452DEA51F000E33002E27CC /* UIView+Animation.swift */; };
 		04705D021EF32B230011B236 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04705D011EF32B230011B236 /* AppDelegate.swift */; };
 		04705D071EF32B230011B236 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04705D051EF32B230011B236 /* Main.storyboard */; };
 		04705D091EF32B230011B236 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04705D081EF32B230011B236 /* Assets.xcassets */; };
@@ -54,6 +56,8 @@
 		04408C941EF8044D00788063 /* EventEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventEntity.swift; sourceTree = "<group>"; };
 		04408C961EF81EE900788063 /* FilterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCollectionViewCell.swift; sourceTree = "<group>"; };
 		04408C9A1EF81FF000788063 /* FiltersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersViewController.swift; sourceTree = "<group>"; };
+		0452DEA31F000C93002E27CC /* EventEntityParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventEntityParser.swift; sourceTree = "<group>"; };
+		0452DEA51F000E33002E27CC /* UIView+Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Animation.swift"; sourceTree = "<group>"; };
 		04705CFE1EF32B230011B236 /* GigRoulette.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GigRoulette.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04705D011EF32B230011B236 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04705D061EF32B230011B236 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -133,6 +137,14 @@
 			path = "Filter View Controller";
 			sourceTree = "<group>";
 		};
+		0452DEA21F000C69002E27CC /* ObjectCreators */ = {
+			isa = PBXGroup;
+			children = (
+				0452DEA31F000C93002E27CC /* EventEntityParser.swift */,
+			);
+			name = ObjectCreators;
+			sourceTree = "<group>";
+		};
 		04705CF51EF32B230011B236 = {
 			isa = PBXGroup;
 			children = (
@@ -194,6 +206,7 @@
 				047B8AF81EF41BB10024C293 /* TMPricingAPIHandler.swift */,
 				047B8AF21EF3F3A60024C293 /* TFLAPIHandler.swift */,
 				0411843C1EF3C2050054A00C /* GeoHashAPIHandler.swift */,
+				0452DEA21F000C69002E27CC /* ObjectCreators */,
 			);
 			path = "API Handlers";
 			sourceTree = "<group>";
@@ -221,6 +234,7 @@
 			isa = PBXGroup;
 			children = (
 				04F074441EF5692700670F28 /* Double+RoundTo.swift */,
+				0452DEA51F000E33002E27CC /* UIView+Animation.swift */,
 			);
 			path = "Class Extensions";
 			sourceTree = "<group>";
@@ -320,6 +334,7 @@
 				04F074381EF549F200670F28 /* RouletteViewController.swift in Sources */,
 				644A007A1EF4118A0001A6C6 /* Globals.swift in Sources */,
 				04F074401EF54B5900670F28 /* LocationTracker.swift in Sources */,
+				0452DEA41F000C93002E27CC /* EventEntityParser.swift in Sources */,
 				047B8AF31EF3F3A60024C293 /* TFLAPIHandler.swift in Sources */,
 				04408C921EF8002200788063 /* DelayedSplashTransition.swift in Sources */,
 				04F074391EF549F200670F28 /* SplashViewController.swift in Sources */,
@@ -327,6 +342,7 @@
 				04408C901EF7FD2300788063 /* CustomFadeInNavigationControllerDelegate.swift in Sources */,
 				04F074451EF5692700670F28 /* Double+RoundTo.swift in Sources */,
 				04F074331EF549F200670F28 /* ChosenEventViewController.swift in Sources */,
+				0452DEA61F000E33002E27CC /* UIView+Animation.swift in Sources */,
 				04408C9B1EF8209B00788063 /* FiltersViewController.swift in Sources */,
 				04F074431EF55CD100670F28 /* TintedToggleButton.swift in Sources */,
 				04408C951EF8044D00788063 /* EventEntity.swift in Sources */,

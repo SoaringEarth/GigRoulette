@@ -11,9 +11,12 @@ import UIKit
 class FiltersViewController: UIViewController {
     
     var currentGeoHash: String = ""
-    var eventManager = EventsViewModel()
+    var eventsManager = EventsViewModel()
 
-    @IBOutlet weak var userlocationLabel: UILabel!
+    @IBOutlet weak var filterView: UIView!
+    @IBOutlet weak var timeView: UIView!
+    @IBOutlet weak var priceView: UIView!
+    
     @IBOutlet weak var filterCollectionView: UICollectionView!
     
 	@IBOutlet weak var musicBTN: UIButton!
@@ -31,7 +34,21 @@ class FiltersViewController: UIViewController {
 	override func viewDidLoad() {
         super.viewDidLoad()
         
-        filterCollectionView.allowsMultipleSelection = true
+        filterCollectionView?.allowsMultipleSelection = true
+        
+        let collectionFlowLayout = UICollectionViewFlowLayout()
+        collectionFlowLayout.sectionInset = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
+        filterCollectionView.collectionViewLayout = collectionFlowLayout
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+//        if eventsManager.getEvents().count == 0 {
+//            filterCollectionView.delegate = nil
+//            filterCollectionView.dataSource = nil
+//            filterView.removeFromSuperview()
+//        }
     }
 	
 	@IBAction func genreButtonAction(_ sender: Any) {
@@ -40,9 +57,9 @@ class FiltersViewController: UIViewController {
 	}
     
 	@IBAction func partyAction(_ sender: Any) {
-        if eventManager.getEvents().count > 0 {
+        if eventsManager.getEvents().count > 0 {
             let loadingVC = LoadingVC(nibName: "LoadingVC", bundle: nil)
-            loadingVC.chosenEvent = eventManager.getEvents().first
+            loadingVC.chosenEvent = eventsManager.getEvents().first
             self.show(loadingVC, sender: self)
         }
 	}
@@ -55,19 +72,15 @@ extension FiltersViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print(eventManager.getGenres().count)
-        return eventManager.getGenres().count
+        print(eventsManager.getGenres().count)
+        return eventsManager.getGenres().count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "filterCell", for: indexPath) as! FilterCollectionViewCell
-        if indexPath.row % 2 == 0 {
-            cell.backgroundColor = UIColor.red
-        } else {
-            cell.backgroundColor = UIColor.black
-        }
         
-        cell.filterName = eventManager.getGenres()[indexPath.row].name
+        cell.backgroundColor = UIColor.clear
+        cell.filterName = eventsManager.getGenres()[indexPath.row].name
         
         return cell
     }

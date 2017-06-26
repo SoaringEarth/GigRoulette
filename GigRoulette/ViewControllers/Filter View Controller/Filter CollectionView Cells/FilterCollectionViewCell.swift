@@ -14,9 +14,11 @@ class FilterCollectionViewCell: UICollectionViewCell {
     override var isSelected: Bool {
         willSet {
             if newValue {
-                self.backgroundColor = UIColor.red
+                layer.borderColor = UIColor.red.cgColor
+                titleLabel.textColor = UIColor.red
             } else {
-                self.backgroundColor = UIColor.gray
+                layer.borderColor = UIColor.white.cgColor
+                titleLabel.textColor = UIColor.white
             }
         }
     }
@@ -24,6 +26,9 @@ class FilterCollectionViewCell: UICollectionViewCell {
     var filterName: String = "" {
         didSet {
             titleLabel.text = filterName
+            titleLabel.numberOfLines = 2
+            titleLabel.adjustsFontSizeToFitWidth = true
+            titleLabel.textAlignment = .center
         }
     }
     
@@ -34,7 +39,7 @@ class FilterCollectionViewCell: UICollectionViewCell {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
-        layer.borderColor = UIColor.cyan.cgColor
+        layer.borderColor = UIColor.white.cgColor
         layer.borderWidth = 1.0
         layer.cornerRadius = 5.0
     }

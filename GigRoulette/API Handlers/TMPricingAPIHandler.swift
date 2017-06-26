@@ -20,7 +20,6 @@ func getPrice(ForEvent event: EventEntity, WithSuccess success: @escaping (Strin
             do {
                 let serializedData = try JSONSerialization.jsonObject(with: responseData!, options:.allowFragments) as! [String : AnyObject]
                 print(serializedData)
-                
                 success("")
             } catch {
                 print("Failed to serialize responseData to [String : AnyObject]")

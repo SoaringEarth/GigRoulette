@@ -39,7 +39,7 @@ class SplashViewController: UIViewController {
     private func presentLocationSettingsAlert() {
         let alertController = UIAlertController(
             title: "Background Location Access Disabled",
-            message: "In order to be notified about adorable kittens near you, please open this app's settings and set location access to 'Always'.",
+            message: "In order to find relevant events near you, please open this app's settings and set location access to 'When in use'.",
             preferredStyle: .alert)
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
