@@ -16,5 +16,5 @@ struct EventEntity {
     let distanceFromUser: Double
     let eventLocation: Point
     let ticketPrice: Double
-    //    let dates: [EventDate]
+//    let dates: [EventDate]
 }

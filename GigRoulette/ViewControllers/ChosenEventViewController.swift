@@ -22,6 +22,10 @@ class ChosenEventViewController: UIViewController {
     }
     
     @IBAction func imGoingButtonTapped(_ sender: Any) {
+        imGoing()
+    }
+    
+    private func imGoing() {
         if let currentLocation = LocationTracker.sharedInstance.currentLocation {
             let latString = String(describing: currentLocation.coordinate.latitude)
             let lonString = String(describing: currentLocation.coordinate.longitude)
@@ -36,5 +40,10 @@ class ChosenEventViewController: UIViewController {
     }
     
     @IBAction func spinAgainButtonTapped(_ sender: Any) {
+        spinAgain()
+    }
+    
+    private func spinAgain() {
+        navigationController?.popToRootViewController(animated: true)
     }
 }

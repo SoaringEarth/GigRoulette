@@ -80,6 +80,6 @@ class LoadingVC: UIViewController {
     @IBAction func open(_ sender: Any) {
         let chosenVC = ChosenEventViewController(nibName: "ChosenEventViewController", bundle: nil)
         chosenVC.chosenEvent = self.chosenEvent
-        self.show(chosenVC, sender: nil)
+        navigationController?.pushViewController(chosenVC, animated: true)
     }
 }

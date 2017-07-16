@@ -19,14 +19,14 @@ class EventsViewModel {
     func getGenres() -> [GenreEntity] {
         
         // Stub Data
-        let testGenres = [GenreEntity(name: "Art Show", id: "1"),
-                          GenreEntity(name: "Theatre", id: "2"),
-                          GenreEntity(name: "Live Music", id: "3"),
-                          GenreEntity(name: "Sports", id: "4"),
-                          GenreEntity(name: "Interactive Experience", id: "5"),
-                          GenreEntity(name: "Performance", id: "6")]
-        return testGenres
-//        return eventsModel.getGenresFromEvents()
+//        let testGenres = [GenreEntity(name: "Art Show", id: "1"),
+//                          GenreEntity(name: "Theatre", id: "2"),
+//                          GenreEntity(name: "Live Music", id: "3"),
+//                          GenreEntity(name: "Sports", id: "4"),
+//                          GenreEntity(name: "Interactive Experience", id: "5"),
+//                          GenreEntity(name: "Performance", id: "6")]
+//        return testGenres
+        return eventsModel.getGenresFromEvents()
     }
     
     func getRandomEvent() -> EventEntity {

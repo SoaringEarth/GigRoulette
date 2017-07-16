@@ -35,7 +35,6 @@ class FiltersViewController: UIViewController {
         super.viewDidLoad()
         
         filterCollectionView?.allowsMultipleSelection = true
-        
         let collectionFlowLayout = UICollectionViewFlowLayout()
         collectionFlowLayout.sectionInset = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
         filterCollectionView.collectionViewLayout = collectionFlowLayout
@@ -59,8 +58,8 @@ class FiltersViewController: UIViewController {
 	@IBAction func partyAction(_ sender: Any) {
         if eventsManager.getEvents().count > 0 {
             let loadingVC = LoadingVC(nibName: "LoadingVC", bundle: nil)
-            loadingVC.chosenEvent = eventsManager.getEvents().first
-            self.show(loadingVC, sender: self)
+            loadingVC.chosenEvent = eventsManager.getEvents().randomElement()
+            navigationController?.pushViewController(loadingVC, animated: true)
         }
 	}
 }

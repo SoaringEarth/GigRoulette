@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="KF9-Qm-hQt">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="IoN-nB-6RR">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -44,7 +44,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uAH-9Q-7mp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-159" y="792"/>
+            <point key="canvasLocation" x="-984" y="792"/>
         </scene>
         <!--Fetch Events View Controller-->
         <scene sceneID="U01-y2-98D">
@@ -82,12 +82,12 @@
                     <connections>
                         <outlet property="backgroundImageView" destination="VEI-Up-cmw" id="Mhi-oz-k75"/>
                         <outlet property="loadingImageView" destination="j1Y-Ah-zCc" id="0kp-j6-AHx"/>
-                        <segue destination="Bl4-h5-EGt" kind="show" identifier="ToFiltersView" id="Ljb-uq-uJB"/>
+                        <segue destination="KF9-Qm-hQt" kind="show" identifier="ToFiltersView" id="Xxi-5g-m9V"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JuT-m5-e9a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="628" y="790"/>
+            <point key="canvasLocation" x="-199" y="789"/>
         </scene>
         <!--Filters View Controller-->
         <scene sceneID="LvS-DG-tWX">
@@ -384,6 +384,7 @@
                             <constraint firstAttribute="trailing" secondItem="wWh-Ig-lp2" secondAttribute="trailing" constant="16" id="zVy-Gi-pgA"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="0Sx-Es-fSl"/>
                     <size key="freeformSize" width="320" height="568"/>
                     <connections>
                         <outlet property="anytimeBTN" destination="dwy-XF-5Q2" id="rjn-uO-MdD"/>
@@ -486,7 +487,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="niF-Uh-OUu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2312" y="791"/>
+            <point key="canvasLocation" x="2310" y="792"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="FYe-lI-Nc9">
@@ -501,13 +502,13 @@
                     <nil name="viewControllers"/>
                     <connections>
                         <outlet property="delegate" destination="hYy-mM-Tp3" id="Ndw-ZP-8Sf"/>
-                        <segue destination="IoN-nB-6RR" kind="relationship" relationship="rootViewController" id="8Jl-bP-LEj"/>
+                        <segue destination="Bl4-h5-EGt" kind="relationship" relationship="rootViewController" id="mZj-V4-o4X"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bmj-8U-Ah7" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <customObject id="hYy-mM-Tp3" customClass="CustomFadeInNavigationControllerDelegate" customModule="GigRoulette" customModuleProvider="target"/>
             </objects>
-            <point key="canvasLocation" x="-923" y="791"/>
+            <point key="canvasLocation" x="636" y="791"/>
         </scene>
     </scenes>
     <resources>
