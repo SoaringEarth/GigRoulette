@@ -11,7 +11,6 @@ import CoreLocation
 
 class FetchEventsViewController: UIViewController {
     var currentLocation: CLLocation = CLLocation()
-    var eventManager = EventsViewModel()
     
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var loadingImageView: UIImageView!

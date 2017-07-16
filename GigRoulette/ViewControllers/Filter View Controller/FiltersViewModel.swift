@@ -8,7 +8,7 @@
 
 import Foundation
 
-class EventsViewModel {
+class FiltersViewModel {
     
     let eventsModel = EventsModel.sharedInstance
     

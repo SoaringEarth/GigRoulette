@@ -12,6 +12,9 @@
 		041184341EF3B7380054A00C /* EntityStuff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041184331EF3B7380054A00C /* EntityStuff.swift */; };
 		0411843D1EF3C2050054A00C /* GeoHashAPIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0411843C1EF3C2050054A00C /* GeoHashAPIHandler.swift */; };
 		0432DB0C1F1B6E8C004EC04A /* Array+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0432DB0B1F1B6E8C004EC04A /* Array+Random.swift */; };
+		0432DB111F1B750C004EC04A /* ChosenEventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0432DB101F1B750C004EC04A /* ChosenEventViewModel.swift */; };
+		0432DB121F1B7583004EC04A /* ChosenEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0432DB0F1F1B74EE004EC04A /* ChosenEventViewController.swift */; };
+		0432DB131F1B7588004EC04A /* ChosenEventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0432DB0E1F1B74EE004EC04A /* ChosenEventViewController.xib */; };
 		04408C8A1EF7F0E200788063 /* FetchEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04408C891EF7F0E200788063 /* FetchEventsViewController.swift */; };
 		04408C8C1EF7F1C600788063 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04408C8B1EF7F1C600788063 /* Icons.xcassets */; };
 		04408C8E1EF7FC4500788063 /* CustomFadeInTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04408C8D1EF7FC4500788063 /* CustomFadeInTransition.swift */; };
@@ -27,7 +30,7 @@
 		04705D091EF32B230011B236 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04705D081EF32B230011B236 /* Assets.xcassets */; };
 		04705D0C1EF32B230011B236 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04705D0A1EF32B230011B236 /* LaunchScreen.storyboard */; };
 		047B8AF31EF3F3A60024C293 /* TFLAPIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047B8AF21EF3F3A60024C293 /* TFLAPIHandler.swift */; };
-		047B8AF51EF3F6200024C293 /* EventsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047B8AF41EF3F6200024C293 /* EventsViewModel.swift */; };
+		047B8AF51EF3F6200024C293 /* FiltersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047B8AF41EF3F6200024C293 /* FiltersViewModel.swift */; };
 		047B8AF71EF3FFBA0024C293 /* EventsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047B8AF61EF3FFBA0024C293 /* EventsModel.swift */; };
 		047B8AF91EF41BB10024C293 /* TMPricingAPIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047B8AF81EF41BB10024C293 /* TMPricingAPIHandler.swift */; };
 		04F074361EF549F200670F28 /* LoadingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047B8B0A1EF548580024C293 /* LoadingVC.swift */; };
@@ -50,6 +53,7 @@
 		0432DB0B1F1B6E8C004EC04A /* Array+Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Random.swift"; sourceTree = "<group>"; };
 		0432DB0E1F1B74EE004EC04A /* ChosenEventViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChosenEventViewController.xib; sourceTree = "<group>"; };
 		0432DB0F1F1B74EE004EC04A /* ChosenEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChosenEventViewController.swift; sourceTree = "<group>"; };
+		0432DB101F1B750C004EC04A /* ChosenEventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChosenEventViewModel.swift; sourceTree = "<group>"; };
 		04408C891EF7F0E200788063 /* FetchEventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchEventsViewController.swift; sourceTree = "<group>"; };
 		04408C8B1EF7F1C600788063 /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
 		04408C8D1EF7FC4500788063 /* CustomFadeInTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFadeInTransition.swift; sourceTree = "<group>"; };
@@ -67,7 +71,7 @@
 		04705D0B1EF32B230011B236 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04705D0D1EF32B230011B236 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		047B8AF21EF3F3A60024C293 /* TFLAPIHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFLAPIHandler.swift; sourceTree = "<group>"; };
-		047B8AF41EF3F6200024C293 /* EventsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewModel.swift; sourceTree = "<group>"; };
+		047B8AF41EF3F6200024C293 /* FiltersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersViewModel.swift; sourceTree = "<group>"; };
 		047B8AF61EF3FFBA0024C293 /* EventsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsModel.swift; sourceTree = "<group>"; };
 		047B8AF81EF41BB10024C293 /* TMPricingAPIHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMPricingAPIHandler.swift; sourceTree = "<group>"; };
 		047B8B091EF548580024C293 /* LoadingVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = LoadingVC.xib; path = GigRoulette/ViewControllers/LoadingVC.xib; sourceTree = SOURCE_ROOT; };
@@ -114,6 +118,7 @@
 		0432DB0D1F1B74D5004EC04A /* Chosen Event */ = {
 			isa = PBXGroup;
 			children = (
+				0432DB101F1B750C004EC04A /* ChosenEventViewModel.swift */,
 				0432DB0F1F1B74EE004EC04A /* ChosenEventViewController.swift */,
 				0432DB0E1F1B74EE004EC04A /* ChosenEventViewController.xib */,
 			);
@@ -140,6 +145,7 @@
 		04408C991EF81FCE00788063 /* Filter View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				047B8AF41EF3F6200024C293 /* FiltersViewModel.swift */,
 				04408C9A1EF81FF000788063 /* FiltersViewController.swift */,
 				04408C981EF81FC100788063 /* Filter CollectionView Cells */,
 			);
@@ -179,7 +185,6 @@
 				04F0743E1EF54B4900670F28 /* Managers */,
 				04F0743D1EF54AAE00670F28 /* API Handlers */,
 				04F074471EF5705A00670F28 /* Models */,
-				047B8AF41EF3F6200024C293 /* EventsViewModel.swift */,
 				04408C931EF8042100788063 /* Entities */,
 				04F074411EF55C9600670F28 /* UI Elements */,
 				047B8B051EF548330024C293 /* ViewControllers */,
@@ -319,6 +324,7 @@
 				04705D091EF32B230011B236 /* Assets.xcassets in Resources */,
 				04408C8C1EF7F1C600788063 /* Icons.xcassets in Resources */,
 				04705D071EF32B230011B236 /* Main.storyboard in Resources */,
+				0432DB131F1B7588004EC04A /* ChosenEventViewController.xib in Resources */,
 				040AD32B1EF93B7C009131F0 /* againts refresh.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -334,9 +340,10 @@
 				04408C8E1EF7FC4500788063 /* CustomFadeInTransition.swift in Sources */,
 				04408C971EF81EE900788063 /* FilterCollectionViewCell.swift in Sources */,
 				0411843D1EF3C2050054A00C /* GeoHashAPIHandler.swift in Sources */,
-				047B8AF51EF3F6200024C293 /* EventsViewModel.swift in Sources */,
+				047B8AF51EF3F6200024C293 /* FiltersViewModel.swift in Sources */,
 				04F074361EF549F200670F28 /* LoadingVC.swift in Sources */,
 				047B8AF71EF3FFBA0024C293 /* EventsModel.swift in Sources */,
+				0432DB111F1B750C004EC04A /* ChosenEventViewModel.swift in Sources */,
 				041184321EF3B71C0054A00C /* TMAPIHandler.swift in Sources */,
 				644A00851EF423B10001A6C6 /* LegCell.swift in Sources */,
 				04F074381EF549F200670F28 /* RouletteViewController.swift in Sources */,
@@ -345,6 +352,7 @@
 				0452DEA41F000C93002E27CC /* EventEntityParser.swift in Sources */,
 				047B8AF31EF3F3A60024C293 /* TFLAPIHandler.swift in Sources */,
 				04408C921EF8002200788063 /* DelayedSplashTransition.swift in Sources */,
+				0432DB121F1B7583004EC04A /* ChosenEventViewController.swift in Sources */,
 				04F074391EF549F200670F28 /* SplashViewController.swift in Sources */,
 				04408C8A1EF7F0E200788063 /* FetchEventsViewController.swift in Sources */,
 				04408C901EF7FD2300788063 /* CustomFadeInNavigationControllerDelegate.swift in Sources */,

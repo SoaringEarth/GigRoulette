@@ -11,7 +11,7 @@ import UIKit
 class FiltersViewController: UIViewController {
     
     var currentGeoHash: String = ""
-    var eventsManager = EventsViewModel()
+    var filterViewModel = FiltersViewModel()
 
     @IBOutlet weak var filterView: UIView!
     @IBOutlet weak var timeView: UIView!
@@ -56,9 +56,9 @@ class FiltersViewController: UIViewController {
 	}
     
 	@IBAction func partyAction(_ sender: Any) {
-        if eventsManager.getEvents().count > 0 {
+        if filterViewModel.getEvents().count > 0 {
             let loadingVC = LoadingVC(nibName: "LoadingVC", bundle: nil)
-            loadingVC.chosenEvent = eventsManager.getEvents().randomElement()
+            loadingVC.chosenEvent = filterViewModel.getEvents().randomElement()
             navigationController?.pushViewController(loadingVC, animated: true)
         }
 	}
@@ -71,15 +71,15 @@ extension FiltersViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print(eventsManager.getGenres().count)
-        return eventsManager.getGenres().count
+        print(filterViewModel.getGenres().count)
+        return filterViewModel.getGenres().count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "filterCell", for: indexPath) as! FilterCollectionViewCell
         
         cell.backgroundColor = UIColor.clear
-        cell.filterName = eventsManager.getGenres()[indexPath.row].name
+        cell.filterName = filterViewModel.getGenres()[indexPath.row].name
         
         return cell
     }
