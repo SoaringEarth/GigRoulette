@@ -26,9 +26,14 @@ class FilterCollectionViewCell: UICollectionViewCell {
     var filterName: String = "" {
         didSet {
             titleLabel.text = filterName
-            titleLabel.numberOfLines = 2
-            titleLabel.adjustsFontSizeToFitWidth = true
+            titleLabel.numberOfLines = 1
             titleLabel.textAlignment = .center
+        }
+    }
+    
+    var font: UIFont {
+        get {
+            return UIFont.systemFont(ofSize: 16.0)
         }
     }
     

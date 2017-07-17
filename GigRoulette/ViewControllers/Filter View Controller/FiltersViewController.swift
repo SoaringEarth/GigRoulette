@@ -19,49 +19,49 @@ class FiltersViewController: UIViewController {
     
     @IBOutlet weak var filterCollectionView: UICollectionView!
     
-	@IBOutlet weak var musicBTN: UIButton!
-	@IBOutlet weak var sportsBTN: UIButton!
-	@IBOutlet weak var comedyBTN: UIButton!
-	@IBOutlet weak var artBTN: UIButton!
-	@IBOutlet weak var familyBTN: UIButton!
-	@IBOutlet weak var theatreBTN: UIButton!
+    @IBOutlet weak var musicBTN: UIButton!
+    @IBOutlet weak var sportsBTN: UIButton!
+    @IBOutlet weak var comedyBTN: UIButton!
+    @IBOutlet weak var artBTN: UIButton!
+    @IBOutlet weak var familyBTN: UIButton!
+    @IBOutlet weak var theatreBTN: UIButton!
 	
-	@IBOutlet weak var nowBTN: UIButton!
-	@IBOutlet weak var tomorrowBTN: UIButton!
-	@IBOutlet weak var anytimeBTN: UIButton!
+    @IBOutlet weak var nowBTN: UIButton!
+    @IBOutlet weak var tomorrowBTN: UIButton!
+    @IBOutlet weak var anytimeBTN: UIButton!
     
     
-	override func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
         
-        filterCollectionView?.allowsMultipleSelection = true
-        let collectionFlowLayout = UICollectionViewFlowLayout()
-        collectionFlowLayout.sectionInset = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
-        filterCollectionView.collectionViewLayout = collectionFlowLayout
+        setupCollectionView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-//        if eventsManager.getEvents().count == 0 {
-//            filterCollectionView.delegate = nil
-//            filterCollectionView.dataSource = nil
-//            filterView.removeFromSuperview()
-//        }
+        filterCollectionView.reloadData()
+    }
+    
+    private func setupCollectionView() {
+        filterCollectionView?.allowsMultipleSelection = true
+        let collectionFlowLayout = UICollectionViewFlowLayout()
+        collectionFlowLayout.sectionInset = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
+        filterCollectionView.collectionViewLayout = collectionFlowLayout
     }
 	
-	@IBAction func genreButtonAction(_ sender: Any) {
-		let btn:UIButton = sender as! UIButton
+    @IBAction func genreButtonAction(_ sender: Any) {
+        let btn:UIButton = sender as! UIButton
         btn.isSelected = !btn.isSelected
-	}
+    }
     
-	@IBAction func partyAction(_ sender: Any) {
+    @IBAction func partyAction(_ sender: Any) {
         if filterViewModel.getEvents().count > 0 {
             let loadingVC = LoadingVC(nibName: "LoadingVC", bundle: nil)
             loadingVC.chosenEvent = filterViewModel.getEvents().randomElement()
             navigationController?.pushViewController(loadingVC, animated: true)
         }
-	}
+    }
 }
 
 extension FiltersViewController: UICollectionViewDataSource {
@@ -71,7 +71,6 @@ extension FiltersViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print(filterViewModel.getGenres().count)
         return filterViewModel.getGenres().count
     }
     
@@ -80,13 +79,22 @@ extension FiltersViewController: UICollectionViewDataSource {
         
         cell.backgroundColor = UIColor.clear
         cell.filterName = filterViewModel.getGenres()[indexPath.row].name
-        
         return cell
     }
+    
 }
 
 extension FiltersViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print(indexPath)
+    }
+}
+
+extension FiltersViewController: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let genreTitle = filterViewModel.getGenres()[indexPath.row].name
+        return CGSize(width: genreTitle.widthOfString(usingFont: FilterCollectionViewCell().font) + 8.0,
+                      height: genreTitle.heightOfString(usingFont: FilterCollectionViewCell().font) + 24.0)
     }
 }

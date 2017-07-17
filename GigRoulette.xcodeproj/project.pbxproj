@@ -15,6 +15,7 @@
 		0432DB111F1B750C004EC04A /* ChosenEventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0432DB101F1B750C004EC04A /* ChosenEventViewModel.swift */; };
 		0432DB121F1B7583004EC04A /* ChosenEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0432DB0F1F1B74EE004EC04A /* ChosenEventViewController.swift */; };
 		0432DB131F1B7588004EC04A /* ChosenEventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0432DB0E1F1B74EE004EC04A /* ChosenEventViewController.xib */; };
+		0432DB171F1B8319004EC04A /* String+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0432DB161F1B8319004EC04A /* String+Size.swift */; };
 		04408C8A1EF7F0E200788063 /* FetchEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04408C891EF7F0E200788063 /* FetchEventsViewController.swift */; };
 		04408C8C1EF7F1C600788063 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04408C8B1EF7F1C600788063 /* Icons.xcassets */; };
 		04408C8E1EF7FC4500788063 /* CustomFadeInTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04408C8D1EF7FC4500788063 /* CustomFadeInTransition.swift */; };
@@ -54,6 +55,7 @@
 		0432DB0E1F1B74EE004EC04A /* ChosenEventViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChosenEventViewController.xib; sourceTree = "<group>"; };
 		0432DB0F1F1B74EE004EC04A /* ChosenEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChosenEventViewController.swift; sourceTree = "<group>"; };
 		0432DB101F1B750C004EC04A /* ChosenEventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChosenEventViewModel.swift; sourceTree = "<group>"; };
+		0432DB161F1B8319004EC04A /* String+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Size.swift"; sourceTree = "<group>"; };
 		04408C891EF7F0E200788063 /* FetchEventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchEventsViewController.swift; sourceTree = "<group>"; };
 		04408C8B1EF7F1C600788063 /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
 		04408C8D1EF7FC4500788063 /* CustomFadeInTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFadeInTransition.swift; sourceTree = "<group>"; };
@@ -249,6 +251,7 @@
 				04F074441EF5692700670F28 /* Double+RoundTo.swift */,
 				0452DEA51F000E33002E27CC /* UIView+Animation.swift */,
 				0432DB0B1F1B6E8C004EC04A /* Array+Random.swift */,
+				0432DB161F1B8319004EC04A /* String+Size.swift */,
 			);
 			path = "Class Extensions";
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 				047B8AF51EF3F6200024C293 /* FiltersViewModel.swift in Sources */,
 				04F074361EF549F200670F28 /* LoadingVC.swift in Sources */,
 				047B8AF71EF3FFBA0024C293 /* EventsModel.swift in Sources */,
+				0432DB171F1B8319004EC04A /* String+Size.swift in Sources */,
 				0432DB111F1B750C004EC04A /* ChosenEventViewModel.swift in Sources */,
 				041184321EF3B71C0054A00C /* TMAPIHandler.swift in Sources */,
 				644A00851EF423B10001A6C6 /* LegCell.swift in Sources */,
