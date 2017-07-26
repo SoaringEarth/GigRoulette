@@ -14,6 +14,7 @@ class EventsModel {
     static let sharedInstance = EventsModel()
     
     var events: [EventEntity] = []
+    var genres: [GenreEntity] = []
     
     init() {
         initEvents()
@@ -42,6 +43,26 @@ class EventsModel {
         }, WithFailure: {
             failure()
         })
+    }
+    
+    func getAllEvents(withCompletionClosure completion: (([EventEntity])->())? = nil, andFailureClosure failure: (()->())? = nil) {
+        if let location = LocationTracker.sharedInstance.currentLocation {
+            GeoHashAPIHandler.getCountryCode(FromLocation: location, withSuccess: { (countryCode) in
+                GeoHashAPIHandler.getGeoHash(ForLocation: location, WithSuccess: { (geoHash) in
+                    self.getAllEvents(WithGeoHash: geoHash, AndCountryCode: countryCode, WithSuccess: { (events) in
+                        self.events = events
+                        self.genres = self.getGenresFromEvents()
+                        if completion != nil {
+                            completion!(events)
+                        }
+                    }, withFailure: {
+                        print("failedToGetEvents")
+                    })
+                })
+            }, WithFailure: {
+                print("EventsModel - Failure to initialise events")
+            })
+        }
     }
     
     func getGenresFromEvents() -> [GenreEntity] {

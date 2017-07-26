@@ -236,6 +236,9 @@
                                     <outlet property="delegate" destination="Bl4-h5-EGt" id="TDK-tH-aBl"/>
                                 </connections>
                             </collectionView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="egd-gA-B1r">
+                                <rect key="frame" x="141.5" y="127" width="37" height="37"/>
+                            </activityIndicatorView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tdw-2R-U2n" userLabel="TimeView">
                                 <rect key="frame" x="16" y="291" width="288" height="88"/>
                                 <subviews>
@@ -317,16 +320,25 @@
                                         </constraints>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" image="Icon_unselected_£"/>
+                                        <connections>
+                                            <action selector="genreButtonAction:" destination="Bl4-h5-EGt" eventType="touchUpInside" id="jPs-zZ-SGX"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cu2-Uf-SAZ" customClass="TintedToggleButton" customModule="GigRoulette" customModuleProvider="target">
                                         <rect key="frame" x="111" y="37" width="66" height="32"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" image="Icon_unselected_££"/>
+                                        <connections>
+                                            <action selector="genreButtonAction:" destination="Bl4-h5-EGt" eventType="touchUpInside" id="Fcc-D1-GHf"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9rn-an-wBp" customClass="TintedToggleButton" customModule="GigRoulette" customModuleProvider="target">
                                         <rect key="frame" x="201" y="37" width="66" height="32"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" image="Icon_unselected_£££"/>
+                                        <connections>
+                                            <action selector="genreButtonAction:" destination="Bl4-h5-EGt" eventType="touchUpInside" id="9Hg-xT-q2N"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -380,7 +392,9 @@
                             <constraint firstItem="Tdw-2R-U2n" firstAttribute="top" secondItem="5q2-oI-21x" secondAttribute="bottom" priority="750" constant="16" id="lZN-Li-8fa"/>
                             <constraint firstAttribute="bottom" secondItem="bgo-X0-j3V" secondAttribute="bottom" constant="32" id="mBk-Rw-FDe"/>
                             <constraint firstItem="pTm-vN-obv" firstAttribute="leading" secondItem="5q2-oI-21x" secondAttribute="leading" id="ost-La-sP5"/>
+                            <constraint firstItem="egd-gA-B1r" firstAttribute="centerX" secondItem="pTm-vN-obv" secondAttribute="centerX" id="uhk-ll-Cdb"/>
                             <constraint firstAttribute="bottom" secondItem="boZ-rl-SCO" secondAttribute="bottom" id="voO-mx-RYp"/>
+                            <constraint firstItem="egd-gA-B1r" firstAttribute="centerY" secondItem="pTm-vN-obv" secondAttribute="centerY" id="yAW-v1-Xjh"/>
                             <constraint firstAttribute="trailing" secondItem="wWh-Ig-lp2" secondAttribute="trailing" constant="16" id="zVy-Gi-pgA"/>
                         </constraints>
                     </view>
@@ -391,6 +405,7 @@
                         <outlet property="artBTN" destination="6E6-fq-fN9" id="yDx-ZL-VEg"/>
                         <outlet property="comedyBTN" destination="Dr9-Ra-uFs" id="zyz-YB-1Hn"/>
                         <outlet property="familyBTN" destination="Anh-BG-SEf" id="oOe-ad-oFM"/>
+                        <outlet property="filterActivityIndicatorView" destination="egd-gA-B1r" id="ddk-cp-d84"/>
                         <outlet property="filterCollectionView" destination="pTm-vN-obv" id="z3A-x8-2uF"/>
                         <outlet property="musicBTN" destination="tDg-jb-BiQ" id="GZH-Si-trK"/>
                         <outlet property="nowBTN" destination="1aP-iJ-s7v" id="MjX-Dj-Hrh"/>

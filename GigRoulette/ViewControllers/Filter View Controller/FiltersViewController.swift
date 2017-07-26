@@ -30,11 +30,19 @@ class FiltersViewController: UIViewController {
     @IBOutlet weak var tomorrowBTN: UIButton!
     @IBOutlet weak var anytimeBTN: UIButton!
     
+    @IBOutlet weak var filterActivityIndicatorView: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupCollectionView()
+        
+        filterViewModel.getEvents(withCompletionHandler: { (events) in
+            DispatchQueue.main.async {
+                self.filterCollectionView.reloadData()
+                self.filterActivityIndicatorView.stopAnimating()
+            }
+        }, andFailureHandler: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -58,7 +66,7 @@ class FiltersViewController: UIViewController {
     @IBAction func partyAction(_ sender: Any) {
         if filterViewModel.getEvents().count > 0 {
             let loadingVC = LoadingVC(nibName: "LoadingVC", bundle: nil)
-            loadingVC.chosenEvent = filterViewModel.getEvents().randomElement()
+            loadingVC.chosenEvent = filterViewModel.getRandomEvent()
             navigationController?.pushViewController(loadingVC, animated: true)
         }
     }

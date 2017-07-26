@@ -12,6 +12,10 @@ class FiltersViewModel {
     
     let eventsModel = EventsModel.sharedInstance
     
+    func getEvents(withCompletionHandler completion: (([EventEntity])->())? = nil, andFailureHandler failure: (()->())? = nil) {
+        eventsModel.getAllEvents(withCompletionClosure: completion, andFailureClosure: failure)
+    }
+    
     func getEvents() -> [EventEntity] {
         return eventsModel.events
     }
@@ -30,7 +34,6 @@ class FiltersViewModel {
     }
     
     func getRandomEvent() -> EventEntity {
-        
-        return eventsModel.events[0]
+        return eventsModel.events.randomElement()
     }
 }
