@@ -19,6 +19,8 @@ class ChosenEventViewController: UIViewController {
         super.viewDidLoad()
         
         chosenEventTitleLabel.text = chosenEvent?.name
+        chosenEventVenueTitleLabel.text = chosenEvent?.eventVenue.name
+        chosenEventVenueAddressLabel.text = chosenEvent?.eventVenue.addressLine1
     }
     
     @IBAction func imGoingButtonTapped(_ sender: Any) {
@@ -26,17 +28,22 @@ class ChosenEventViewController: UIViewController {
     }
     
     private func imGoing() {
-        if let currentLocation = LocationTracker.sharedInstance.currentLocation {
-            let latString = String(describing: currentLocation.coordinate.latitude)
-            let lonString = String(describing: currentLocation.coordinate.longitude)
-            let startPoint = Point(lat: latString, lon: lonString)
-            getDirections(FromStartPoint: startPoint, ToEndPoint: chosenEvent!.eventLocation, WithSuccess: { (journey) in
-                let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-                let stepsVC = storyBoard.instantiateViewController(withIdentifier: "StepsVC") as! StepsVC
-                stepsVC.journey = journey
-                self.show(stepsVC, sender: self)
-            })
-        }
+        let alertViewController = UIAlertController(title: "Purchase Ticket?", message: "This will lead to the purchasing flow when implemented.", preferredStyle: .alert)
+        alertViewController.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        present(alertViewController, animated: true, completion: nil)
+        
+//        if let currentLocation = LocationTracker.sharedInstance.currentLocation {
+//            let latString = String(describing: currentLocation.coordinate.latitude)
+//            let lonString = String(describing: currentLocation.coordinate.longitude)
+//            let startPoint = Point(lat: latString, lon: lonString)
+//            getDirections(FromStartPoint: startPoint, ToEndPoint: chosenEvent!.eventLocation, WithSuccess: { (journey) in
+//                let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+//                let stepsVC = storyBoard.instantiateViewController(withIdentifier: "StepsVC") as! StepsVC
+//                stepsVC.journey = journey
+//                self.navigationController?.navigationBar.isHidden = false
+//                self.navigationController?.pushViewController(stepsVC, animated: true)
+//            })
+//        }
     }
     
     @IBAction func spinAgainButtonTapped(_ sender: Any) {

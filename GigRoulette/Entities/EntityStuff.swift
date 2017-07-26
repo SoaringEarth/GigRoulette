@@ -38,7 +38,7 @@ struct VenueEntity {
     let name: String
     let addressLine1: String
     let city: String
-    let country: Country
+    let country: String
     let distanceFromUser: Decimal
 }
 

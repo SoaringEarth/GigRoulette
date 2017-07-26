@@ -34,18 +34,30 @@ func create(EventsWithDictionary dictionary: [String : AnyObject]) -> [EventEnti
                     let eventLon: String = (((((event["_embedded"] as! [String : AnyObject])["venues"] as! [AnyObject]).first as! [String : AnyObject])["location"] as! [String : AnyObject])["longitude"] as! String)
                     let eventLocation = Point(lat: eventLat, lon: eventLon)
                     
+                    let venueName: String = (((event["_embedded"] as! [String : AnyObject])["venues"] as! [AnyObject]).first as! [String : AnyObject])["name"] as! String
+                    let venueAddress1: String = ((((event["_embedded"] as! [String : AnyObject])["venues"] as! [AnyObject]).first as! [String : AnyObject])["address"] as! [String : AnyObject]).first?.value as! String
+                    let venueCity: String = ((((event["_embedded"] as! [String : AnyObject])["venues"] as! [AnyObject]).first as! [String : AnyObject])["city"] as! [String : AnyObject]).first?.value as! String
+                    let venueCountry: String = ((((event["_embedded"] as! [String : AnyObject])["venues"] as! [AnyObject]).first as! [String : AnyObject])["country"] as! [String : AnyObject])["name"] as! String
+                    let venueDistanceFromUser: NSNumber = (((event["_embedded"] as! [String : AnyObject])["venues"] as! [AnyObject]).first as! [String : AnyObject])["distance"] as! NSNumber
+                    
+                    let eventVenue = VenueEntity(name: venueName,
+                                                 addressLine1: venueAddress1,
+                                                 city: venueCity,
+                                                 country: venueCountry,
+                                                 distanceFromUser: venueDistanceFromUser.decimalValue)
+                    
                     let eventDistanceFromUser = (event["distance"] as! Double).roundTo(places: 2)
                     
                     let eventTicketPrice = Double(arc4random_uniform(100) + 16)
                     
                     
-                    let newEvent = EventEntity(name: eventName, id: eventID, url: eventURL, genres: genreArray, distanceFromUser: eventDistanceFromUser, eventLocation: eventLocation, ticketPrice: eventTicketPrice)
+                    let newEvent = EventEntity(name: eventName, id: eventID, url: eventURL, genres: genreArray, distanceFromUser: eventDistanceFromUser, eventLocation: eventLocation, eventVenue: eventVenue, ticketPrice: eventTicketPrice)
                     events.append(newEvent)
                 }
             }
-            //                            getPrice(ForEvent: self.events!.first!, WithSuccess: { (priceString) in
-            //                                print(priceString)
-            //                            })
+//                            getPrice(ForEvent: self.events!.first!, WithSuccess: { (priceString) in
+//                                print(priceString)
+//                            })
             print(events.count)
         }
     } else {
