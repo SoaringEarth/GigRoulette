@@ -43,4 +43,23 @@ class FiltersViewModel {
     func getRandomEvent() -> EventEntity {
         return eventsModel.events.randomElement()
     }
+    
+    func getFilteredEvent() -> EventEntity {
+        
+        var filteredEvents : [EventEntity] = [EventEntity]()
+        
+        if selectedGenres.isEmpty {
+            return getEvents().randomElement()
+        }
+        
+        for event in getEvents() {
+            for genre in event.genres {
+                if selectedGenres.contains(genre) && !filteredEvents.contains(event) {
+                    filteredEvents.append(event)
+                }
+            }
+        }
+        
+        return filteredEvents.randomElement()
+    }
 }

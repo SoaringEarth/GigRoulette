@@ -60,7 +60,7 @@ class FiltersViewController: UIViewController {
     @IBAction func partyAction(_ sender: Any) {
         if filterViewModel.getEvents().count > 0 {
             let loadingVC = LoadingVC(nibName: "LoadingVC", bundle: nil)
-            loadingVC.chosenEvent = filterViewModel.getRandomEvent()
+            loadingVC.chosenEvent = filterViewModel.getFilteredEvent()
             navigationController?.pushViewController(loadingVC, animated: true)
         }
     }
