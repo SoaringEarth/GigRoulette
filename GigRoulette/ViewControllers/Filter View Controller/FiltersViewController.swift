@@ -45,12 +45,6 @@ class FiltersViewController: UIViewController {
         }, andFailureHandler: nil)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        filterCollectionView.reloadData()
-    }
-    
     private func setupCollectionView() {
         filterCollectionView?.allowsMultipleSelection = true
         let collectionFlowLayout = UICollectionViewFlowLayout()
@@ -118,6 +112,6 @@ extension FiltersViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let genreTitle = filterViewModel.getGenres()[indexPath.row].name
         return CGSize(width: genreTitle.widthOfString(usingFont: FilterCollectionViewCell().font) + 8.0,
-                      height: genreTitle.heightOfString(usingFont: FilterCollectionViewCell().font) + 24.0)
+                      height: genreTitle.heightOfString(usingFont: FilterCollectionViewCell().font) + 20.0)
     }
 }
