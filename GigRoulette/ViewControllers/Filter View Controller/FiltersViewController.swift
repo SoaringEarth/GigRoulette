@@ -84,17 +84,32 @@ extension FiltersViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "filterCell", for: indexPath) as! FilterCollectionViewCell
-        
         cell.backgroundColor = UIColor.clear
-        cell.filterName = filterViewModel.getGenres()[indexPath.row].name
+        cell.genre = filterViewModel.getGenres()[indexPath.row]
+        
+        if !filterViewModel.selectedGenres.isEmpty {
+            if filterViewModel.selectedGenres.contains(cell.genre!) {
+                cell.isSelected = true
+                return cell
+            }
+        }
+        
         return cell
     }
-    
 }
 
 extension FiltersViewController: UICollectionViewDelegate {
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print(indexPath)
+        filterViewModel.select(genre: (collectionView.cellForItem(at: indexPath) as! FilterCollectionViewCell).genre!)
+        print(filterViewModel.selectedGenres.count)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        print(indexPath)
+        filterViewModel.deSelect(genre: (collectionView.cellForItem(at: indexPath) as! FilterCollectionViewCell).genre!)
+        print(filterViewModel.selectedGenres.count)
     }
 }
 

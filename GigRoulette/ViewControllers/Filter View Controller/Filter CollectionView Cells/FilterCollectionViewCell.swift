@@ -11,6 +11,14 @@ import UIKit
 class FilterCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     
+    var genre : GenreEntity? = nil {
+        didSet {
+            titleLabel.text = genre?.name
+            titleLabel.numberOfLines = 1
+            titleLabel.textAlignment = .center
+        }
+    }
+    
     override var isSelected: Bool {
         willSet {
             if newValue {
@@ -20,14 +28,6 @@ class FilterCollectionViewCell: UICollectionViewCell {
                 layer.borderColor = UIColor.white.cgColor
                 titleLabel.textColor = UIColor.white
             }
-        }
-    }
-    
-    var filterName: String = "" {
-        didSet {
-            titleLabel.text = filterName
-            titleLabel.numberOfLines = 1
-            titleLabel.textAlignment = .center
         }
     }
     

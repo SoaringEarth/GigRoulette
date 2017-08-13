@@ -12,6 +12,8 @@ class FiltersViewModel {
     
     let eventsModel = EventsModel.sharedInstance
     
+    var selectedGenres : [GenreEntity] = [GenreEntity]()
+    
     func getEvents(withCompletionHandler completion: (([EventEntity])->())? = nil, andFailureHandler failure: (()->())? = nil) {
         eventsModel.getAllEvents(withCompletionClosure: completion, andFailureClosure: failure)
     }
@@ -21,16 +23,21 @@ class FiltersViewModel {
     }
     
     func getGenres() -> [GenreEntity] {
-        
-        // Stub Data
-//        let testGenres = [GenreEntity(name: "Art Show", id: "1"),
-//                          GenreEntity(name: "Theatre", id: "2"),
-//                          GenreEntity(name: "Live Music", id: "3"),
-//                          GenreEntity(name: "Sports", id: "4"),
-//                          GenreEntity(name: "Interactive Experience", id: "5"),
-//                          GenreEntity(name: "Performance", id: "6")]
-//        return testGenres
         return eventsModel.getGenresFromEvents()
+    }
+    
+    func getSelectedGenres() -> [GenreEntity] {
+        return selectedGenres
+    }
+    
+    func select(genre: GenreEntity) {
+        selectedGenres.append(genre)
+    }
+    
+    func deSelect(genre: GenreEntity) {
+        if selectedGenres.contains(genre) {
+            selectedGenres.remove(at: selectedGenres.index(of: genre)!)
+        }
     }
     
     func getRandomEvent() -> EventEntity {
