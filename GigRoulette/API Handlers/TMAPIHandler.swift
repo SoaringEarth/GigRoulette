@@ -21,6 +21,9 @@ class TMAPIHandler {
                 do {
                     let serializedData = try JSONSerialization.jsonObject(with: responseData!, options:.allowFragments) as! [String : AnyObject]
                     let events: [EventEntity] = create(EventsWithDictionary: serializedData)
+//                    getPrice(ForEvent: events.first!, WithSuccess: { (priceString) in
+//                        print(priceString)
+//                    })
                     print(events.count)
                     success(events)
                     NotificationCenter.default.post(name: NotificationName.eventsReceived.realName, object: nil)

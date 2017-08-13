@@ -16,6 +16,14 @@ struct EventEntity {
     let distanceFromUser: Double
     let eventLocation: Point
     let eventVenue: VenueEntity
-    let ticketPrice: Double
+    let ticketPrices: [Double]
 //    let dates: [EventDate]
+}
+
+extension EventEntity: Equatable {}
+
+func ==(lhs: EventEntity, rhs: EventEntity) -> Bool {
+    let areEqual = lhs.id == rhs.id &&
+        lhs.name == rhs.name
+    return areEqual
 }

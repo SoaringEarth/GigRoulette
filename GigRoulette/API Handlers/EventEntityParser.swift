@@ -48,16 +48,12 @@ func create(EventsWithDictionary dictionary: [String : AnyObject]) -> [EventEnti
                     
                     let eventDistanceFromUser = (event["distance"] as! Double).roundTo(places: 2)
                     
-                    let eventTicketPrice = Double(arc4random_uniform(100) + 16)
+                    let eventTicketPrice = [Double(arc4random_uniform(100) + 16)]
                     
-                    
-                    let newEvent = EventEntity(name: eventName, id: eventID, url: eventURL, genres: genreArray, distanceFromUser: eventDistanceFromUser, eventLocation: eventLocation, eventVenue: eventVenue, ticketPrice: eventTicketPrice)
+                    let newEvent = EventEntity(name: eventName, id: eventID, url: eventURL, genres: genreArray, distanceFromUser: eventDistanceFromUser, eventLocation: eventLocation, eventVenue: eventVenue, ticketPrices: eventTicketPrice)
                     events.append(newEvent)
                 }
             }
-//                            getPrice(ForEvent: self.events!.first!, WithSuccess: { (priceString) in
-//                                print(priceString)
-//                            })
             print(events.count)
         }
     } else {
