@@ -40,6 +40,16 @@ func create(EventsWithDictionary dictionary: [String : AnyObject]) -> [EventEnti
                     let venueCountry: String = ((((event["_embedded"] as! [String : AnyObject])["venues"] as! [AnyObject]).first as! [String : AnyObject])["country"] as! [String : AnyObject])["name"] as! String
                     let venueDistanceFromUser: NSNumber = (((event["_embedded"] as! [String : AnyObject])["venues"] as! [AnyObject]).first as! [String : AnyObject])["distance"] as! NSNumber
                     
+                    // Get event images
+                    var imageURLS : [String] = []
+                    if let images = event["images"] as? [AnyObject] {
+                        for image in images {
+                            if (image["ratio"] as! String) == "16_9" {
+                                imageURLS.append(image["url"] as! String)
+                            }
+                        }
+                    }
+                    
                     let eventVenue = VenueEntity(name: venueName,
                                                  addressLine1: venueAddress1,
                                                  city: venueCity,
@@ -50,7 +60,7 @@ func create(EventsWithDictionary dictionary: [String : AnyObject]) -> [EventEnti
                     
                     let eventTicketPrice = [Double(arc4random_uniform(100) + 16)]
                     
-                    let newEvent = EventEntity(name: eventName, id: eventID, url: eventURL, genres: genreArray, distanceFromUser: eventDistanceFromUser, eventLocation: eventLocation, eventVenue: eventVenue, ticketPrices: eventTicketPrice)
+                    let newEvent = EventEntity(name: eventName, id: eventID, url: eventURL, genres: genreArray, distanceFromUser: eventDistanceFromUser, eventLocation: eventLocation, eventVenue: eventVenue, ticketPrices: eventTicketPrice, eventImageURLS: imageURLS)
                     events.append(newEvent)
                 }
             }

@@ -9,6 +9,7 @@
 import UIKit
 
 class ChosenEventViewController: UIViewController {
+    @IBOutlet weak var eventImageView: UIImageView!
     @IBOutlet weak var chosenEventVenueTitleLabel: UILabel!
     @IBOutlet weak var chosenEventTitleLabel: UILabel!
     @IBOutlet weak var chosenEventVenueAddressLabel: UILabel!
@@ -23,6 +24,14 @@ class ChosenEventViewController: UIViewController {
         chosenEventTitleLabel.text = chosenEvent?.name
         chosenEventVenueTitleLabel.text = chosenEvent?.eventVenue.name
         chosenEventVenueAddressLabel.text = chosenEvent?.eventVenue.addressLine1
+        
+        do {
+            let imageURL = URL(string: chosenEvent!.eventImageURLS.first!)
+            let imageData = try Data(contentsOf: imageURL!)
+            eventImageView.image = UIImage(data: imageData)
+        } catch {
+            print("failed to get image")
+        }
     }
     
     @IBAction func imGoingButtonTapped(_ sender: Any) {

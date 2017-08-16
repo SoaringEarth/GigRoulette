@@ -17,6 +17,7 @@ struct EventEntity {
     let eventLocation: Point
     let eventVenue: VenueEntity
     let ticketPrices: [Double]
+    let eventImageURLS: [String]
 //    let dates: [EventDate]
 }
 
